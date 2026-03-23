@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./diagnostic_part2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,14 +131,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,14 +251,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -252,17 +269,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#목적-및-범위" id="toc-목적-및-범위" class="nav-link active" data-scroll-target="#목적-및-범위">1. 목적 및 범위</a></li>
-  <li><a href="#분석-체계-framework" id="toc-분석-체계-framework" class="nav-link" data-scroll-target="#분석-체계-framework">2. 분석 체계 (Framework)</a></li>
-  <li><a href="#estimand의-구성-요소" id="toc-estimand의-구성-요소" class="nav-link" data-scroll-target="#estimand의-구성-요소">3. Estimand의 구성 요소</a>
+  <li><a href="#개정안의-주요-목적-및-배경" id="toc-개정안의-주요-목적-및-배경" class="nav-link active" data-scroll-target="#개정안의-주요-목적-및-배경">1. 개정안의 주요 목적 및 배경</a></li>
+  <li><a href="#임상시험의-분석-체계-framework" id="toc-임상시험의-분석-체계-framework" class="nav-link" data-scroll-target="#임상시험의-분석-체계-framework">2. 임상시험의 분석 체계 (Framework)</a></li>
+  <li><a href="#estimand의-5가지-핵심-속성" id="toc-estimand의-5가지-핵심-속성" class="nav-link" data-scroll-target="#estimand의-5가지-핵심-속성">3. Estimand의 5가지 핵심 속성</a>
   <ul class="collapse">
-  <li><a href="#a.-치료-treatment" id="toc-a.-치료-treatment" class="nav-link" data-scroll-target="#a.-치료-treatment">A. 치료 (Treatment)</a></li>
-  <li><a href="#b.-대상-집단-population" id="toc-b.-대상-집단-population" class="nav-link" data-scroll-target="#b.-대상-집단-population">B. 대상 집단 (Population)</a></li>
-  <li><a href="#c.-평가-변수-variable-endpoint" id="toc-c.-평가-변수-variable-endpoint" class="nav-link" data-scroll-target="#c.-평가-변수-variable-endpoint">C. 평가 변수 (Variable / Endpoint)</a></li>
-  <li><a href="#d.-중간-사건ice-처리-전략-strategies-for-ices" id="toc-d.-중간-사건ice-처리-전략-strategies-for-ices" class="nav-link" data-scroll-target="#d.-중간-사건ice-처리-전략-strategies-for-ices">D. 중간 사건(ICE) 처리 전략 (Strategies for ICEs)</a></li>
-  <li><a href="#e.-요약-지표-population-level-summary" id="toc-e.-요약-지표-population-level-summary" class="nav-link" data-scroll-target="#e.-요약-지표-population-level-summary">E. 요약 지표 (Population-level Summary)</a></li>
+  <li><a href="#치료-treatment" id="toc-치료-treatment" class="nav-link" data-scroll-target="#치료-treatment">(1) 치료 (Treatment)</a></li>
+  <li><a href="#대상-집단-population" id="toc-대상-집단-population" class="nav-link" data-scroll-target="#대상-집단-population">(2) 대상 집단 (Population)</a></li>
+  <li><a href="#평가-변수-variable-endpoint" id="toc-평가-변수-variable-endpoint" class="nav-link" data-scroll-target="#평가-변수-variable-endpoint">(3) 평가 변수 (Variable / Endpoint)</a></li>
+  <li><a href="#중간-사건ice-처리-전략-strategies-for-ices" id="toc-중간-사건ice-처리-전략-strategies-for-ices" class="nav-link" data-scroll-target="#중간-사건ice-처리-전략-strategies-for-ices">(4) 중간 사건(ICE) 처리 전략 (Strategies for ICEs)</a></li>
+  <li><a href="#요약-지표-population-level-summary" id="toc-요약-지표-population-level-summary" class="nav-link" data-scroll-target="#요약-지표-population-level-summary">(5) 요약 지표 (Population-level Summary)</a></li>
   </ul></li>
-  <li><a href="#요약" id="toc-요약" class="nav-link" data-scroll-target="#요약">4. 요약</a></li>
   </ul>
 </nav>
     </div>
@@ -272,6 +288,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9r1_part1.html">Estimand 및 민감도 분석 (E9R1)</a></li><li class="breadcrumb-item"><a href="./e9r1_part1.html"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span></h1>
+<p class="subtitle lead">Estimand의 정의와 중간 사건 처리를 위한 체계</p>
 </div>
 
 
@@ -288,61 +305,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>본 내용은 ICH E9 지침의 개정안(Addendum)인 E9(R1)의 핵심 내용으로, 임상시험에서 Estimand(분석 대상)의 정의와 민감도 분석(Sensitivity Analysis)에 대한 프레임워크를 다룹니다.</p>
-<section id="목적-및-범위" class="level2">
-<h2 class="anchored" data-anchor-id="목적-및-범위">1. 목적 및 범위</h2>
-<p>E9(R1) 개정안은 임상시험의 설계, 수행, 분석 및 해석 과정에서 발생할 수 있는 모호함을 줄이고, 의뢰사와 규제기관 간의 원활한 소통을 위해 구조화된 프레임워크를 제시합니다.</p>
+<p>ICH E9(R1) 개정안은 임상시험 설계 및 분석 과정에서 발생할 수 있는 모호함을 해소하기 위해 구조화된 분석 체계(Estimand Framework)를 제시합니다 <span class="citation" data-cites="ich2019e9r1">(<a href="references.html#ref-ich2019e9r1" role="doc-biblioref">International Council for Harmonisation 2019</a>)</span>.</p>
+<section id="개정안의-주요-목적-및-배경" class="level2">
+<h2 class="anchored" data-anchor-id="개정안의-주요-목적-및-배경">1. 개정안의 주요 목적 및 배경</h2>
+<p>임상시험에서 수집된 데이터를 단순히 분석하는 것만으로는 부족합니다. “치료 효과에 대해 무엇을 추정할 것인가?”라는 임상적 질문이 선행되어야 하며, 이를 명확히 하기 위해 Estimand의 개념이 도입되었습니다.</p>
 <ul>
-<li>주요 목적: 치료 효과(Treatment Effect)에 대한 명확한 정의와 분석 방법의 정립</li>
-<li>핵심 이슈:
+<li><strong>핵심 이슈:</strong>
 <ul>
-<li>ITT(Intention-To-Treat) 원칙의 적용 범위</li>
-<li>중도 탈락(Discontinuation)과 연구 동의 철회(Withdrawal)의 구분</li>
-<li>중간 사건(Intercurrent Events, ICE): 무작위 배정 이후 치료 과정을 변경하는 사건 (예: 치료 중단, 병용 약물 사용, 사망 등)에 대한 처리 방안</li>
-<li>분석군 설정(FAS vs PPS) 및 결과의 견고성(Robustness) 평가를 위한 민감도 분석</li>
+<li>무작위 배정 이후 치료 과정을 변경하게 만드는 <strong>중간 사건(Intercurrent Events, ICE)</strong>에 대한 처리 방안.</li>
+<li>중도 탈락(Discontinuation)과 연구 동의 철회(Withdrawal)의 구분 및 관리.</li>
+<li>결과 데이터의 견고성(Robustness) 평가를 위한 민감도 분석 체계.</li>
 </ul></li>
 </ul>
+<hr>
 </section>
-<section id="분석-체계-framework" class="level2">
-<h2 class="anchored" data-anchor-id="분석-체계-framework">2. 분석 체계 (Framework)</h2>
-<p>임상시험의 목적을 달성하기 위해 다음의 단계적 체계를 따릅니다.</p>
+<section id="임상시험의-분석-체계-framework" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험의-분석-체계-framework">2. 임상시험의 분석 체계 (Framework)</h2>
+<p>임상시험의 기획 단계에서 다음의 연쇄적 과정을 거쳐야 합니다.</p>
 <p><img src="pics/E9R1_1_pic1.png" class="img-fluid"></p>
 <ol type="1">
-<li>Estimand (분석 대상): “무엇을 추정할 것인가?”에 대한 정의입니다. 단순히 통계 수치가 아니라, 특정 조건 하에서 우리가 알고자 하는 임상적 질문의 최종 목표입니다.</li>
-<li>Estimator (추정 방법): 정의된 Estimand를 산출하기 위한 통계적 방법(예: ANCOVA, MMRM 등)입니다.</li>
-<li>Estimate (추정치): 실제 데이터를 통해 얻은 수치적 결과입니다.</li>
-<li>Sensitivity Analysis (민감도 분석): 설정된 통계적 가정이 결과의 견고성에 미치는 영향을 평가하는 분석입니다.</li>
+<li><strong>Estimand (분석 대상):</strong> 특정 임상적 질문에 답하기 위해 추정하고자 하는 최종 목표 수치.</li>
+<li><strong>Estimator (추정 방법):</strong> 정의된 Estimand를 산출하기 위한 구체적인 통계적 방법론.</li>
+<li><strong>Estimate (추정치):</strong> 실제 수집된 데이터로부터 도출된 통계적 수치.</li>
+<li><strong>Sensitivity Analysis (민감도 분석):</strong> 통계적 가정의 일관성과 결론의 정밀도를 검증하는 분석.</li>
 </ol>
+<hr>
 </section>
-<section id="estimand의-구성-요소" class="level2">
-<h2 class="anchored" data-anchor-id="estimand의-구성-요소">3. Estimand의 구성 요소</h2>
-<p>관심 있는 치료 효과를 명확히 정의하기 위해 Estimand는 다음 다섯 가지 속성을 포함해야 합니다.</p>
-<section id="a.-치료-treatment" class="level3">
-<h3 class="anchored" data-anchor-id="a.-치료-treatment">A. 치료 (Treatment)</h3>
-<p>연구에서 평가하고자 하는 치료법의 상세 내용입니다. 중간 사건 발생 시 치료의 변경이나 추가 허용 여부 등을 포함합니다.</p>
+<section id="estimand의-5가지-핵심-속성" class="level2">
+<h2 class="anchored" data-anchor-id="estimand의-5가지-핵심-속성">3. Estimand의 5가지 핵심 속성</h2>
+<p>관심 있는 치료 효과를 정밀하게 정의하기 위해 Estimand는 반드시 다음 속성들을 포함해야 합니다.</p>
+<section id="치료-treatment" class="level3">
+<h3 class="anchored" data-anchor-id="치료-treatment">(1) 치료 (Treatment)</h3>
+<p>평가 대상이 되는 치료법의 세부 내용 및 중간 사건 발생 시의 처치 규정.</p>
 </section>
-<section id="b.-대상-집단-population" class="level3">
-<h3 class="anchored" data-anchor-id="b.-대상-집단-population">B. 대상 집단 (Population)</h3>
-<p>분석에 포함될 피험자 집단입니다. 선정/제외 기준을 만족하는 전체 집단 혹은 특정 하위 집단 등을 정의합니다.</p>
+<section id="대상-집단-population" class="level3">
+<h3 class="anchored" data-anchor-id="대상-집단-population">(2) 대상 집단 (Population)</h3>
+<p>임상적 질문이 적용될 모집단과 분석에 포함될 구체적인 피험자군.</p>
 </section>
-<section id="c.-평가-변수-variable-endpoint" class="level3">
-<h3 class="anchored" data-anchor-id="c.-평가-변수-variable-endpoint">C. 평가 변수 (Variable / Endpoint)</h3>
-<p>관심 있는 임상적 결과를 측정하는 변수와 측정 시점입니다.</p>
+<section id="평가-변수-variable-endpoint" class="level3">
+<h3 class="anchored" data-anchor-id="평가-변수-variable-endpoint">(3) 평가 변수 (Variable / Endpoint)</h3>
+<p>관심 있는 임상적 결과를 측정하는 구체적인 지표와 측정 시점.</p>
 </section>
-<section id="d.-중간-사건ice-처리-전략-strategies-for-ices" class="level3">
-<h3 class="anchored" data-anchor-id="d.-중간-사건ice-처리-전략-strategies-for-ices">D. 중간 사건(ICE) 처리 전략 (Strategies for ICEs)</h3>
-<p>임상시험 중 발생하는 다양한 중간 사건을 어떻게 다룰 것인지에 대한 전략입니다. 1. 치료 방침 전략 (Treatment Policy): ICE 발생 여부와 상관없이 실제 측정된 값을 그대로 사용합니다. (ITT 원칙과 유사) 2. 가상적 전략 (Hypothetical): “만약 ICE가 발생하지 않았다면 어떤 결과가 나왔을까?”라는 가상적 상황을 가정합니다. 3. 복합 변수 전략 (Composite Variable): ICE 자체를 평가 결과의 일부(예: 실패)로 통합합니다. 4. 치료 중 전략 (While-on-Treatment): ICE가 발생하기 전까지 측정된 데이터만 사용합니다. 5. 주요 계층 전략 (Principal Stratum): 특정 ICE가 발생할(혹은 발생하지 않을) 피험자 집단에 대해서만 분석합니다.</p>
+<section id="중간-사건ice-처리-전략-strategies-for-ices" class="level3">
+<h3 class="anchored" data-anchor-id="중간-사건ice-처리-전략-strategies-for-ices">(4) 중간 사건(ICE) 처리 전략 (Strategies for ICEs)</h3>
+<p>ICE 발생 시 해당 데이터를 어떻게 처리할 것인가에 대한 전략. - <strong>치료 방침 전략 (Treatment Policy):</strong> ICE 발생과 무관하게 실제 측정된 모든 값을 있는 그대로 사용. - <strong>가상적 전략 (Hypothetical):</strong> “만약 특정 ICE가 발생하지 않았다면 어떤 결과가 나왔을까?”라는 가상적 상황 가정. - <strong>복합 변수 전략 (Composite Variable):</strong> ICE 자체를 평가 결과의 일부(예: 사망이나 탈락을 실패로 간주)로 통합. - <strong>치료 중 전략 (While-on-Treatment):</strong> ICE 발생 전까지만 측정된 데이터를 사용하여 분석.</p>
 </section>
-<section id="e.-요약-지표-population-level-summary" class="level3">
-<h3 class="anchored" data-anchor-id="e.-요약-지표-population-level-summary">E. 요약 지표 (Population-level Summary)</h3>
-<p>치료군 간의 효과 차이를 요약하는 방법입니다. (예: 평균 차이, 위험비(Hazard Ratio), 오즈비(Odds Ratio) 등)</p>
-</section>
-</section>
-<section id="요약" class="level2">
-<h2 class="anchored" data-anchor-id="요약">4. 요약</h2>
-<p>Estimand는 임상시험의 설계 단계에서부터 명확히 정의되어야 합니다. 특히 중간 사건(ICE)을 어떻게 처리할 것인지에 대한 전략이 임상적 질문의 성격과 직결되므로, 연구 목적에 가장 부합하는 전략을 선택하는 것이 중요합니다.</p>
+<section id="요약-지표-population-level-summary" class="level3">
+<h3 class="anchored" data-anchor-id="요약-지표-population-level-summary">(5) 요약 지표 (Population-level Summary)</h3>
+<p>집단 간 치료 효과 차이를 설명하는 최종 요약 수치 (예: 평균 차이, 위험비(Hazard Ratio)).</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ich2019e9r1" class="csl-entry" role="listitem">
+International Council for Harmonisation. 2019. <em>E9(R1) Addendum on Estimands and Sensitivity Analysis in Clinical Trials to the Guideline on Statistical Principles for Clinical Trials</em>. ICH.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->

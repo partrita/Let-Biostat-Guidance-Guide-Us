@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>우월성 및 비열등성 시험 간의 전환 시 고려사항 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./e9_part2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -139,14 +141,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -261,14 +261,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -281,22 +279,14 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#서론-introduction" id="toc-서론-introduction" class="nav-link active" data-scroll-target="#서론-introduction">1. 서론 (Introduction)</a>
+  <li><a href="#임상시험의-비교-유형" id="toc-임상시험의-비교-유형" class="nav-link active" data-scroll-target="#임상시험의-비교-유형">1. 임상시험의 비교 유형</a></li>
+  <li><a href="#비교-목적의-시각적-이해" id="toc-비교-목적의-시각적-이해" class="nav-link" data-scroll-target="#비교-목적의-시각적-이해">2. 비교 목적의 시각적 이해</a></li>
+  <li><a href="#비교-목적의-전환-switching" id="toc-비교-목적의-전환-switching" class="nav-link" data-scroll-target="#비교-목적의-전환-switching">3. 비교 목적의 전환 (Switching)</a>
   <ul class="collapse">
-  <li><a href="#시험군신약과-활성-대조군-간의-비교-유형" id="toc-시험군신약과-활성-대조군-간의-비교-유형" class="nav-link" data-scroll-target="#시험군신약과-활성-대조군-간의-비교-유형">시험군(신약)과 활성 대조군 간의 비교 유형</a></li>
-  <li><a href="#비교-유형-간의-전환" id="toc-비교-유형-간의-전환" class="nav-link" data-scroll-target="#비교-유형-간의-전환">비교 유형 간의 전환</a></li>
+  <li><a href="#비열등성-시험-우월성-시험으로의-해석" id="toc-비열등성-시험-우월성-시험으로의-해석" class="nav-link" data-scroll-target="#비열등성-시험-우월성-시험으로의-해석">비열등성 시험 → 우월성 시험으로의 해석</a></li>
+  <li><a href="#우월성-시험-비열등성-시험으로의-해석" id="toc-우월성-시험-비열등성-시험으로의-해석" class="nav-link" data-scroll-target="#우월성-시험-비열등성-시험으로의-해석">우월성 시험 → 비열등성 시험으로의 해석</a></li>
   </ul></li>
-  <li><a href="#시험-목적별-비교-trial-objectives" id="toc-시험-목적별-비교-trial-objectives" class="nav-link" data-scroll-target="#시험-목적별-비교-trial-objectives">2. 시험 목적별 비교 (Trial Objectives)</a>
-  <ul class="collapse">
-  <li><a href="#시각적-비교" id="toc-시각적-비교" class="nav-link" data-scroll-target="#시각적-비교">시각적 비교</a></li>
-  </ul></li>
-  <li><a href="#사전-정의의-중요성" id="toc-사전-정의의-중요성" class="nav-link" data-scroll-target="#사전-정의의-중요성">3. 사전 정의의 중요성</a></li>
-  <li><a href="#비교-목적의-전환-switching-the-objective" id="toc-비교-목적의-전환-switching-the-objective" class="nav-link" data-scroll-target="#비교-목적의-전환-switching-the-objective">4. 비교 목적의 전환 (Switching the Objective)</a>
-  <ul class="collapse">
-  <li><a href="#비열등성-시험을-우월성-시험으로-해석하는-경우" id="toc-비열등성-시험을-우월성-시험으로-해석하는-경우" class="nav-link" data-scroll-target="#비열등성-시험을-우월성-시험으로-해석하는-경우">4.1 비열등성 시험을 우월성 시험으로 해석하는 경우</a></li>
-  <li><a href="#우월성-시험을-비열등성-시험으로-해석하는-경우" id="toc-우월성-시험을-비열등성-시험으로-해석하는-경우" class="nav-link" data-scroll-target="#우월성-시험을-비열등성-시험으로-해석하는-경우">4.2 우월성 시험을 비열등성 시험으로 해석하는 경우</a></li>
-  </ul></li>
-  <li><a href="#결론-및-제언" id="toc-결론-및-제언" class="nav-link" data-scroll-target="#결론-및-제언">5. 결론 및 제언</a></li>
+  <li><a href="#실무적-권고-사항" id="toc-실무적-권고-사항" class="nav-link" data-scroll-target="#실무적-권고-사항">4. 실무적 권고 사항</a></li>
   </ul>
 </nav>
     </div>
@@ -306,6 +296,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">우월성 및 비열등성 시험 간의 전환 시 고려사항</span></h1>
+<p class="subtitle lead">통계적 가설 검정 목적의 유연한 해석과 판단 기준</p>
 </div>
 
 
@@ -322,72 +313,22 @@ window.Quarto = {
 </header>
 
 
-<section id="서론-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="서론-introduction">1. 서론 (Introduction)</h2>
-<section id="시험군신약과-활성-대조군-간의-비교-유형" class="level3">
-<h3 class="anchored" data-anchor-id="시험군신약과-활성-대조군-간의-비교-유형">시험군(신약)과 활성 대조군 간의 비교 유형</h3>
-<p>임상시험에서 신약의 유효성을 검증하기 위한 비교 유형은 크게 세 가지로 나뉩니다.</p>
+<p>임상 연구의 설계 단계에서 설정한 비교 목적(예: 우월성 시험)을 연구 결과에 따라 다른 관점(예: 비열등성)에서 재정의할 때 발생하는 통계적·임상적 원칙을 다룹니다.</p>
+<section id="임상시험의-비교-유형" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험의-비교-유형">1. 임상시험의 비교 유형</h2>
 <ul>
-<li>우월성 (Superiority): 신약이 대조군보다 뛰어남을 입증</li>
-<li>비열등성 (Non-inferiority): 신약이 대조군보다 크게 나쁘지 않음을 입증</li>
-<li>동등성 (Equivalence): 신약과 대조군의 효과 차이가 허용 범위 내에 있음을 입증</li>
+<li><strong>우월성 (Superiority):</strong> 시험약이 대조군보다 통계적으로 유의하고 임상적으로 유미한 우위에 있음을 입증합니다.</li>
+<li><strong>비열등성 (Non-inferiority):</strong> 시험약과 대조약 간의 차이가 사전에 설정한 허용 범위(Margin) 내에 있음을 입증합니다.</li>
+<li><strong>동등성 (Equivalence):</strong> 두 치료군 간의 효과 차이가 임상적으로 무시할 수 있는 수준임을 입증합니다.</li>
 </ul>
+<hr>
 </section>
-<section id="비교-유형-간의-전환" class="level3">
-<h3 class="anchored" data-anchor-id="비교-유형-간의-전환">비교 유형 간의 전환</h3>
-<p>상황에 따라 초기 설정한 비교 목적을 다음과 같이 전환해야 할 경우가 발생합니다.</p>
+<section id="비교-목적의-시각적-이해" class="level2">
+<h2 class="anchored" data-anchor-id="비교-목적의-시각적-이해">2. 비교 목적의 시각적 이해</h2>
+<p>치료 효과의 차이는 주로 95% 신뢰구간(Confidence Interval)을 통해 판단합니다.</p>
 <ul>
-<li>우월성 시험 → 비열등성 시험으로 해석</li>
-<li>비열등성 시험 → 우월성 시험으로 해석</li>
-<li>동등성 시험 → 더 좁은 마진의 동등성 확인</li>
-</ul>
-<p>본 문서는 단일 일차 평가변수를 사용하는 유효성 시험의 관점에서, 이러한 전환 시 고려해야 할 통계적·임상적 원칙을 다룹니다.</p>
-</section>
-</section>
-<section id="시험-목적별-비교-trial-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="시험-목적별-비교-trial-objectives">2. 시험 목적별 비교 (Trial Objectives)</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">비교 유형</th>
-<th style="text-align: left;">우월성 시험 (Superiority)</th>
-<th style="text-align: left;">동등성 시험 (Equivalence)</th>
-<th style="text-align: left;">비열등성 시험 (Non-inferiority)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">목적</td>
-<td style="text-align: left;">시험약이 대조약보다 임상적으로 우월함을 확인</td>
-<td style="text-align: left;">두 치료군 간의 효과 차이가 임상적으로 유의하지 않음을 확인</td>
-<td style="text-align: left;">시험약이 대조약보다 효과가 작지 않음(비열등함)을 확인</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">검정 방법</td>
-<td style="text-align: left;">주로 p-value 확인 (p &lt; 0.05)</td>
-<td style="text-align: left;">주로 신뢰구간(CI) 사용</td>
-<td style="text-align: left;">주로 신뢰구간(CI) 및 하한선 확인</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">신뢰구간 및 허용 한계(Δ)</td>
-<td style="text-align: left;">95% 신뢰구간이 0을 포함하지 않아야 함. 별도의 허용 한계(Δ)는 없음.</td>
-<td style="text-align: left;">95% 신뢰구간이 (-Δ, +Δ) 사이에 완전히 포함되어야 함.</td>
-<td style="text-align: left;">95% 신뢰구간의 하한값이 -Δ보다 오른쪽에 있어야 함.</td>
-</tr>
-</tbody>
-</table>
-<section id="시각적-비교" class="level3">
-<h3 class="anchored" data-anchor-id="시각적-비교">시각적 비교</h3>
-<ul>
-<li>신뢰구간: 95% 양측 신뢰구간 기준</li>
-<li>좌측: 대조군 효과 우세 / 우측: 시험군 효과 우세 (<span class="math inline">\(\mu_T - \mu_C\)</span>)</li>
-<li>Δ (Delta): 임상적으로 허용 가능한 최대 차이값 (마진)</li>
+<li><strong>Δ (Delta):</strong> 임상적으로 수용 가능한 최대 차이값(마진).</li>
+<li><strong><span class="math inline">\(\mu_T - \mu_C\)</span>:</strong> 시험군과 대조군 간의 평균 효과 차이.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -395,73 +336,32 @@ window.Quarto = {
 <figcaption>통계적 유의성과 신뢰구간</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/analysis_equivalence.png" class="img-fluid figure-img"></p>
-<figcaption>동등성 분석 도식</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/analysis_noninferiority.png" class="img-fluid figure-img"></p>
-<figcaption>비열등성 분석 도식</figcaption>
-</figure>
-</div>
+<hr>
 </section>
-</section>
-<section id="사전-정의의-중요성" class="level2">
-<h2 class="anchored" data-anchor-id="사전-정의의-중요성">3. 사전 정의의 중요성</h2>
-<p>시험 설계 단계에서 다음 사항들이 사전에 정의되어야 합니다.</p>
+<section id="비교-목적의-전환-switching" class="level2">
+<h2 class="anchored" data-anchor-id="비교-목적의-전환-switching">3. 비교 목적의 전환 (Switching)</h2>
+<section id="비열등성-시험-우월성-시험으로의-해석" class="level3">
+<h3 class="anchored" data-anchor-id="비열등성-시험-우월성-시험으로의-해석">비열등성 시험 → 우월성 시험으로의 해석</h3>
+<p>이 경우에는 통계적으로 <strong>폐쇄 검정 절차(Closed Test Procedure)</strong>의 틀 내에서 작동하므로, 별도의 다중성 보정 없이도 제1종 오류 제어가 가능합니다.</p>
 <ul>
-<li>대조군의 치료법, 용량, 대상자 및 평가변수의 적절성</li>
-<li>통계적 검정력에 근거한 표본 크기 산출</li>
-<li>비열등성 및 동등성 마진(Δ)의 설정 근거</li>
-<li>프로토콜 내 명확한 통계 분석 계획</li>
-<li>시험의 민감도(Sensitivity) 확보 여부</li>
+<li><strong>신뢰구간 확인:</strong> 비열등성 마진을 만족하는 동시에, 신뢰구간의 하한값이 0보다 큰 경우 우월성을 입증한 것으로 간주할 수 있습니다.</li>
+<li><strong>분석 집단:</strong> ITT 원칙에 기반한 FAS 분석이 주요 근거가 됩니다.</li>
 </ul>
 </section>
-<section id="비교-목적의-전환-switching-the-objective" class="level2">
-<h2 class="anchored" data-anchor-id="비교-목적의-전환-switching-the-objective">4. 비교 목적의 전환 (Switching the Objective)</h2>
-<section id="비열등성-시험을-우월성-시험으로-해석하는-경우" class="level3">
-<h3 class="anchored" data-anchor-id="비열등성-시험을-우월성-시험으로-해석하는-경우">4.1 비열등성 시험을 우월성 시험으로 해석하는 경우</h3>
-<p>이 전환은 통계적으로 폐쇄 검정 절차(Closed Test Procedure)에 해당하므로, 별도의 다중성 조절 없이도 제1종 오류(Type 1 Error)를 제어할 수 있습니다.</p>
+<section id="우월성-시험-비열등성-시험으로의-해석" class="level3">
+<h3 class="anchored" data-anchor-id="우월성-시험-비열등성-시험으로의-해석">우월성 시험 → 비열등성 시험으로의 해석</h3>
+<p>우월성 검정에 실패한 후 비열등성을 주장하는 경우로, 훨씬 엄격한 검토가 필요합니다.</p>
 <ul>
-<li>대조군의 적절성: 대조군이 해당 적응증에서 유효성이 확립된 약제여야 하며, ’우월성’에 대한 기준이 명확해야 합니다.</li>
-<li>검정력: 비열등성 시험은 대조군과의 작은 차이도 정밀하게 보기 위해 대규모로 설계되는 경우가 많아, 우월성을 입증하기에 충분한 정밀도를 가질 수 있습니다.</li>
-<li>분석 집단: 우월성 입증을 위해서는 ITT 원칙에 따른 FAS(Full Analysis Set) 분석 결과가 핵심적인 역할을 합니다.</li>
-<li>신뢰도: 비열등성 시험에서 우월성이 입증되면 시험의 민감도가 함께 증명되는 셈이므로 결론의 신뢰도가 높아집니다.</li>
+<li><strong>마진(Δ)의 사전 정의:</strong> 시험 종료 후 사후적으로 마진을 설정하는 것은 분석자의 주관이 개입될 수 있어 편향의 위험이 큽니다. 가급적 프로토콜 단계에서 사전에 정의되어야 합니다.</li>
+<li><strong>검정의 민감도:</strong> 해당 시험이 실제 차이를 식별해낼 수 있는 충분한 민감도를 가지고 수행되었는지(예: 대조군의 유효성 유지) 성립해야 합니다.</li>
+<li><strong>일관된 결과:</strong> FAS와 PPS 집단 모두에서 비열등성 마진을 만족하는 일치된 결과가 권장됩니다.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/treatment_difference.png" class="img-fluid figure-img"></p>
-<figcaption>치료 효과 차이 분석 1</figcaption>
-</figure>
-</div>
-</section>
-<section id="우월성-시험을-비열등성-시험으로-해석하는-경우" class="level3">
-<h3 class="anchored" data-anchor-id="우월성-시험을-비열등성-시험으로-해석하는-경우">4.2 우월성 시험을 비열등성 시험으로 해석하는 경우</h3>
-<p>우월성 입증에 실패한 후 비열등성을 주장하려는 경우로, 4.1의 경우보다 훨씬 엄격한 기준이 적용됩니다.</p>
-<ul>
-<li>마진(Δ)의 사후 설정 문제: 시험 종료 후 마진을 설정하는 것은 분석자의 주관이 개입될 수 있어 편향의 위험이 큽니다. 가급적 설계 단계에서 마진을 사전에 정의해두는 것이 좋습니다.</li>
-<li>시험의 민감도: 우월성 시험은 차이를 입증하지 못했을 때 그것이 실제 효과가 없어서인지, 아니면 시험의 정밀도(민감도)가 낮아서인지를 구별하기 어렵습니다. 따라서 비열등성을 주장하기 위해서는 해당 시험이 효과 차이를 감별해낼 충분한 민감도를 가졌음을 입증해야 합니다.</li>
-<li>분석 집단: 비열등성 판단 시에는 FAS와 PP(Per Protocol) 집단 모두에서 일관된 결과가 나오는지 확인하는 것이 매우 중요합니다.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/treatment_difference2.png" class="img-fluid figure-img"></p>
-<figcaption>치료 효과 차이 분석 2</figcaption>
-</figure>
-</div>
+<hr>
 </section>
 </section>
-<section id="결론-및-제언" class="level2">
-<h2 class="anchored" data-anchor-id="결론-및-제언">5. 결론 및 제언</h2>
-<p>우월성 시험과 비열등성 시험 간의 전환은 결과를 신뢰구간(Confidence Interval) 관점에서 접근할 때 가장 명확하게 해석될 수 있습니다.</p>
-<ol type="1">
-<li>비열등성 → 우월성: 적절히 설계된 시험이라면 전환에 큰 무리가 없으며, 결론의 신뢰성을 높여줍니다.</li>
-<li>우월성 → 비열등성: 사후에 마진을 설정해야 하는 어려움과 시험의 민감도 부족 가능성 때문에 신중해야 합니다. 가급적 설계 단계에서 비열등성 마진을 함께 고려하는 것이 바람직합니다.</li>
-</ol>
-<p>결국, 가장 좋은 방법은 시험 설계 단계에서 비열등성과 우월성을 모두 순차적으로 검정할 수 있도록 전향적인 분석 계획을 수립하는 것입니다.</p>
+<section id="실무적-권고-사항" class="level2">
+<h2 class="anchored" data-anchor-id="실무적-권고-사항">4. 실무적 권고 사항</h2>
+<p>가장 바람직한 접근법은 연구 설계 단계에서 우월성과 비열등성을 동시에 고려하여, 순차적 검정(Sequential Testing) 체계를 수립함으로써 사후 해석의 논란을 최소화하는 것입니다.</p>
 
 
 </section>

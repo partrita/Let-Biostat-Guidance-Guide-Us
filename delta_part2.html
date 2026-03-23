@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./delta_part1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -139,14 +160,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -261,14 +280,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -281,18 +298,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#임상시험의-목표-차이-명시-방법" id="toc-임상시험의-목표-차이-명시-방법" class="nav-link active" data-scroll-target="#임상시험의-목표-차이-명시-방법">임상시험의 목표 차이 명시 방법</a></li>
-  <li><a href="#표본-수-산출-시-보고-항목-table-1-권고안" id="toc-표본-수-산출-시-보고-항목-table-1-권고안" class="nav-link" data-scroll-target="#표본-수-산출-시-보고-항목-table-1-권고안">표본 수 산출 시 보고 항목 (Table 1 권고안)</a>
+  <li><a href="#임상시험-목표-차이-명시의-두-가지-관점" id="toc-임상시험-목표-차이-명시의-두-가지-관점" class="nav-link active" data-scroll-target="#임상시험-목표-차이-명시의-두-가지-관점">1. 임상시험 목표 차이 명시의 두 가지 관점</a></li>
+  <li><a href="#표본-수-산출-시-보고-항목-table-1-권고" id="toc-표본-수-산출-시-보고-항목-table-1-권고" class="nav-link" data-scroll-target="#표본-수-산출-시-보고-항목-table-1-권고">2. 표본 수 산출 시 보고 항목 (Table 1 권고)</a>
   <ul class="collapse">
-  <li><a href="#핵심-보고-항목-core-items" id="toc-핵심-보고-항목-core-items" class="nav-link" data-scroll-target="#핵심-보고-항목-core-items">핵심 보고 항목 (Core Items)</a></li>
+  <li><a href="#핵심-보고-항목-core-reporting-items" id="toc-핵심-보고-항목-core-reporting-items" class="nav-link" data-scroll-target="#핵심-보고-항목-core-reporting-items">핵심 보고 항목 (Core Reporting Items)</a></li>
   </ul></li>
-  <li><a href="#목표-차이-및-중요-차이-파악-방법-box-2" id="toc-목표-차이-및-중요-차이-파악-방법-box-2" class="nav-link" data-scroll-target="#목표-차이-및-중요-차이-파악-방법-box-2">목표 차이 및 중요 차이 파악 방법 (Box 2)</a>
+  <li><a href="#목표-차이-파악-방법론-box-2" id="toc-목표-차이-파악-방법론-box-2" class="nav-link" data-scroll-target="#목표-차이-파악-방법론-box-2">3. 목표 차이 파악 방법론 (Box 2)</a>
   <ul class="collapse">
-  <li><a href="#중요-차이-파악을-위한-방법-anchor-distribution" id="toc-중요-차이-파악을-위한-방법-anchor-distribution" class="nav-link" data-scroll-target="#중요-차이-파악을-위한-방법-anchor-distribution">중요 차이 파악을 위한 방법 (Anchor &amp; Distribution)</a></li>
-  <li><a href="#표준화된-효과-크기-standardised-effect-size" id="toc-표준화된-효과-크기-standardised-effect-size" class="nav-link" data-scroll-target="#표준화된-효과-크기-standardised-effect-size">표준화된 효과 크기 (Standardised Effect Size)</a></li>
-  <li><a href="#현실적인-차이-파악을-위한-방법" id="toc-현실적인-차이-파악을-위한-방법" class="nav-link" data-scroll-target="#현실적인-차이-파악을-위한-방법">현실적인 차이 파악을 위한 방법</a></li>
+  <li><a href="#중요-차이-파악을-위한-기법-anchor-distribution" id="toc-중요-차이-파악을-위한-기법-anchor-distribution" class="nav-link" data-scroll-target="#중요-차이-파악을-위한-기법-anchor-distribution">중요 차이 파악을 위한 기법 (Anchor &amp; Distribution)</a></li>
+  <li><a href="#현실적인-차이-파악을-위한-기법" id="toc-현실적인-차이-파악을-위한-기법" class="nav-link" data-scroll-target="#현실적인-차이-파악을-위한-기법">현실적인 차이 파악을 위한 기법</a></li>
   </ul></li>
-  <li><a href="#요약-및-결론" id="toc-요약-및-결론" class="nav-link" data-scroll-target="#요약-및-결론">요약 및 결론</a></li>
+  <li><a href="#요약-및-제언" id="toc-요약-및-제언" class="nav-link" data-scroll-target="#요약-및-제언">4. 요약 및 제언</a></li>
   </ul>
 </nav>
     </div>
@@ -302,6 +318,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./delta_part1.html">목표 차이 설정 및 표본수 산출 (DELTA2)</a></li><li class="breadcrumb-item"><a href="./delta_part2.html"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span></h1>
+<p class="subtitle lead">주요 보고 항목과 목표 차이 추정 방법론</p>
 </div>
 
 
@@ -318,69 +335,66 @@ window.Quarto = {
 </header>
 
 
-<section id="임상시험의-목표-차이-명시-방법" class="level2">
-<h2 class="anchored" data-anchor-id="임상시험의-목표-차이-명시-방법">임상시험의 목표 차이 명시 방법</h2>
-<p>임상시험의 목표 차이를 설정할 때 다음 두 가지 관점에서 접근할 수 있습니다. - 중요성: 하나 이상의 이해관계자 집단(환자, 의료진 등)에게 의미 있는 수준인가? - 현실성: 기존 근거 또는 전문가 의견에 비추어 달성 가능한 수준인가?</p>
-<p>확증적 임상시험(3상 등) 설계 시에는 목표 차이가 중요하면서도 현실적이어야 합니다.</p>
+<p>임상시험 목표 차이 설정과 표본 수 산출 근거를 보다 명확하고 투명하게 보고해야 한다는 점이 DELTA2 지침의 핵심 메시지입니다 <span class="citation" data-cites="cook2018delta2">(<a href="references.html#ref-cook2018delta2" role="doc-biblioref"><span class="nocase">Cook et al.</span> 2018</a>)</span>.</p>
+<section id="임상시험-목표-차이-명시의-두-가지-관점" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-목표-차이-명시의-두-가지-관점">1. 임상시험 목표 차이 명시의 두 가지 관점</h2>
+<p>목표 차이를 설정할 때는 다음 두 가지 관점에서 접근할 것을 권장합니다.</p>
+<ol type="1">
+<li><strong>중요성 (Importance):</strong> 환자나 의료진 등 핵심 이해관계자에게 의미 있는 수준인가?</li>
+<li><strong>현실성 (Realism):</strong> 기존 근거 또는 전문가 의견에 비추어 달성 가능한 수준인가?</li>
+</ol>
 <hr>
 </section>
-<section id="표본-수-산출-시-보고-항목-table-1-권고안" class="level2">
-<h2 class="anchored" data-anchor-id="표본-수-산출-시-보고-항목-table-1-권고안">표본 수 산출 시 보고 항목 (Table 1 권고안)</h2>
-<p>우월성 검정을 수행하는 임상시험의 표본 수 산출 결과 보고 시 포함되어야 할 핵심 항목들입니다.</p>
-<section id="핵심-보고-항목-core-items" class="level3">
-<h3 class="anchored" data-anchor-id="핵심-보고-항목-core-items">핵심 보고 항목 (Core Items)</h3>
+<section id="표본-수-산출-시-보고-항목-table-1-권고" class="level2">
+<h2 class="anchored" data-anchor-id="표본-수-산출-시-보고-항목-table-1-권고">2. 표본 수 산출 시 보고 항목 (Table 1 권고)</h2>
+<p>우월성 검정을 수행하는 임상시험에서는 다음 5가지 핵심 항목을 반드시 보고해야 합니다.</p>
+<section id="핵심-보고-항목-core-reporting-items" class="level3">
+<h3 class="anchored" data-anchor-id="핵심-보고-항목-core-reporting-items">핵심 보고 항목 (Core Reporting Items)</h3>
 <ol type="1">
-<li>주 평가변수 (Primary Outcome): 표본 수 산출의 기준이 되는 변수</li>
-<li>통계적 유의수준 및 검정력: 통상 양측 유의수준 5%, 검정력 80%~90% 설정</li>
-<li>결과변수 유형에 따른 목표 차이 명시:
+<li><strong>주 평가변수 (Primary Outcome):</strong> 표본 수 산출의 기준이 되는 일차 변수.</li>
+<li><strong>통계적 유의수준 및 검정력:</strong> 통상 양측 유의수준 5%와 검정력 80%~90%.</li>
+<li><strong>결과변수 유형에 따른 수치 명시:</strong>
 <ul>
-<li>이분형 (Binary): 절대적 차이(Absolute) 또는 상대적 효과(Relative)와 함께 중재군과 대조군의 예상 반응률 명시</li>
-<li>연속형 (Continuous): 평균 차이, 공통 표준편차(Standard Deviation), 그리고 표준화된 효과 크기(Standardised Effect Size) 명시 <span class="math display">\[Effect Size = \frac{\mu_{diff}}{\sigma}\]</span></li>
-<li>생존 분석 (Time-to-event): 절대적/상대적 차이와 함께 다음 4가지 사항을 포함 (대조군 사건 발생률, 추적 관찰 기간, 생존 분포, 모집 기간)</li>
+<li>이분형 (Binary): 절대적/상대적 효과 및 군별 예상 반응률.</li>
+<li>연속형 (Continuous): 평균 차이, 공통 표준편차, 표준화된 효과 크기(<span class="math inline">\(\mu_{diff}/\sigma\)</span>).</li>
+<li>생존 분석 (Time-to-event): 군별 사건 발생률, 추적 기간, 생존 분포.</li>
 </ul></li>
-<li>할당 비율 (Allocation Ratio): 시험군과 대조군의 배정 비율 (예: 1:1)</li>
-<li>기타 가정 사항: 중도 탈락 고려, 다중 검정 보정 여부, 결측치 처리 방법, 사용된 산출 공식 및 민감도 분석 결과</li>
+<li><strong>할당 비율 (Allocation Ratio):</strong> 시험군과 대조군의 배정 비율 (예: 1:1).</li>
+<li><strong>기타 가정 사항:</strong> 중도 탈락 고려, 다중 검정 보정, 결측치 처리 방법, 산출 공식.</li>
 </ol>
 <hr>
 </section>
 </section>
-<section id="목표-차이-및-중요-차이-파악-방법-box-2" class="level2">
-<h2 class="anchored" data-anchor-id="목표-차이-및-중요-차이-파악-방법-box-2">목표 차이 및 중요 차이 파악 방법 (Box 2)</h2>
-<p>임상적으로 중요한 차이(Important Difference)나 현실적인 차이(Realistic Difference)를 파악하기 위해 다음 방법론들을 활용할 수 있습니다.</p>
-<section id="중요-차이-파악을-위한-방법-anchor-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="중요-차이-파악을-위한-방법-anchor-distribution">중요 차이 파악을 위한 방법 (Anchor &amp; Distribution)</h3>
+<section id="목표-차이-파악-방법론-box-2" class="level2">
+<h2 class="anchored" data-anchor-id="목표-차이-파악-방법론-box-2">3. 목표 차이 파악 방법론 (Box 2)</h2>
+<p>임상적으로 중요한 차이(Important Difference)나 현실적인 차이(Realistic Difference)를 추정하기 위해 다음의 방법론을 활용할 수 있습니다.</p>
+<section id="중요-차이-파악을-위한-기법-anchor-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="중요-차이-파악을-위한-기법-anchor-distribution">중요 차이 파악을 위한 기법 (Anchor &amp; Distribution)</h3>
 <ul>
-<li>앵커 방법 (Anchor): 환자나 의료진의 판단을 외부 지표(Anchor)로 삼아, 해당 지표의 변화와 결과변수 점수의 변화 사이의 관계를 파악하는 방식</li>
-<li>분포 방법 (Distribution): 측정 도구 자체의 정밀도나 변동성을 기준으로, 우연히 발생하기 어려운 최소한의 변화 수준을 파악하는 방식</li>
-<li>경제성 평가 (Health Economic): 투입 비용 대비 건강 이득의 가치를 평가하여 임상적으로 수용 가능한 차이를 결정하는 방식</li>
+<li><strong>앵커 방법 (Anchor):</strong> 외부 지표(환자나 의료진의 평가)의 변화와 결과변수 점수 변화 사이의 관계를 파약하여 설정하는 방식.</li>
+<li><strong>분포 방법 (Distribution):</strong> 측정 도구의 변동성과 정밀도를 기준으로, 통계적 분포상 최소한의 의미 있는 변화 수준을 설정하는 방식.</li>
+<li><strong>경제성 평가 (Health Economic):</strong> 투입 비용 대비 건강 이득의 가치를 평가하여 임상적으로 수용 가능한 차이를 결정하는 방식.</li>
 </ul>
 </section>
-<section id="표준화된-효과-크기-standardised-effect-size" class="level3">
-<h3 class="anchored" data-anchor-id="표준화된-효과-크기-standardised-effect-size">표준화된 효과 크기 (Standardised Effect Size)</h3>
+<section id="현실적인-차이-파악을-위한-기법" class="level3">
+<h3 class="anchored" data-anchor-id="현실적인-차이-파악을-위한-기법">현실적인 차이 파악을 위한 기법</h3>
 <ul>
-<li>Cohen’s d: 두 군의 평균 차이를 표준편차로 나눈 값으로, 효과의 크기를 객관적으로 비교할 때 사용합니다.
-<ul>
-<li>0.2: 작음 (Small)</li>
-<li>0.5: 중간 (Medium)</li>
-<li>0.8: 큼 (Large)</li>
-</ul></li>
+<li><strong>예비 연구 (Pilot Study):</strong> 관련 근거가 부족할 때 사전에 소규모 연구를 통해 변동성을 파악하는 방식.</li>
+<li><strong>전문가 의견 수렴 (Opinion Seeking):</strong> 의료 현장의 실무자 및 환자 집단으로부터 체계적으로 의견을 구하는 방식.</li>
+<li><strong>기존 증거 검토 (Review of Evidence Base):</strong> 메타분석이나 체계적 문헌고찰의 정량적 결과를 활용하는 방식.</li>
 </ul>
 </section>
-<section id="현실적인-차이-파악을-위한-방법" class="level3">
-<h3 class="anchored" data-anchor-id="현실적인-차이-파악을-위한-방법">현실적인 차이 파악을 위한 방법</h3>
-<ul>
-<li>예비 연구 (Pilot Study): 관련 근거가 부족할 때 적절한 목표 차이를 탐색하고 변동성을 파악하기 위해 소규모로 수행하는 연구</li>
-<li>전문가 의견 수렴 (Opinion Seeking): 의료 전문가, 환자 등으로부터 임상적 의미를 지니는 차이에 대한 의견을 구하는 방식</li>
-<li>기존 증거 검토 (Review of Evidence Base): 체계적 문헌고찰이나 메타분석 결과를 바탕으로 현실적인 차이값을 도출하는 방식</li>
-</ul>
-<hr>
 </section>
-</section>
-<section id="요약-및-결론" class="level2">
-<h2 class="anchored" data-anchor-id="요약-및-결론">요약 및 결론</h2>
-<p>DELTA2 지침의 핵심 메시지는 목표 차이 설정과 표본 수 산출 근거를 보다 명확하고 투명하게 보고해야 한다는 것입니다. 통계적으로 유의하든 그렇지 않든, 임상시험 결과의 해석은 설정된 목표 차이를 기반으로 이루어집니다. 따라서 연구 설계 단계에서부터 이해관계자들의 관점을 반영한 타당한 목표 차이를 설정하고 이를 문서화하는 노력이 필요합니다.</p>
+<section id="요약-및-제언" class="level2">
+<h2 class="anchored" data-anchor-id="요약-및-제언">4. 요약 및 제언</h2>
+<p>DELTA2 지침은 연구 과정의 투명성을 강조합니다. 따라서 설정된 목표 차이가 왜 해당 수준으로 정해졌는지에 대한 정당한 근거를 상세히 문서화해야 합니다.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-cook2018delta2" class="csl-entry" role="listitem">
+<span class="nocase">Cook, Jonathan A, Steven A Julious, William Sones, et al.</span> 2018. <span>“DELTA2 Guidance on Choosing the Target Difference and Undertaking and Reporting the Sample Size Calculation for a Randomised Controlled Trial.”</span> <em>BMJ</em> 363: k3750. <a href="https://doi.org/10.1136/bmj.k3750">https://doi.org/10.1136/bmj.k3750</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

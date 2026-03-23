@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./e9r1_part1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,14 +131,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,14 +251,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -252,20 +269,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#임상시험-설계-및-수행에-미치는-영향" id="toc-임상시험-설계-및-수행에-미치는-영향" class="nav-link active" data-scroll-target="#임상시험-설계-및-수행에-미치는-영향">4. 임상시험 설계 및 수행에 미치는 영향</a>
+  <li><a href="#임상시험-설계-및-데이터-수집에-미치는-영향" id="toc-임상시험-설계-및-데이터-수집에-미치는-영향" class="nav-link active" data-scroll-target="#임상시험-설계-및-데이터-수집에-미치는-영향">1. 임상시험 설계 및 데이터 수집에 미치는 영향</a>
   <ul class="collapse">
   <li><a href="#설계의-기초가-되는-estimand" id="toc-설계의-기초가-되는-estimand" class="nav-link" data-scroll-target="#설계의-기초가-되는-estimand">설계의 기초가 되는 Estimand</a></li>
-  <li><a href="#데이터-수집-및-누락-관리" id="toc-데이터-수집-및-누락-관리" class="nav-link" data-scroll-target="#데이터-수집-및-누락-관리">데이터 수집 및 누락 관리</a></li>
-  <li><a href="#표본-수-산출-sample-size" id="toc-표본-수-산출-sample-size" class="nav-link" data-scroll-target="#표본-수-산출-sample-size">표본 수 산출 (Sample Size)</a></li>
   </ul></li>
-  <li><a href="#분석-및-민감도-분석-analysis-sensitivity" id="toc-분석-및-민감도-분석-analysis-sensitivity" class="nav-link" data-scroll-target="#분석-및-민감도-분석-analysis-sensitivity">5. 분석 및 민감도 분석 (Analysis &amp; Sensitivity)</a>
+  <li><a href="#분석-및-민감도-분석-analysiss-sensitivity" id="toc-분석-및-민감도-분석-analysiss-sensitivity" class="nav-link" data-scroll-target="#분석-및-민감도-분석-analysiss-sensitivity">2. 분석 및 민감도 분석 (Analysiss &amp; Sensitivity)</a>
   <ul class="collapse">
   <li><a href="#주-분석-main-estimation" id="toc-주-분석-main-estimation" class="nav-link" data-scroll-target="#주-분석-main-estimation">주 분석 (Main Estimation)</a></li>
   <li><a href="#민감도-분석-sensitivity-analysis" id="toc-민감도-분석-sensitivity-analysis" class="nav-link" data-scroll-target="#민감도-분석-sensitivity-analysis">민감도 분석 (Sensitivity Analysis)</a></li>
-  <li><a href="#보충-분석-supplementary-analysis" id="toc-보충-분석-supplementary-analysis" class="nav-link" data-scroll-target="#보충-분석-supplementary-analysis">보충 분석 (Supplementary Analysis)</a></li>
   </ul></li>
-  <li><a href="#문서화-documentation" id="toc-문서화-documentation" class="nav-link" data-scroll-target="#문서화-documentation">6. 문서화 (Documentation)</a></li>
-  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론">결론</a></li>
+  <li><a href="#문서화-및-연구-계획서-반영" id="toc-문서화-및-연구-계획서-반영" class="nav-link" data-scroll-target="#문서화-및-연구-계획서-반영">3. 문서화 및 연구 계획서 반영</a></li>
   </ul>
 </nav>
     </div>
@@ -275,6 +288,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9r1_part1.html">Estimand 및 민감도 분석 (E9R1)</a></li><li class="breadcrumb-item"><a href="./e9r1_part2.html"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span></h1>
+<p class="subtitle lead">민감도 분석과 데이터의 견고성 평가 방안</p>
 </div>
 
 
@@ -291,57 +305,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>본 섹션에서는 정의된 Estimand가 임상시험의 설계, 수행 및 분석 전반에 미치는 실질적인 영향에 대해 다룹니다.</p>
-<section id="임상시험-설계-및-수행에-미치는-영향" class="level2">
-<h2 class="anchored" data-anchor-id="임상시험-설계-및-수행에-미치는-영향">4. 임상시험 설계 및 수행에 미치는 영향</h2>
+<p>E9(R1) 가이드라인은 정의된 <strong>Estimand(추정 대상)</strong>를 바탕으로 시험의 설계와 분석이 하나의 임상적 질문을 향해 완벽하게 정렬되어야 함을 강조합니다 <span class="citation" data-cites="ich2019e9r1">(<a href="references.html#ref-ich2019e9r1" role="doc-biblioref">International Council for Harmonisation 2019</a>)</span>.</p>
+<section id="임상시험-설계-및-데이터-수집에-미치는-영향" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-설계-및-데이터-수집에-미치는-영향">1. 임상시험 설계 및 데이터 수집에 미치는 영향</h2>
 <section id="설계의-기초가-되는-estimand" class="level3">
 <h3 class="anchored" data-anchor-id="설계의-기초가-되는-estimand">설계의 기초가 되는 Estimand</h3>
-<p>하나의 임상시험에서 여러 분석 대상(Estimand)이 존재할 수 있지만, 시험의 주된 목적을 반영하는 핵심 Estimand를 기반으로 설계가 이루어져야 합니다. 이는 포함/제외 기준, 병용 약물 허용 여부, 데이터 수집 방법 결정의 기준이 됩니다.</p>
-</section>
-<section id="데이터-수집-및-누락-관리" class="level3">
-<h3 class="anchored" data-anchor-id="데이터-수집-및-누락-관리">데이터 수집 및 누락 관리</h3>
+<p>하나의 임상시험에서 여러 가지 분석 대상이 존재할 수 있지만, 연구의 일차적 목적을 나타내는 <strong>핵심 Estimand</strong>를 기반으로 선정/제외 기준 및 데이터 수집 계획이 결정되어야 합니다.</p>
 <ul>
-<li>모든 피험자의 데이터를 완벽하게 수집하는 것은 현실적으로 불가능합니다.</li>
-<li>치료 중단(ICE)이 발생하더라도 가능한 한 피험자의 건강 상태를 추적 관찰하는 것이 권장됩니다.</li>
-<li>사망과 같은 사건은 ’누락’이 아니라 분석 전략에 따라 적절히 처리되어야 하는 중간 사건입니다.</li>
-<li>누락 이유 기록: 데이터가 왜 누락되었는지(예: 효능 부족으로 인한 중단, 연락 두절 등)를 명확히 기록해야 분석의 타당성을 높일 수 있습니다.</li>
+<li><strong>데이터 수집 가이드:</strong> 치료 중단과 같은 중간 사건(ICE)이 발생하더라도 가능한 한 피험자의 상태를 지속적으로 관찰하는 것을 권장합니다.</li>
+<li><strong>사망 사건의 처리:</strong> 사망은 단순히 데이터 누락이 아니라 해당 Estimand 전략에 따라 적절히 처리되어야 하는 중요한 사건입니다.</li>
+<li><strong>누락 사유 기록:</strong> 데이터 유실 시 그 이유를 명확하게 분류하여 기록하는 것이 분석의 정당성을 뒷받침합니다.</li>
 </ul>
-</section>
-<section id="표본-수-산출-sample-size" class="level3">
-<h3 class="anchored" data-anchor-id="표본-수-산출-sample-size">표본 수 산출 (Sample Size)</h3>
-<p>표본 수 계산은 명확하게 정의된 치료 효과(Estimand)에 기반해야 합니다. 특히 모든 대상자의 정보가 분석에 포함되고 중간 사건(ICE)까지 고려된 상태라면, 중도 탈락률을 단순히 고려하여 표본 수를 무리하게 늘릴 필요는 없습니다.</p>
+<hr>
 </section>
 </section>
-<section id="분석-및-민감도-분석-analysis-sensitivity" class="level2">
-<h2 class="anchored" data-anchor-id="분석-및-민감도-분석-analysis-sensitivity">5. 분석 및 민감도 분석 (Analysis &amp; Sensitivity)</h2>
+<section id="분석-및-민감도-분석-analysiss-sensitivity" class="level2">
+<h2 class="anchored" data-anchor-id="분석-및-민감도-분석-analysiss-sensitivity">2. 분석 및 민감도 분석 (Analysiss &amp; Sensitivity)</h2>
 <section id="주-분석-main-estimation" class="level3">
 <h3 class="anchored" data-anchor-id="주-분석-main-estimation">주 분석 (Main Estimation)</h3>
-<p>모든 분석 방법은 특정 가정에 의존합니다. 사용된 가정은 명시적이고 타당해야 하며, 선택된 전략(Treatment Policy, Hypothetical 등)에 따라 적절한 분석 도구(MMRM 등)를 선택해야 합니다.</p>
+<p>일차적으로 정의된 Estimand를 산출하는 분석입니다. 선택된 전략(Treatment Policy 등)에 적합한 통계적 도구(예: MMRM)를 사용해야 합니다.</p>
 </section>
 <section id="민감도-분석-sensitivity-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="민감도-분석-sensitivity-analysis">민감도 분석 (Sensitivity Analysis)</h3>
-<p>민감도 분석은 주 분석의 결론이 통계적 가정의 변화에도 얼마나 견고한지(Robustness)를 평가하는 과정입니다. - 규제 승인을 위한 주 분석 결과에 대해 반드시 민감도 분석 계획을 사전에 수립해야 합니다. - 누락된 데이터의 처리에 대한 가정을 변경해 가며 결과의 일관성을 확인합니다. - 단순한 재분석이 아니라, 결론의 신뢰도를 뒷받침하는 핵심적인 통계적 검증 단계입니다.</p>
-</section>
-<section id="보충-분석-supplementary-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="보충-분석-supplementary-analysis">보충 분석 (Supplementary Analysis)</h3>
+<p>민감도 분석은 주 분석의 결과가 통계적 가정의 미세한 변화에도 얼마나 견고한지(Robustness)를 검증하는 과정입니다.</p>
 <ul>
-<li>데이터를 보다 입체적으로 이해하기 위해 수행하는 분석입니다.</li>
-<li>민감도 분석보다는 낮은 우선순위를 가지며, 결과의 해석을 돕는 보조적인 역할을 합니다.</li>
-<li>FAS와 PPS 결과의 일관성을 확인하는 것도 보충 분석의 좋은 예입니다.</li>
+<li><strong>중요성:</strong> 규제 승인을 위한 주 분석 결과의 신뢰도를 뒷받침하는 핵심 단계입니다.</li>
+<li><strong>실행 방식:</strong> 누락 데이터의 처리에 대한 가정을 다각도로 변경하여 결론의 일관성을 확인합니다.</li>
+<li><strong>보충 분석 (Supplementary Analysis):</strong> 민감도 분석보다 낮은 우선순위로, 결과를 다각도에서 이해하기 위한 보조적인 용도로 활용됩니다. (예: FAS와 PPS의 비교 결과)</li>
 </ul>
-</section>
-</section>
-<section id="문서화-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="문서화-documentation">6. 문서화 (Documentation)</h2>
-<p>임상시험을 계획할 때 다음 사항들을 반드시 연구 프로토콜에 문서화해야 합니다. 1. 연구의 주요 및 보조 목적별 Estimand 2. 중간 사건(ICE) 발생 시의 처리 전략 3. 주 분석 방법 및 이를 뒷받침하는 통계적 가정 4. 가정의 견고성을 검증하기 위한 민감도 분석 계획</p>
-<p>시험 도중에 Estimand를 임의로 변경하는 것은 결과의 신뢰도를 크게 떨어뜨리므로 지양해야 하며, 변경이 불가피한 경우 프로토콜 수정을 통해 이를 투명하게 반영해야 합니다.</p>
 <hr>
 </section>
-<section id="결론" class="level2">
-<h2 class="anchored" data-anchor-id="결론">결론</h2>
-<p>E9(R1)은 임상시험의 각 단계(설계-수행-분석-해석)가 하나의 일관된 질문(Estimand)을 향해 정렬되어야 함을 강조합니다. 명확한 Estimand 정의와 철저한 민감도 분석은 임상시험 결과의 신뢰성을 확보하고 의사 결정의 근거를 강화하는 핵심 요소입니다.</p>
+</section>
+<section id="문서화-및-연구-계획서-반영" class="level2">
+<h2 class="anchored" data-anchor-id="문서화-및-연구-계획서-반영">3. 문서화 및 연구 계획서 반영</h2>
+<p>임상 연구 계획서(Protocol)에는 다음 사항들을 투명하게 명시해야 합니다.</p>
+<ol type="1">
+<li>일차 및 이차 목적에 따른 해당 <strong>Estimand</strong> 정의.</li>
+<li>중간 사건(ICE) 발생 시의 구체적인 처리 전략.</li>
+<li>주 분석 방법 및 민감도 분석 단계별 계획.</li>
+</ol>
+<blockquote class="blockquote">
+<p>[!CAUTION] 시험 도중에 Estimand의 속성을 임의로 변경하는 것은 연구 데이터의 신뢰성을 심각하게 훼손할 수 있으므로 극히 제한되어야 합니다.</p>
+</blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ich2019e9r1" class="csl-entry" role="listitem">
+International Council for Harmonisation. 2019. <em>E9(R1) Addendum on Estimands and Sensitivity Analysis in Clinical Trials to the Guideline on Statistical Principles for Clinical Trials</em>. ICH.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -753,7 +765,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./summary.html" class="pagination-link" aria-label="요약 및 결론">
-        <span class="nav-page-text">요약 및 결론</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">요약 및 결론</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

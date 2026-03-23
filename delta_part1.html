@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./switching.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -139,14 +160,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -261,14 +280,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -281,16 +298,14 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#delta2-프로젝트-소개" id="toc-delta2-프로젝트-소개" class="nav-link active" data-scroll-target="#delta2-프로젝트-소개">DELTA2 프로젝트 소개</a></li>
-  <li><a href="#연구자를-위한-delta2-권고-사항-box-1" id="toc-연구자를-위한-delta2-권고-사항-box-1" class="nav-link" data-scroll-target="#연구자를-위한-delta2-권고-사항-box-1">연구자를 위한 DELTA2 권고 사항 (Box 1)</a></li>
-  <li><a href="#rct-연구에서의-목표-차이와-표본-수-산출" id="toc-rct-연구에서의-목표-차이와-표본-수-산출" class="nav-link" data-scroll-target="#rct-연구에서의-목표-차이와-표본-수-산출">RCT 연구에서의 목표 차이와 표본 수 산출</a>
+  <li><a href="#delta2-지침의-도입-배경" id="toc-delta2-지침의-도입-배경" class="nav-link active" data-scroll-target="#delta2-지침의-도입-배경">1. DELTA2 지침의 도입 배경</a></li>
+  <li><a href="#연구자를-위한-핵심-권고-사항" id="toc-연구자를-위한-핵심-권고-사항" class="nav-link" data-scroll-target="#연구자를-위한-핵심-권고-사항">2. 연구자를 위한 핵심 권고 사항</a></li>
+  <li><a href="#표본-수-산출의-통계적-고려사항" id="toc-표본-수-산출의-통계적-고려사항" class="nav-link" data-scroll-target="#표본-수-산출의-통계적-고려사항">3. 표본 수 산출의 통계적 고려사항</a>
   <ul class="collapse">
-  <li><a href="#표본-수-산출의-역할" id="toc-표본-수-산출의-역할" class="nav-link" data-scroll-target="#표본-수-산출의-역할">표본 수 산출의 역할</a></li>
-  <li><a href="#분석-대상estimand과의-연관성" id="toc-분석-대상estimand과의-연관성" class="nav-link" data-scroll-target="#분석-대상estimand과의-연관성">분석 대상(Estimand)과의 연관성</a></li>
-  <li><a href="#통계적-산출의-한계와-가정" id="toc-통계적-산출의-한계와-가정" class="nav-link" data-scroll-target="#통계적-산출의-한계와-가정">통계적 산출의 한계와 가정</a></li>
-  <li><a href="#제1종-오류와-제2종-오류의-균형" id="toc-제1종-오류와-제2종-오류의-균형" class="nav-link" data-scroll-target="#제1종-오류와-제2종-오류의-균형">제1종 오류와 제2종 오류의 균형</a></li>
-  <li><a href="#표본-수-산출-예시-및-공식" id="toc-표본-수-산출-예시-및-공식" class="nav-link" data-scroll-target="#표본-수-산출-예시-및-공식">표본 수 산출 예시 및 공식</a></li>
+  <li><a href="#통계적-오류와-검정력" id="toc-통계적-오류와-검정력" class="nav-link" data-scroll-target="#통계적-오류와-검정력">통계적 오류와 검정력</a></li>
+  <li><a href="#수치적-민감도-분석-sensitivity-analysis" id="toc-수치적-민감도-분석-sensitivity-analysis" class="nav-link" data-scroll-target="#수치적-민감도-분석-sensitivity-analysis">수치적 민감도 분석 (Sensitivity Analysis)</a></li>
   </ul></li>
+  <li><a href="#분석-대상estimand과의-연관성" id="toc-분석-대상estimand과의-연관성" class="nav-link" data-scroll-target="#분석-대상estimand과의-연관성">4. 분석 대상(Estimand)과의 연관성</a></li>
   </ul>
 </nav>
     </div>
@@ -300,6 +315,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./delta_part1.html">목표 차이 설정 및 표본수 산출 (DELTA2)</a></li><li class="breadcrumb-item"><a href="./delta_part1.html"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span></h1>
+<p class="subtitle lead">무작위 대조 시험의 목표 차이 정의와 연구 설계 권고</p>
 </div>
 
 
@@ -316,57 +332,52 @@ window.Quarto = {
 </header>
 
 
-<p>본 내용은 무작위 대조 시험(RCT)에서 목표 차이(Target Difference) 설정과 표본 수 산출 및 보고를 위한 DELTA2 지침을 정리한 것입니다.</p>
-<ul>
-<li>참고 논문: <a href="https://www.bmj.com/content/363/bmj.k3750">BMJ 2018;363:k3750</a></li>
-<li>프로젝트 링크: <a href="https://www.ndorms.ox.ac.uk/csm/delta2-guidance">DELTA2 Guidance</a></li>
-</ul>
-<section id="delta2-프로젝트-소개" class="level2">
-<h2 class="anchored" data-anchor-id="delta2-프로젝트-소개">DELTA2 프로젝트 소개</h2>
-<p>DELTA2 지침은 2019년 옥스퍼드 대학교 CSM(Centre for Statistics in Medicine)에서 발표한 최종 버전으로, RCT 연구 설계 시 가장 중요한 요소인 ‘목표 차이’ 설정과 그에 따른 ’표본 수 산출’에 대한 가이드를 제공합니다. 영국 의학연구위원회(MRC)와 국립보건연구소(NIHR)의 지원을 받아 기존 지침을 대폭 개정하였습니다.</p>
-<hr>
+<p>무작위 대조 시험(RCT) 설계 시 핵심은 임상적으로 의미 있는 목표 차이(Target Difference)를 설정하고, 이를 바탕으로 정확한 표본 크기(Sample Size)를 산출하는 것입니다 <span class="citation" data-cites="cook2018delta2">(<a href="references.html#ref-cook2018delta2" role="doc-biblioref"><span class="nocase">Cook et al.</span> 2018</a>)</span>.</p>
+<section id="delta2-지침의-도입-배경" class="level2">
+<h2 class="anchored" data-anchor-id="delta2-지침의-도입-배경">1. DELTA2 지침의 도입 배경</h2>
+<p>영국 의학연구위원회(MRC)와 국립보건연구소(NIHR)의 지원으로 2019년에 개정된 DELTA2 지침은, 연구자가 통계적 정밀도와 임상적 의의 사이의 균형을 맞출 수 있도록 체계적인 가이드를 제공합니다.</p>
 </section>
-<section id="연구자를-위한-delta2-권고-사항-box-1" class="level2">
-<h2 class="anchored" data-anchor-id="연구자를-위한-delta2-권고-사항-box-1">연구자를 위한 DELTA2 권고 사항 (Box 1)</h2>
-<p>표본 수를 산출하고 목표 차이를 선택할 때 다음의 권고 사항을 준수해야 합니다.</p>
+<section id="연구자를-위한-핵심-권고-사항" class="level2">
+<h2 class="anchored" data-anchor-id="연구자를-위한-핵심-권고-사항">2. 연구자를 위한 핵심 권고 사항</h2>
+<p>연구 설계 및 수행 시 다음의 권고 사항을 준수해야 합니다.</p>
 <ol type="1">
-<li>문헌 고찰: 관련 문헌을 통해 주 평가변수에 대해 임상적으로 중요하고 현실적인 차이가 어느 정도인지 먼저 파악하십시오.</li>
-<li>주 평가변수(Primary Outcome) 선정: 여러 후보 변수 중 주 평가변수를 정할 때는 환자를 포함한 핵심 이해관계자의 의견과 연구 수행의 현실성을 고려해야 합니다. 단순히 표본 수가 가장 적게 나오는 변수를 선택해서는 안 됩니다.</li>
-<li>차이값의 정당성 확보: 사망률이나 중대한 이상반응을 제외한 모든 결과변수는 해당 차이값이 왜 중요한지에 대해 이해관계자(환자, 의료진 등)의 관점에서 추가적인 정당성을 제시해야 합니다.</li>
-<li>목표 차이 설정: 확증적 임상시험(3상 등)의 목표 차이는 적어도 하나 이상의 핵심 이해관계자 집단에게 중요한 가치를 지니는 값이어야 합니다. 현실적으로 더 큰 차이가 가능하거나 진료 관행을 바꾸기 위해 필요하다면, 최소 중요 차이보다 큰 값을 설정할 수 있습니다.</li>
-<li>보조 연구 방법: 현실적인 차이값을 파악하기 위해 추가 연구가 필요할 경우, 앵커 방법(Anchor Method)이나 전문가 의견 수렴(Opinion Seeking) 방식이 권장됩니다. 단순히 통계적 분포에 의존하는 방식은 피해야 합니다.</li>
-<li>예비 연구(Pilot Trial) 활용: 예비 연구 결과는 표준편차(연속형 변수)나 대조군의 반응률(이분형 변수), 결측치 비율 등을 추정하는 근거로 활용하십시오.</li>
-<li>민감도 분석(Sensitivity Analysis): 목표 차이나 대조군 반응률 등 표본 수 계산에 사용된 주요 가정값들이 변할 때 필요한 표본 수가 어떻게 달라지는지 민감도 분석을 수행해야 합니다.</li>
-<li>투명한 보고: 표본 수 산출 근거와 사용된 값들을 임상시험 계획서 및 결과 보고서에 명확히 기술해야 합니다.</li>
+<li><strong>철저한 문헌 고찰:</strong> 기존 데이터와 문헌을 통해 주 평가변수의 임상적 중요성과 현실적인 차이를 먼저 파악하십시오.</li>
+<li><strong>이해관계자의 관점 반영:</strong> 목표 차이는 환자, 의료진 등 핵심 이해관계자에게 의미 있는 수준이어야 합니다.</li>
+<li><strong>차이값의 정당성 확보:</strong> 설정된 목표 차이가 왜 임상적으로 중요한지에 대해 논리적인 근거를 제시해야 합니다.</li>
+<li><strong>표본 산출의 투명성:</strong> 표본 크기 계산에 사용된 모든 가정(제1종 오류, 검정력, 탈락률 등)을 계획서에 명확히 기록해야 합니다.</li>
 </ol>
 <hr>
 </section>
-<section id="rct-연구에서의-목표-차이와-표본-수-산출" class="level2">
-<h2 class="anchored" data-anchor-id="rct-연구에서의-목표-차이와-표본-수-산출">RCT 연구에서의 목표 차이와 표본 수 산출</h2>
-<section id="표본-수-산출의-역할" class="level3">
-<h3 class="anchored" data-anchor-id="표본-수-산출의-역할">표본 수 산출의 역할</h3>
-<p>표본 수 산출은 연구의 주요 목표를 신뢰성 있게 달성하기 위해 몇 명의 피험자가 필요한지 결정하는 과정입니다. 주로 주 평가변수를 기준으로 하며, 신뢰할 수 있는 수준에서 탐지하고자 하는 ’목표 차이’를 명시하는 것에서 시작됩니다.</p>
+<section id="표본-수-산출의-통계적-고려사항" class="level2">
+<h2 class="anchored" data-anchor-id="표본-수-산출의-통계적-고려사항">3. 표본 수 산출의 통계적 고려사항</h2>
+<section id="통계적-오류와-검정력" class="level3">
+<h3 class="anchored" data-anchor-id="통계적-오류와-검정력">통계적 오류와 검정력</h3>
+<ul>
+<li><strong>제1종 오류 (<span class="math inline">\(\alpha\)</span>):</strong> 실제로 차이가 없는데 차이가 있다고 판정할 위험 (통상 5%).</li>
+<li><strong>제2종 오류 (<span class="math inline">\(\beta\)</span>):</strong> 실제 차이가 존재함에도 이를 발견하지 못할 위험.</li>
+<li><strong>검정력 (<span class="math inline">\(1-\beta\)</span>):</strong> 설정된 목표 차이를 통계적으로 유의미하게 찾아낼 확률 (통상 80%~90%).</li>
+</ul>
 </section>
-<section id="분석-대상estimand과의-연관성" class="level3">
-<h3 class="anchored" data-anchor-id="분석-대상estimand과의-연관성">분석 대상(Estimand)과의 연관성</h3>
-<p>연구가 답하고자 하는 정밀한 질문에 따라 분석 대상(Estimand)이 결정됩니다. 설정된 목표 차이는 이 분석 대상에 적합한 값이어야 합니다.</p>
+<section id="수치적-민감도-분석-sensitivity-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="수치적-민감도-분석-sensitivity-analysis">수치적 민감도 분석 (Sensitivity Analysis)</h3>
+<p>목표 차이(<span class="math inline">\(\delta\)</span>)나 대조군의 예상 반응률 등 주요 가정치가 미세하게 변할 때 필요한 표본 수(<span class="math inline">\(n\)</span>)가 어떻게 달라지는지 미리 검토해야 합니다.</p>
+<ul>
+<li><strong><span class="math inline">\(\delta\)</span>가 작아질수록:</strong> 탐지 난이도가 상승하므로 기하급수적으로 많은 표본이 필요하게 됩니다.</li>
+<li><strong>예시 지표:</strong> <img src="pics/delta1_table1.png" class="img-fluid"> <img src="pics/delta1_table2.png" class="img-fluid"> <em>그림 1. 목표 차이 변화에 따른 표본 크기의 민감도 예시</em></li>
+</ul>
+<hr>
 </section>
-<section id="통계적-산출의-한계와-가정" class="level3">
-<h3 class="anchored" data-anchor-id="통계적-산출의-한계와-가정">통계적 산출의 한계와 가정</h3>
-<p>표본 수 산출은 정밀 과학이라기보다 여러 가정(Assumption)에 기반한 예측 과정입니다. - 분석 모델의 단순화: 실제 분석은 여러 공변량을 보정하지만, 표본 수 계산 시에는 무보정 분석을 가정하는 등 단순화된 수식을 사용하는 경우가 많습니다. - 가정값에 대한 민감도: 설정된 가정값이 조금만 변해도 필요한 표본 수는 크게 달라질 수 있습니다. 예를 들어, 탐지하고자 하는 차이값을 절반으로 줄이면 필요한 표본 수는 약 4배로 늘어납니다.</p>
 </section>
-<section id="제1종-오류와-제2종-오류의-균형" class="level3">
-<h3 class="anchored" data-anchor-id="제1종-오류와-제2종-오류의-균형">제1종 오류와 제2종 오류의 균형</h3>
-<p>통계적 가설 검정 틀 안에서 다음 두 가지 오류 사이의 균형을 맞춰야 합니다. - 제1종 오류 (<span class="math inline">\(\alpha\)</span>): 실제로 차이가 없는데 차이가 있다고 잘못 결론 내릴 위험 (통상 5%) - 제2종 오류 (<span class="math inline">\(\beta\)</span>): 실제로 의미 있는 차이가 있는데 이를 발견하지 못할 위험 - 검정력 (<span class="math inline">\(1-\beta\)</span>): 실제 차이를 발견할 확률 (통상 80% 또는 90%)</p>
-<p><img src="pics/delta1_table1.png" class="img-fluid"></p>
-</section>
-<section id="표본-수-산출-예시-및-공식" class="level3">
-<h3 class="anchored" data-anchor-id="표본-수-산출-예시-및-공식">표본 수 산출 예시 및 공식</h3>
-<p>주요 평가변수의 유형(연속형, 이분형 등)에 따라 적절한 산출 공식을 사용하며, 복잡한 시나리오의 경우 시뮬레이션을 활용하기도 합니다.</p>
-<p><img src="pics/delta1_table2.png" class="img-fluid"> <em>차이값(<span class="math inline">\(\delta\)</span>)의 변화에 따른 표본 수(<span class="math inline">\(n\)</span>)의 민감도를 보여주는 예시</em></p>
+<section id="분석-대상estimand과의-연관성" class="level2">
+<h2 class="anchored" data-anchor-id="분석-대상estimand과의-연관성">4. 분석 대상(Estimand)과의 연관성</h2>
+<p>설정된 목표 차이는 임상적 질문의 최종 목표인 <strong>추정 대상(Estimand)</strong>과 체계적으로 연계되어야 하며, 연구의 전 과정은 이 질문에 답하기 위해 정렬되어야 합니다.</p>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-cook2018delta2" class="csl-entry" role="listitem">
+<span class="nocase">Cook, Jonathan A, Steven A Julious, William Sones, et al.</span> 2018. <span>“DELTA2 Guidance on Choosing the Target Difference and Undertaking and Reporting the Sample Size Calculation for a Randomised Controlled Trial.”</span> <em>BMJ</em> 363: k3750. <a href="https://doi.org/10.1136/bmj.k3750">https://doi.org/10.1136/bmj.k3750</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

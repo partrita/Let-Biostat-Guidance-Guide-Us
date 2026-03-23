@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./diagnostic_part1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -139,14 +160,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -261,14 +280,12 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -281,26 +298,23 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#권장-보고-사항" id="toc-권장-보고-사항" class="nav-link active" data-scroll-target="#권장-보고-사항">5. 권장 보고 사항</a>
+  <li><a href="#지침-기반-권장-보고-사항" id="toc-지침-기반-권장-보고-사항" class="nav-link active" data-scroll-target="#지침-기반-권장-보고-사항">1. 지침 기반 권장 보고 사항</a>
   <ul class="collapse">
-  <li><a href="#연구-맥락-보고-reporting-the-context-of-the-study" id="toc-연구-맥락-보고-reporting-the-context-of-the-study" class="nav-link" data-scroll-target="#연구-맥락-보고-reporting-the-context-of-the-study">(1) 연구 맥락 보고 (Reporting the context of the study)</a></li>
-  <li><a href="#사용-조건-정의-defining-the-conditions-of-use" id="toc-사용-조건-정의-defining-the-conditions-of-use" class="nav-link" data-scroll-target="#사용-조건-정의-defining-the-conditions-of-use">(2) 사용 조건 정의 (Defining the conditions of use)</a></li>
-  <li><a href="#비교-결과-및-방법-설명" id="toc-비교-결과-및-방법-설명" class="nav-link" data-scroll-target="#비교-결과-및-방법-설명">(3) 비교 결과 및 방법 설명</a></li>
-  <li><a href="#연구-결과-보고" id="toc-연구-결과-보고" class="nav-link" data-scroll-target="#연구-결과-보고">(4) 연구 결과 보고</a></li>
+  <li><a href="#연구-맥락-보고-reporting-study-context" id="toc-연구-맥락-보고-reporting-study-context" class="nav-link" data-scroll-target="#연구-맥락-보고-reporting-study-context">(1) 연구 맥락 보고 (Reporting Study Context)</a></li>
+  <li><a href="#사용-조건-및-환경-정의" id="toc-사용-조건-및-환경-정의" class="nav-link" data-scroll-target="#사용-조건-및-환경-정의">(2) 사용 조건 및 환경 정의</a></li>
   </ul></li>
-  <li><a href="#통계적으로-부적절한-관행" id="toc-통계적으로-부적절한-관행" class="nav-link" data-scroll-target="#통계적으로-부적절한-관행">6. 통계적으로 부적절한 관행</a>
+  <li><a href="#지양해야-할-통계적-관행-improper-practices" id="toc-지양해야-할-통계적-관행-improper-practices" class="nav-link" data-scroll-target="#지양해야-할-통계적-관행-improper-practices">2. 지양해야 할 통계적 관행 (Improper Practices)</a>
   <ul class="collapse">
-  <li><a href="#비-참조-표준-비교-시-민감도특이도-용어-사용-금지" id="toc-비-참조-표준-비교-시-민감도특이도-용어-사용-금지" class="nav-link" data-scroll-target="#비-참조-표준-비교-시-민감도특이도-용어-사용-금지">(1) 비-참조 표준 비교 시 ‘민감도/특이도’ 용어 사용 금지</a></li>
-  <li><a href="#모호한-결과equivocal-results의-임의-제거-금지" id="toc-모호한-결과equivocal-results의-임의-제거-금지" class="nav-link" data-scroll-target="#모호한-결과equivocal-results의-임의-제거-금지">(2) 모호한 결과(Equivocal Results)의 임의 제거 금지</a></li>
-  <li><a href="#불일치-해결discrepant-resolution-기반-데이터-수정-금지" id="toc-불일치-해결discrepant-resolution-기반-데이터-수정-금지" class="nav-link" data-scroll-target="#불일치-해결discrepant-resolution-기반-데이터-수정-금지">(3) 불일치 해결(Discrepant Resolution) 기반 데이터 수정 금지</a></li>
-  <li><a href="#평가-대상-검사가-포함된-알고리즘과-비교-금지" id="toc-평가-대상-검사가-포함된-알고리즘과-비교-금지" class="nav-link" data-scroll-target="#평가-대상-검사가-포함된-알고리즘과-비교-금지">(4) 평가 대상 검사가 포함된 알고리즘과 비교 금지</a></li>
+  <li><a href="#부적절한-용어-사용" id="toc-부적절한-용어-사용" class="nav-link" data-scroll-target="#부적절한-용어-사용">(1) 부적절한 용어 사용</a></li>
+  <li><a href="#불일치-해결discrepant-resolution을-통한-데이터-수정" id="toc-불일치-해결discrepant-resolution을-통한-데이터-수정" class="nav-link" data-scroll-target="#불일치-해결discrepant-resolution을-통한-데이터-수정">(2) 불일치 해결(Discrepant Resolution)을 통한 데이터 수정</a></li>
+  <li><a href="#모호한-결과equivocal-results의-편의적-분석" id="toc-모호한-결과equivocal-results의-편의적-분석" class="nav-link" data-scroll-target="#모호한-결과equivocal-results의-편의적-분석">(3) 모호한 결과(Equivocal Results)의 편의적 분석</a></li>
   </ul></li>
-  <li><a href="#부록-통계-계산-방법" id="toc-부록-통계-계산-방법" class="nav-link" data-scroll-target="#부록-통계-계산-방법">7. 부록: 통계 계산 방법</a>
+  <li><a href="#요약-통계-계산-방법" id="toc-요약-통계-계산-방법" class="nav-link" data-scroll-target="#요약-통계-계산-방법">3. 요약: 통계 계산 방법</a>
   <ul class="collapse">
-  <li><a href="#민감도와-특이도-산출-참조-표준-사용-시" id="toc-민감도와-특이도-산출-참조-표준-사용-시" class="nav-link" data-scroll-target="#민감도와-특이도-산출-참조-표준-사용-시">(1) 민감도와 특이도 산출 (참조 표준 사용 시)</a></li>
-  <li><a href="#일치도-산출-비-참조-표준-사용-시" id="toc-일치도-산출-비-참조-표준-사용-시" class="nav-link" data-scroll-target="#일치도-산출-비-참조-표준-사용-시">(2) 일치도 산출 (비-참조 표준 사용 시)</a></li>
-  <li><a href="#불일치-해결discrepant-resolution의-문제점" id="toc-불일치-해결discrepant-resolution의-문제점" class="nav-link" data-scroll-target="#불일치-해결discrepant-resolution의-문제점">(3) 불일치 해결(Discrepant Resolution)의 문제점</a></li>
+  <li><a href="#참조-표준-기반-산출" id="toc-참조-표준-기반-산출" class="nav-link" data-scroll-target="#참조-표준-기반-산출">(1) 참조 표준 기반 산출</a></li>
+  <li><a href="#비-참조-표준-기반-산출-일치도" id="toc-비-참조-표준-기반-산출-일치도" class="nav-link" data-scroll-target="#비-참조-표준-기반-산출-일치도">(2) 비-참조 표준 기반 산출 (일치도)</a></li>
   </ul></li>
+  <li><a href="#결론" id="toc-결론" class="nav-link" data-scroll-target="#결론">4. 결론</a></li>
   </ul>
 </nav>
     </div>
@@ -310,6 +324,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diagnostic_part1.html">진단 검사 평가 (Diagnostic)</a></li><li class="breadcrumb-item"><a href="./diagnostic_part2.html"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span></h1>
+<p class="subtitle lead">투명한 보고와 부적절한 관행에 대한 권고</p>
 </div>
 
 
@@ -326,162 +341,75 @@ window.Quarto = {
 </header>
 
 
-<section id="권장-보고-사항" class="level2">
-<h2 class="anchored" data-anchor-id="권장-보고-사항">5. 권장 보고 사항</h2>
-<p>진단 검사를 평가하는 연구에서는 다음 원칙에 따라 결과를 투명하게 보고해야 합니다.</p>
-<section id="연구-맥락-보고-reporting-the-context-of-the-study" class="level3">
-<h3 class="anchored" data-anchor-id="연구-맥락-보고-reporting-the-context-of-the-study">(1) 연구 맥락 보고 (Reporting the context of the study)</h3>
-<p>민감도와 특이도는 연구 모집단 및 설계의 맥락에 따라 달라질 수 있으므로, 다음 정보를 포함해야 합니다. - 의도된 사용군 (Intended Use Population): 제품의 실제 타겟이 되는 대상군 - 연구 집단 (Study Population): 실제 연구에 참여한 피험자 특성 - 참조 표준 (Reference Standard): 사용된 기준점의 정의 및 선택 근거와 한계점</p>
+<p>FDA는 진단 검사 평가 시 부적절한 통계 관행을 피하고 모든 데이터를 투명하게 공개할 것을 강력히 권고합니다 <span class="citation" data-cites="fda2007diagnostic">(<a href="references.html#ref-fda2007diagnostic" role="doc-biblioref">U.S. Food and Drug Administration 2007</a>)</span>.</p>
+<section id="지침-기반-권장-보고-사항" class="level2">
+<h2 class="anchored" data-anchor-id="지침-기반-권장-보고-사항">1. 지침 기반 권장 보고 사항</h2>
+<p>진단 검사를 평가하는 연구에서는 다음 원칠에 근거하여 결과를 투명하게 보고해야 합니다.</p>
+<section id="연구-맥락-보고-reporting-study-context" class="level3">
+<h3 class="anchored" data-anchor-id="연구-맥락-보고-reporting-study-context">(1) 연구 맥락 보고 (Reporting Study Context)</h3>
+<p>민감도와 특이도는 연구 모집단 및 설계의 맥락에 따라 달라질 수 있습니다.</p>
+<ul>
+<li><strong>의도된 사용군 (Intended Use Population):</strong> 실제 제품의 타겟이 되는 대상 집단.</li>
+<li><strong>연구 집단 (Study Population):</strong> 연구에 참여한 피험자의 주된 특성.</li>
+<li><strong>참조 표준 (Reference Standard):</strong> 기준점의 정의 및 선택 근거와 한계점 기술.</li>
+</ul>
 </section>
-<section id="사용-조건-정의-defining-the-conditions-of-use" class="level3">
-<h3 class="anchored" data-anchor-id="사용-조건-정의-defining-the-conditions-of-use">(2) 사용 조건 정의 (Defining the conditions of use)</h3>
+<section id="사용-조건-및-환경-정의" class="level3">
+<h3 class="anchored" data-anchor-id="사용-조건-및-환경-정의">(2) 사용 조건 및 환경 정의</h3>
 <ul>
 <li>수행자의 숙련도 및 경험 (Operator Experience)</li>
-<li>실험 환경 및 설비 (Test Setting)</li>
-<li>품질 관리 절차 (Controls Applied) 및 표본 승인 기준</li>
-</ul>
-</section>
-<section id="비교-결과-및-방법-설명" class="level3">
-<h3 class="anchored" data-anchor-id="비교-결과-및-방법-설명">(3) 비교 결과 및 방법 설명</h3>
-<ul>
-<li>피험자 모집 절차 및 인구통계학적 정보</li>
-<li>포함 및 제외 기준 (Inclusion/Exclusion Criteria)</li>
-<li>표본 수집, 보관 및 처리 절차</li>
-</ul>
-</section>
-<section id="연구-결과-보고" class="level3">
-<h3 class="anchored" data-anchor-id="연구-결과-보고">(4) 연구 결과 보고</h3>
-<ul>
-<li>임상 현장 및 검사 사이트별 결과</li>
-<li>하위 그룹별 분석 결과</li>
-<li>보고 형식: 2x2 분할표, 정확도/일치도 측정치 및 95% 신뢰구간 (CI)</li>
-<li>양적 결과 기반 질적 검사: 히스토그램 및 ROC 커브 포함</li>
+<li>실제 실험 환경 및 기기 관리 상태 (Test Setting)</li>
+<li>품질 관리(QC) 절차 및 표본 승인 기준</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="통계적으로-부적절한-관행" class="level2">
-<h2 class="anchored" data-anchor-id="통계적으로-부적절한-관행">6. 통계적으로 부적절한 관행</h2>
-<p>FDA는 진단 검사 평가 시 다음 네 가지 관행을 피할 것을 강력히 권고합니다.</p>
-<section id="비-참조-표준-비교-시-민감도특이도-용어-사용-금지" class="level3">
-<h3 class="anchored" data-anchor-id="비-참조-표준-비교-시-민감도특이도-용어-사용-금지">(1) 비-참조 표준 비교 시 ‘민감도/특이도’ 용어 사용 금지</h3>
-<p>참조 표준이 아닌 기존 검사법과 비교할 때는 ‘민감도’와 ’특이도’ 대신 ’양성 퍼센트 일치도(PPA)’와 ’음성 퍼센트 일치도(NPA)’라는 용어를 사용해야 합니다.</p>
+<section id="지양해야-할-통계적-관행-improper-practices" class="level2">
+<h2 class="anchored" data-anchor-id="지양해야-할-통계적-관행-improper-practices">2. 지양해야 할 통계적 관행 (Improper Practices)</h2>
+<section id="부적절한-용어-사용" class="level3">
+<h3 class="anchored" data-anchor-id="부적절한-용어-사용">(1) 부적절한 용어 사용</h3>
+<p>비-참조 표준(Non-reference Standard)과 비교할 경우 ‘민감도/특이도’ 대신 <strong>‘양성/음성 퍼센트 일치도(PPA/NPA)’</strong>를 사용해야 합니다.</p>
 </section>
-<section id="모호한-결과equivocal-results의-임의-제거-금지" class="level3">
-<h3 class="anchored" data-anchor-id="모호한-결과equivocal-results의-임의-제거-금지">(2) 모호한 결과(Equivocal Results)의 임의 제거 금지</h3>
-<p>모호한 결과를 분석에서 제외하면 편향된 추정치가 발생할 수 있습니다. 모호한 결과를 양성으로 처리한 경우와 음성으로 처리한 경우를 모두 보고하는 것이 좋습니다.</p>
+<section id="불일치-해결discrepant-resolution을-통한-데이터-수정" class="level3">
+<h3 class="anchored" data-anchor-id="불일치-해결discrepant-resolution을-통한-데이터-수정">(2) 불일치 해결(Discrepant Resolution)을 통한 데이터 수정</h3>
+<p>두 검사법이 일치하지 않을 때 제3의 검사법(Resolver)을 사용하여 기존 결과를 수정하는 행위는 과학적 타당성이 부족하며 연구 결과를 지나치게 낙관적으로 만들 수 있습니다.</p>
 </section>
-<section id="불일치-해결discrepant-resolution-기반-데이터-수정-금지" class="level3">
-<h3 class="anchored" data-anchor-id="불일치-해결discrepant-resolution-기반-데이터-수정-금지">(3) 불일치 해결(Discrepant Resolution) 기반 데이터 수정 금지</h3>
-<p>두 검사법이 일치하지 않을 때 제3의 검사법(Resolver)을 써서 결과를 수정하는 방식은 과학적으로 타당하지 않으며, 결과가 과도하게 낙관적으로 보일 수 있습니다.</p>
-</section>
-<section id="평가-대상-검사가-포함된-알고리즘과-비교-금지" class="level3">
-<h3 class="anchored" data-anchor-id="평가-대상-검사가-포함된-알고리즘과-비교-금지">(4) 평가 대상 검사가 포함된 알고리즘과 비교 금지</h3>
-<p>새로운 검사의 결과가 이미 포함된 진단 알고리즘의 결과와 해당 검사를 비교하는 것은 일치도가 부당하게 높게 나타나는 문제를 야기합니다.</p>
+<section id="모호한-결과equivocal-results의-편의적-분석" class="level3">
+<h3 class="anchored" data-anchor-id="모호한-결과equivocal-results의-편의적-분석">(3) 모호한 결과(Equivocal Results)의 편의적 분석</h3>
+<p>미확정된 결과를 단순히 분석에서 제외하면 성능 데이터가 편향되므로, 이를 양성이나 음성 중 하나로 간주했을 때의 각각의 영향(Worst-case 등)을 함께 보고해야 합니다.</p>
 <hr>
 </section>
 </section>
-<section id="부록-통계-계산-방법" class="level2">
-<h2 class="anchored" data-anchor-id="부록-통계-계산-방법">7. 부록: 통계 계산 방법</h2>
-<section id="민감도와-특이도-산출-참조-표준-사용-시" class="level3">
-<h3 class="anchored" data-anchor-id="민감도와-특이도-산출-참조-표준-사용-시">(1) 민감도와 특이도 산출 (참조 표준 사용 시)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">질병 있음 (Ref+)</th>
-<th style="text-align: center;">질병 없음 (Ref-)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">새 검사 양성</td>
-<td style="text-align: center;">TP (진양성)</td>
-<td style="text-align: center;">FP (위양성)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">새 검사 음성</td>
-<td style="text-align: center;">FN (위음성)</td>
-<td style="text-align: center;">TN (진음성)</td>
-</tr>
-</tbody>
-</table>
+<section id="요약-통계-계산-방법" class="level2">
+<h2 class="anchored" data-anchor-id="요약-통계-계산-방법">3. 요약: 통계 계산 방법</h2>
+<p>진단 성능 지표는 2x2 분할표를 기본으로 하며, 반드시 95% 신뢰구간(CI)과 함께 제시되어야 합니다.</p>
+<section id="참조-표준-기반-산출" class="level3">
+<h3 class="anchored" data-anchor-id="참조-표준-기반-산출">(1) 참조 표준 기반 산출</h3>
 <ul>
-<li>민감도: <span class="math inline">\(\frac{TP}{TP + FN}\)</span></li>
-<li>특이도: <span class="math inline">\(\frac{TN}{FP + TN}\)</span></li>
+<li><strong>민감도:</strong> <span class="math inline">\(\frac{TP}{TP + FN}\)</span></li>
+<li><strong>특이도:</strong> <span class="math inline">\(\frac{TN}{FP + TN}\)</span></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/reference_test.png" class="img-fluid figure-img"></p>
-<figcaption>참조 표준 기반 2x2 표</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/reference_test2.png" class="img-fluid figure-img"></p>
-<figcaption>계산 예시</figcaption>
-</figure>
-</div>
 </section>
-<section id="일치도-산출-비-참조-표준-사용-시" class="level3">
-<h3 class="anchored" data-anchor-id="일치도-산출-비-참조-표준-사용-시">(2) 일치도 산출 (비-참조 표준 사용 시)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">비-참조 표준 양성</th>
-<th style="text-align: center;">비-참조 표준 음성</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">새 검사 양성</td>
-<td style="text-align: center;">a</td>
-<td style="text-align: center;">b</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">새 검사 음성</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">d</td>
-</tr>
-</tbody>
-</table>
+<section id="비-참조-표준-기반-산출-일치도" class="level3">
+<h3 class="anchored" data-anchor-id="비-참조-표준-기반-산출-일치도">(2) 비-참조 표준 기반 산출 (일치도)</h3>
 <ul>
-<li>양성 퍼센트 일치도 (PPA): <span class="math inline">\(\frac{a}{a+c}\)</span></li>
-<li>음성 퍼센트 일치도 (NPA): <span class="math inline">\(\frac{d}{b+d}\)</span></li>
-<li>전체 퍼센트 일치도 (OPA): <span class="math inline">\(\frac{a+d}{a+b+c+d}\)</span></li>
+<li><strong>양성 퍼센트 일치도 (PPA):</strong> <span class="math inline">\(\frac{a}{a+c}\)</span></li>
+<li><strong>음성 퍼센트 일치도 (NPA):</strong> <span class="math inline">\(\frac{d}{b+d}\)</span></li>
+<li><strong>전체 퍼센트 일치도 (OPA):</strong> <span class="math inline">\(\frac{a+d}{a+b+c+d}\)</span></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/nonreference_test.png" class="img-fluid figure-img"></p>
-<figcaption>비-참조 표준 기반 2x2 표</figcaption>
-</figure>
-</div>
-<section id="일치도의-한계-예시" class="level4">
-<h4 class="anchored" data-anchor-id="일치도의-한계-예시">일치도의 한계 (예시)</h4>
-<p>일치도 수치만으로는 실제 성능을 완벽히 이해할 수 없습니다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/nonreference_agreement.png" class="img-fluid figure-img"></p>
-<figcaption>일치도 예시 1</figcaption>
-</figure>
-</div>
-<p><img src="pics/nonreference_agreement2.png" class="img-fluid" alt="수정된 일치도 예시"> <em>(위 표에서 분모 값 수정이 필요할 수 있습니다: 41 → 59)</em></p>
+<p><img src="pics/reference_test.png" class="img-fluid" alt="계산 예시"> <img src="pics/nonreference_agreement.png" class="img-fluid" alt="일치도 예시"></p>
 </section>
 </section>
-<section id="불일치-해결discrepant-resolution의-문제점" class="level3">
-<h3 class="anchored" data-anchor-id="불일치-해결discrepant-resolution의-문제점">(3) 불일치 해결(Discrepant Resolution)의 문제점</h3>
-<p>불일치 해결 방식은 다음과 같은 단계를 거치지만, 결과의 신뢰도를 떨어뜨릴 수 있습니다.</p>
-<ol type="1">
-<li>새 검사와 기존 검사 비교 후 불일치 발생 확인</li>
-<li>제3의 검사(Resolver)로 재검사</li>
-<li>기존 검사 결과를 Resolver의 결과로 수정하여 2x2 표 재작성 (비권장)</li>
-</ol>
-<p><img src="pics/delta2_table7.png" class="img-fluid" alt="불일치 해결 절차"> <img src="pics/delta2_table8.png" class="img-fluid" alt="불일치 재검사"> <img src="pics/delta2_table10.png" class="img-fluid" alt="수정된 2x2 표의 문제점"></p>
-<p>결론: 불일치 해결 방식을 통해 원래의 결과표를 수정하는 것은 부적절하며, 모든 데이터는 투명하게 공개되어야 합니다.</p>
+<section id="결론" class="level2">
+<h2 class="anchored" data-anchor-id="결론">4. 결론</h2>
+<p>진단 기기 승인을 위한 핵심은 모든 결과 데이터를 투명하게 공개하고, 적절한 통계 지표와 신뢰구간을 통해 그 성능을 입증하는 데 있습니다.</p>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-fda2007diagnostic" class="csl-entry" role="listitem">
+U.S. Food and Drug Administration. 2007. <em>Statistical Guidance on Reporting Results from Studies Evaluating Diagnostic Tests - Guidance for Industry and FDA Staff</em>. FDA.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

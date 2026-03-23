@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험의 통계적 원칙 (E9) Part 1 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./gcp_part2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,6 +92,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -110,14 +160,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,14 +280,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -252,25 +298,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#서론-introduction" id="toc-서론-introduction" class="nav-link active" data-scroll-target="#서론-introduction">1. 서론 (Introduction)</a>
+  <li><a href="#통계적-설계의-기본-방향" id="toc-통계적-설계의-기본-방향" class="nav-link active" data-scroll-target="#통계적-설계의-기본-방향">1. 통계적 설계의 기본 방향</a></li>
+  <li><a href="#임상시험-설계의-주요-고려사항" id="toc-임상시험-설계의-주요-고려사항" class="nav-link" data-scroll-target="#임상시험-설계의-주요-고려사항">2. 임상시험 설계의 주요 고려사항</a>
   <ul class="collapse">
-  <li><a href="#a.-배경-및-목적" id="toc-a.-배경-및-목적" class="nav-link" data-scroll-target="#a.-배경-및-목적">A. 배경 및 목적</a></li>
-  <li><a href="#b.-범위-및-방향" id="toc-b.-범위-및-방향" class="nav-link" data-scroll-target="#b.-범위-및-방향">B. 범위 및 방향</a></li>
+  <li><a href="#임상시험의-맥락과-유형" id="toc-임상시험의-맥락과-유형" class="nav-link" data-scroll-target="#임상시험의-맥락과-유형">임상시험의 맥락과 유형</a></li>
+  <li><a href="#평가변수-variables의-선정" id="toc-평가변수-variables의-선정" class="nav-link" data-scroll-target="#평가변수-variables의-선정">평가변수 (Variables)의 선정</a></li>
   </ul></li>
-  <li><a href="#임상-개발-전반에-대한-고려사항" id="toc-임상-개발-전반에-대한-고려사항" class="nav-link" data-scroll-target="#임상-개발-전반에-대한-고려사항">2. 임상 개발 전반에 대한 고려사항</a>
+  <li><a href="#편향-방지를-위한-설계-기법" id="toc-편향-방지를-위한-설계-기법" class="nav-link" data-scroll-target="#편향-방지를-위한-설계-기법">3. 편향 방지를 위한 설계 기법</a>
   <ul class="collapse">
-  <li><a href="#a.-임상시험의-맥락" id="toc-a.-임상시험의-맥락" class="nav-link" data-scroll-target="#a.-임상시험의-맥락">A. 임상시험의 맥락</a></li>
-  <li><a href="#b.-임상시험의-범위" id="toc-b.-임상시험의-범위" class="nav-link" data-scroll-target="#b.-임상시험의-범위">B. 임상시험의 범위</a></li>
-  <li><a href="#c.-편향-방지를-위한-설계-기법" id="toc-c.-편향-방지를-위한-설계-기법" class="nav-link" data-scroll-target="#c.-편향-방지를-위한-설계-기법">C. 편향 방지를 위한 설계 기법</a></li>
+  <li><a href="#눈가림-blinding" id="toc-눈가림-blinding" class="nav-link" data-scroll-target="#눈가림-blinding">눈가림 (Blinding)</a></li>
+  <li><a href="#무작위-배정-randomization" id="toc-무작위-배정-randomization" class="nav-link" data-scroll-target="#무작위-배정-randomization">무작위 배정 (Randomization)</a></li>
   </ul></li>
-  <li><a href="#임상시험-설계-시-고려사항" id="toc-임상시험-설계-시-고려사항" class="nav-link" data-scroll-target="#임상시험-설계-시-고려사항">3. 임상시험 설계 시 고려사항</a>
-  <ul class="collapse">
-  <li><a href="#a.-설계-구성-design-configuration" id="toc-a.-설계-구성-design-configuration" class="nav-link" data-scroll-target="#a.-설계-구성-design-configuration">A. 설계 구성 (Design Configuration)</a></li>
-  <li><a href="#b.-다기관-임상시험-multicenter-trials" id="toc-b.-다기관-임상시험-multicenter-trials" class="nav-link" data-scroll-target="#b.-다기관-임상시험-multicenter-trials">B. 다기관 임상시험 (Multicenter Trials)</a></li>
-  <li><a href="#c.-비교-유형" id="toc-c.-비교-유형" class="nav-link" data-scroll-target="#c.-비교-유형">C. 비교 유형</a></li>
-  <li><a href="#d.-표본-크기-sample-size" id="toc-d.-표본-크기-sample-size" class="nav-link" data-scroll-target="#d.-표본-크기-sample-size">D. 표본 크기 (Sample Size)</a></li>
-  </ul></li>
-  <li><a href="#임상시험-수행-중-고려사항" id="toc-임상시험-수행-중-고려사항" class="nav-link" data-scroll-target="#임상시험-수행-중-고려사항">4. 임상시험 수행 중 고려사항</a></li>
+  <li><a href="#임상시험-설계-구성-design-configuration" id="toc-임상시험-설계-구성-design-configuration" class="nav-link" data-scroll-target="#임상시험-설계-구성-design-configuration">4. 임상시험 설계 구성 (Design Configuration)</a></li>
+  <li><a href="#표본-크기와-분석-계획" id="toc-표본-크기와-분석-계획" class="nav-link" data-scroll-target="#표본-크기와-분석-계획">5. 표본 크기와 분석 계획</a></li>
   </ul>
 </nav>
     </div>
@@ -280,6 +320,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9_part1.html">임상시험 통계 원칙 (E9)</a></li><li class="breadcrumb-item"><a href="./e9_part1.html"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></h1>
+<p class="subtitle lead">신약 개발 전반의 통계적 설계와 고려사항</p>
 </div>
 
 
@@ -296,105 +337,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="서론-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="서론-introduction">1. 서론 (Introduction)</h2>
-<section id="a.-배경-및-목적" class="level3">
-<h3 class="anchored" data-anchor-id="a.-배경-및-목적">A. 배경 및 목적</h3>
-<p>본 문서는 의뢰자(Sponsor)에게 임상시험의 설계, 분석 및 평가 전반에 걸친 통계적 지침을 제공하는 것을 목적으로 합니다.</p>
-</section>
-<section id="b.-범위-및-방향" class="level3">
-<h3 class="anchored" data-anchor-id="b.-범위-및-방향">B. 범위 및 방향</h3>
+<p>ICH E9 가이드라인은 임상시험의 설계, 수행, 분석 및 평가 전반에 걸쳐 통계적 원칙(Statistical Principles)을 정립함으로써, 신약의 유효성과 안전성을 과학적으로 입증하는 것을 목적으로 합니다 <span class="citation" data-cites="ich1998e9">(<a href="references.html#ref-ich1998e9" role="doc-biblioref">International Council for Harmonisation 1998</a>)</span>.</p>
+<section id="통계적-설계의-기본-방향" class="level2">
+<h2 class="anchored" data-anchor-id="통계적-설계의-기본-방향">1. 통계적 설계의 기본 방향</h2>
+<p>임상시험에서 통계적 업무는 충분한 역량을 갖춘 <strong>통계 전문가(Statistician)</strong>의 책임하에 이루어져야 합니다. 특히 다음 두 가지 원칙을 관통해야 합니다.</p>
 <ol type="1">
-<li>본 지침은 구체적인 통계 절차보다는 통계적 원칙(Statistical Principles)에 중점을 둡니다.</li>
-<li>임상시험의 모든 통계적 업무는 통계 전문가(Statistician)의 책임하에 수행되어야 하며, 해당 전문가는 본 원칙을 준수할 수 있는 충분한 교육과 경험을 갖추어야 합니다.</li>
-<li>임상시험 계획서(Protocol) 및 개정안 작성 시, 통계 분석 부분이 적절히 반영되었는지 통계 전문가의 확인이 반드시 필요합니다.</li>
-<li>본 문서는 주로 확증적 임상시험(Confirmatory Trial)을 다룹니다.</li>
-<li>핵심 원칙은 편향(Bias)의 최소화와 정밀도(Precision)의 극대화입니다.</li>
-<li>편향은 타당한 결론 도출을 방해하는 가장 큰 요인이므로 이를 최소화하는 것이 무엇보다 중요합니다.</li>
-<li>주로 빈도주의 방법론(Frequentist Methods)을 설명하지만, 상황에 따라 베이지안(Bayesian) 방법론도 고려될 수 있습니다.</li>
+<li><strong>편향(Bias)의 최소화:</strong> 결론의 타당성을 훼손하는 체계적 오류를 방지하는 작업.</li>
+<li><strong>정밀도(Precision)의 극대화:</strong> 무작위 오차를 줄여 추정치의 정확도를 높이는 작업.</li>
 </ol>
+<hr>
 </section>
-</section>
-<section id="임상-개발-전반에-대한-고려사항" class="level2">
-<h2 class="anchored" data-anchor-id="임상-개발-전반에-대한-고려사항">2. 임상 개발 전반에 대한 고려사항</h2>
-<section id="a.-임상시험의-맥락" class="level3">
-<h3 class="anchored" data-anchor-id="a.-임상시험의-맥락">A. 임상시험의 맥락</h3>
-<ol type="1">
-<li>개발 계획 (Development Plan): 신약 개발의 목표는 적절한 용량(Dose)과 투여 기간(Schedule) 내에서 안전성과 유효성을 동시에 입증하고, 수용 가능한 위험-이익(Risk-Benefit) 균형을 찾는 것입니다.</li>
-<li>확증적 임상시험 (Confirmatory Trial): 사전에 가설을 설정하고 이를 평가하는 통제된 시험입니다. 통계적 유의성뿐만 아니라 임상적 유의성(Clinical Significance) 확보가 중요하며, 계획서와 표준 작업 지침서(SOP)를 엄격히 준수해야 합니다.</li>
-<li>탐색적 임상시험 (Exploratory Trial): 가설 입증보다는 새로운 사실을 발견하고 확증적 시험을 위한 근거를 마련하는 데 초점을 둡니다.</li>
-</ol>
-</section>
-<section id="b.-임상시험의-범위" class="level3">
-<h3 class="anchored" data-anchor-id="b.-임상시험의-범위">B. 임상시험의 범위</h3>
-<ol type="1">
-<li>대상자 집단 (Population): 적절한 선정 및 제외 기준을 통해 목표 모집단을 설정하는 것이 중요합니다. 너무 좁은 집단만 선택하면 결과의 일반화가 어려울 수 있습니다.</li>
-<li>일차 및 이차 변수 (Primary and Secondary Variables):
+<section id="임상시험-설계의-주요-고려사항" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-설계의-주요-고려사항">2. 임상시험 설계의 주요 고려사항</h2>
+<section id="임상시험의-맥락과-유형" class="level3">
+<h3 class="anchored" data-anchor-id="임상시험의-맥락과-유형">임상시험의 맥락과 유형</h3>
 <ul>
-<li>일차 변수 (Primary Variable): 시험 목적과 가장 직결되는 변수로, 표본 크기 산정의 근거가 됩니다. 눈가림 해제 후 임의로 변경할 수 없습니다.</li>
-<li>이차 변수 (Secondary Variable): 일차 목적을 보조하는 변수입니다.</li>
-</ul></li>
-<li>복합 변수 (Composite Variables): 여러 측정 지표를 단일 지표로 통합한 변수입니다. 다중성 문제 해결에 유용하지만, 구성 요소 각각에 대한 분석도 병행하는 것이 바람직합니다.</li>
-<li>종합 평가 변수 (Global Assessment Variables): 전반적인 유효성이나 안전성을 측정하지만, 상세한 효과 차이를 가릴 수 있어 일차 변수로는 권장되지 않습니다.</li>
-<li>다중 일차 변수 (Multiple Primary Variables): 두 개 이상의 일차 변수를 사용할 경우, 가설 검정 방법과 다중성 조절(Type 1 Error 제어) 방안을 명확히 기술해야 합니다.</li>
-<li>대리 변수 (Surrogate Variables): 실제 임상적 유익성을 직접 관찰하기 어려울 때 사용하는 간접 지표입니다. 실제 임상 결과와의 상관관계가 충분히 입증되어야 합니다.</li>
-<li>범주화 변수 (Categorized Variables): 연속형 변수를 ‘성공/실패’ 등으로 범주화하는 것입니다. 임상적 의미가 명확해야 하며 계획서에 사전에 정의되어야 합니다.</li>
-</ol>
-</section>
-<section id="c.-편향-방지를-위한-설계-기법" class="level3">
-<h3 class="anchored" data-anchor-id="c.-편향-방지를-위한-설계-기법">C. 편향 방지를 위한 설계 기법</h3>
-<p>편향을 줄이는 가장 중요한 기법은 눈가림(Blinding)과 무작위 배정(Randomization)입니다.</p>
-<ol type="1">
-<li>눈가림 (Blinding): 피험자나 연구자가 배정된 군을 알게 됨으로써 발생하는 편향을 방지합니다.
-<ul>
-<li>이중 눈가림 (Double Blind): 피험자, 연구자, 의뢰자, 평가자 모두 배정 결과를 모르게 하는 가장 이상적인 방법입니다.</li>
-<li>데이터 정리(Data Cleaning)가 완료되고 눈가림 해제(Unblinding) 전까지 엄격히 유지되어야 합니다.</li>
-</ul></li>
-<li>무작위 배정 (Randomization): 대상자를 치료군에 무작위로 할당하여 각 군의 비교 가능성을 높입니다.
-<ul>
-<li>주로 블록 무작위 배정 (Block Randomization)을 사용하며, 주요 예후 인자에 따른 층화(Stratification)를 병행할 수 있습니다.</li>
-</ul></li>
-</ol>
-</section>
-</section>
-<section id="임상시험-설계-시-고려사항" class="level2">
-<h2 class="anchored" data-anchor-id="임상시험-설계-시-고려사항">3. 임상시험 설계 시 고려사항</h2>
-<section id="a.-설계-구성-design-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="a.-설계-구성-design-configuration">A. 설계 구성 (Design Configuration)</h3>
-<ol type="1">
-<li>평행군 설계 (Parallel Group Design): 가장 일반적인 설계로, 대상자가 무작위로 한 치료군에 배정되어 시험 종료 시까지 해당 치료를 받는 방식입니다. <img src="pics/randomized_allocation.png" class="img-fluid"></li>
-<li>교차 설계 (Crossover Design): 각 대상자가 순차적으로 여러 치료를 받는 방식입니다. 대상자 자신이 대조군 역할을 하므로 표본 크기를 줄일 수 있으나, 이전 치료의 효과가 남는 잔류 효과(Carryover Effect)를 방지하기 위한 휴약기(Washout Period) 설정이 중요합니다. <img src="pics/drop_out.png" class="img-fluid"></li>
-<li>요인 설계 (Factorial Design): 두 개 이상의 치료 조합을 동시에 평가하여 치료 간의 상호작용(Interaction)을 확인하는 데 사용됩니다. <img src="pics/factorial_design.png" class="img-fluid"></li>
-</ol>
-</section>
-<section id="b.-다기관-임상시험-multicenter-trials" class="level3">
-<h3 class="anchored" data-anchor-id="b.-다기관-임상시험-multicenter-trials">B. 다기관 임상시험 (Multicenter Trials)</h3>
-<p>짧은 기간 내 대상자 모집이 가능하고 결과의 일반화에 유리하지만, 기관 간의 이질성을 관리해야 합니다.</p>
-</section>
-<section id="c.-비교-유형" class="level3">
-<h3 class="anchored" data-anchor-id="c.-비교-유형">C. 비교 유형</h3>
-<ol type="1">
-<li>우월성 시험 (Superiority Trial): 시험약이 대조군(위약 또는 활성대조약)보다 우수함을 입증합니다.</li>
-<li>동등성 및 비열등성 시험 (Equivalence and Non-inferiority Trial): 시험약이 대조약과 효과 차이가 없거나, 허용 범위 내에서 나쁘지 않음을 입증합니다.</li>
-<li>용량-반응 시험 (Dose-Response Trial): 약물 용량에 따른 유효성 및 안전성 변화를 확인하여 최적 용량을 찾습니다.</li>
-</ol>
-</section>
-<section id="d.-표본-크기-sample-size" class="level3">
-<h3 class="anchored" data-anchor-id="d.-표본-크기-sample-size">D. 표본 크기 (Sample Size)</h3>
-<ul>
-<li>표본 크기는 일차 목적에 근거하여 통계적으로 산출되어야 합니다.</li>
-<li>유의수준(Type 1 Error), 검정력(Power), 기대 효과 크기, 탈락률 등을 고려하여 계획서에 명시해야 합니다.</li>
+<li><strong>확증적 임상시험 (Confirmatory Trial):</strong> 사전에 설정된 가설을 검정하고 임상적 유의성을 확보하기 위한 시험입니다. 통계적 가설 검정과 신뢰구간 추정이 핵심입니다.</li>
+<li><strong>탐색적 임상시험 (Exploratory Trial):</strong> 가설의 정교화 및 후속 시험을 위한 근거 마련에 초점을 둡니다.</li>
 </ul>
 </section>
+<section id="평가변수-variables의-선정" class="level3">
+<h3 class="anchored" data-anchor-id="평가변수-variables의-선정">평가변수 (Variables)의 선정</h3>
+<ul>
+<li><strong>일차 변수 (Primary Variable):</strong> 시험 목적과 직결되며 표본 크기 산정의 근거가 되는 변수입니다.</li>
+<li><strong>복합 변수 (Composite Variables):</strong> 여러 지표를 통합하여 다중성 문제를 완화합니다.</li>
+<li><strong>대리 변수 (Surrogate Variables):</strong> 실제 임상적 유익성을 직접 측정하기 어려울 때 사용하는 간접 지표입니다.</li>
+</ul>
+<hr>
 </section>
-<section id="임상시험-수행-중-고려사항" class="level2">
-<h2 class="anchored" data-anchor-id="임상시험-수행-중-고려사항">4. 임상시험 수행 중 고려사항</h2>
+</section>
+<section id="편향-방지를-위한-설계-기법" class="level2">
+<h2 class="anchored" data-anchor-id="편향-방지를-위한-설계-기법">3. 편향 방지를 위한 설계 기법</h2>
+<section id="눈가림-blinding" class="level3">
+<h3 class="anchored" data-anchor-id="눈가림-blinding">눈가림 (Blinding)</h3>
+<p>피험자나 연구자가 배정 정보를 알게 됨으로써 발생하는 심리적·주관적 편향을 차단합니다. <strong>이중 눈가림(Double Blind)</strong>은 데이터 정리(Data Cleaning)가 완료될 때까지 엄격히 유지되어야 합니다.</p>
+</section>
+<section id="무작위-배정-randomization" class="level3">
+<h3 class="anchored" data-anchor-id="무작위-배정-randomization">무작위 배정 (Randomization)</h3>
+<p>군 간의 비교 가능성을 극대화하기 위해 대상자를 무작위로 할당합니다. 주로 <strong>블록 무작위 배정(Block Randomization)</strong>과 주요 예후 인자를 고려한 <strong>층화(Stratification)</strong>가 병행됩니다.</p>
+<hr>
+</section>
+</section>
+<section id="임상시험-설계-구성-design-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-설계-구성-design-configuration">4. 임상시험 설계 구성 (Design Configuration)</h2>
 <ol type="1">
-<li>중간 분석 (Interim Analysis): 시험 완료 전 치료 효과를 비교하는 분석입니다. 사전에 계획되어야 하며, 반복적 분석으로 인한 제1종 오류 증가를 제어해야 합니다.</li>
-<li>독립적 데이터 모니터링 위원회 (IDMC): 의뢰자와 독립적으로 안전성 및 유효성 데이터를 모니터링하여 시험의 지속 여부를 권고하는 기구입니다.</li>
+<li><strong>평행군 설계 (Parallel Group Design):</strong> 가장 표준적인 방식으로, 대상자가 고정된 한 치료군에서 시험을 완료합니다. <img src="pics/randomized_allocation.png" class="img-fluid"></li>
+<li><strong>교차 설계 (Crossover Design):</strong> 각 피험자가 순차적으로 여러 치료를 받으며, 잔류 효과(Carryover Effect) 제어를 위한 휴약기(Washout)가 중요합니다. <img src="pics/drop_out.png" class="img-fluid"></li>
+<li><strong>요인 설계 (Factorial Design):</strong> 두 개 이상의 치료 조합을 동시에 평가하여 치료 간 상호작용(Interaction)을 식별합니다. <img src="pics/factorial_design.png" class="img-fluid"></li>
 </ol>
+</section>
+<section id="표본-크기와-분석-계획" class="level2">
+<h2 class="anchored" data-anchor-id="표본-크기와-분석-계획">5. 표본 크기와 분석 계획</h2>
+<p>표본 크기는 제1종 오류(<span class="math inline">\(\alpha\)</span>), 검정력(<span class="math inline">\(1-\beta\)</span>), 예상 효과 크기를 고려하여 통계적으로 산출되어야 하며, 이는 임상시험 계획서에 명시적인 근거와 함께 기술되어야 합니다.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ich1998e9" class="csl-entry" role="listitem">
+International Council for Harmonisation. 1998. <em>Guideline for Industry: E9 Statistical Principles for Clinical Trials</em>. ICH.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

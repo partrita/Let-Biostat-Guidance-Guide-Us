@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>임상시험의 통계적 원칙 (E9) Part 2 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./e9_part1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,14 +131,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,14 +251,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -252,23 +269,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#데이터-분석-고려사항" id="toc-데이터-분석-고려사항" class="nav-link active" data-scroll-target="#데이터-분석-고려사항">5. 데이터 분석 고려사항</a>
-  <ul class="collapse">
-  <li><a href="#분석-대상-집단-analysis-sets" id="toc-분석-대상-집단-analysis-sets" class="nav-link" data-scroll-target="#분석-대상-집단-analysis-sets">분석 대상 집단 (Analysis Sets)</a></li>
-  <li><a href="#추정-신뢰구간-및-가설-검정" id="toc-추정-신뢰구간-및-가설-검정" class="nav-link" data-scroll-target="#추정-신뢰구간-및-가설-검정">추정, 신뢰구간 및 가설 검정</a></li>
-  <li><a href="#다중성-multiplicity" id="toc-다중성-multiplicity" class="nav-link" data-scroll-target="#다중성-multiplicity">다중성 (Multiplicity)</a></li>
-  <li><a href="#층화-및-하위군-분석" id="toc-층화-및-하위군-분석" class="nav-link" data-scroll-target="#층화-및-하위군-분석">층화 및 하위군 분석</a></li>
-  </ul></li>
-  <li><a href="#안전성-및-내약성-평가" id="toc-안전성-및-내약성-평가" class="nav-link" data-scroll-target="#안전성-및-내약성-평가">6. 안전성 및 내약성 평가</a>
-  <ul class="collapse">
-  <li><a href="#범위-및-대상" id="toc-범위-및-대상" class="nav-link" data-scroll-target="#범위-및-대상">범위 및 대상</a></li>
-  <li><a href="#통계적-평가" id="toc-통계적-평가" class="nav-link" data-scroll-target="#통계적-평가">통계적 평가</a></li>
-  </ul></li>
-  <li><a href="#보고-reporting" id="toc-보고-reporting" class="nav-link" data-scroll-target="#보고-reporting">7. 보고 (Reporting)</a>
-  <ul class="collapse">
-  <li><a href="#평가-및-보고-절차" id="toc-평가-및-보고-절차" class="nav-link" data-scroll-target="#평가-및-보고-절차">평가 및 보고 절차</a></li>
-  <li><a href="#데이터베이스-통합-요약" id="toc-데이터베이스-통합-요약" class="nav-link" data-scroll-target="#데이터베이스-통합-요약">데이터베이스 통합 요약</a></li>
-  </ul></li>
+  <li><a href="#분석-대상-집단-analysis-sets" id="toc-분석-대상-집단-analysis-sets" class="nav-link active" data-scroll-target="#분석-대상-집단-analysis-sets">1. 분석 대상 집단 (Analysis Sets)</a></li>
+  <li><a href="#추정-및-가설-검정" id="toc-추정-및-가설-검정" class="nav-link" data-scroll-target="#추정-및-가설-검정">2. 추정 및 가설 검정</a></li>
+  <li><a href="#다중성-및-하위군-분석" id="toc-다중성-및-하위군-분석" class="nav-link" data-scroll-target="#다중성-및-하위군-분석">3. 다중성 및 하위군 분석</a></li>
+  <li><a href="#안전성-및-내약성-평가" id="toc-안전성-및-내약성-평가" class="nav-link" data-scroll-target="#안전성-및-내약성-평가">4. 안전성 및 내약성 평가</a></li>
+  <li><a href="#최종-보고-및-해석" id="toc-최종-보고-및-해석" class="nav-link" data-scroll-target="#최종-보고-및-해석">5. 최종 보고 및 해석</a></li>
   </ul>
 </nav>
     </div>
@@ -278,6 +283,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9_part1.html">임상시험 통계 원칙 (E9)</a></li><li class="breadcrumb-item"><a href="./e9_part2.html"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 2</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 2</span></h1>
+<p class="subtitle lead">데이터 분석 집단과 안전성 평가 원칙</p>
 </div>
 
 
@@ -294,42 +300,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="데이터-분석-고려사항" class="level2">
-<h2 class="anchored" data-anchor-id="데이터-분석-고려사항">5. 데이터 분석 고려사항</h2>
-<p>통계 분석 계획서(Statistical Analysis Plan, SAP)는 임상시험 계획서가 완성된 직후 작성되어야 하며, 데이터의 눈가림 리뷰(Blind Review)가 완료된 시점에 다시 한번 검토되어야 합니다.</p>
-<section id="분석-대상-집단-analysis-sets" class="level3">
-<h3 class="anchored" data-anchor-id="분석-대상-집단-analysis-sets">분석 대상 집단 (Analysis Sets)</h3>
-<p>원칙적으로 모든 피험자의 데이터를 확보하는 것이 목표이지만, 실제로는 중도 탈락이나 결측치 발생이 불가피합니다. 이러한 상황에서 발생할 수 있는 편향(Bias)을 최소화하고 제1종 오류를 통제하기 위한 대책을 수립해야 합니다.</p>
-<section id="itt-분석군-full-analysis-set-fas" class="level4">
-<h4 class="anchored" data-anchor-id="itt-분석군-full-analysis-set-fas">1. ITT 분석군 (Full Analysis Set, FAS)</h4>
+<p>데이터 분석 단계에서는 연구 설계의 목적에 부합하는 분석 집단을 정의하고, 통계적 가정이 결과에 미치는 영향을 신중하게 평가해야 합니다 <span class="citation" data-cites="ich1998e9">(<a href="references.html#ref-ich1998e9" role="doc-biblioref">International Council for Harmonisation 1998</a>)</span>.</p>
+<section id="분석-대상-집단-analysis-sets" class="level2">
+<h2 class="anchored" data-anchor-id="분석-대상-집단-analysis-sets">1. 분석 대상 집단 (Analysis Sets)</h2>
+<p>현실적인 임상시험 과정에서는 중도 탈락이나 결측치가 발생하기 마련입니다. 분석 결과의 편향을 방지하기 위해 다음과 같은 집단을 사전에 정의합니다.</p>
 <ul>
-<li><strong>ITT 원칙(Intention-to-Treat Principle):</strong> 무작위 배정된 모든 피험자를 분석에 포함하는 원칙입니다. 피험자가 계획을 엄격히 준수하지 않았더라도 배정된 군의 일원으로 분석합니다.</li>
-<li>예외적으로 데이터 분석 전 객관적인 기준에 따라 일부 데이터를 제외할 수 있으나, 이는 충분히 정당화되어야 합니다.</li>
+<li><strong>ITT 분석군 (Full Analysis Set, FAS):</strong> 무작위 배정된 모든 피험자를 분석에 포함하는 원칙입니다. 실제 처치 준수 여부와 상관없이 배정된 군으로 분석하여 실제 임상 현장의 치료 방침 효과를 반영합니다.</li>
+<li><strong>계획서 준수 분석군 (Per Protocol Set, PPS):</strong> 계획서를 엄격히 준수한 피험자군입니다. 약물 자체의 생물학적 효능을 확인하는 데 유용하지만, 선택 편향(Selection Bias)의 위험이 있습니다.</li>
 </ul>
+<blockquote class="blockquote">
+<p>[!TIP] 우월성 시험에서는 ITT 분석이 일차적인 근거가 되며, 비열등성 시험에서는 ITT와 PPS 결과의 일관성을 확인하는 것이 매우 중요합니다.</p>
+</blockquote>
+<hr>
 </section>
-<section id="계획서-준수-분석군-per-protocol-set-pps" class="level4">
-<h4 class="anchored" data-anchor-id="계획서-준수-분석군-per-protocol-set-pps">2. 계획서 준수 분석군 (Per Protocol Set, PPS)</h4>
+<section id="추정-및-가설-검정" class="level2">
+<h2 class="anchored" data-anchor-id="추정-및-가설-검정">2. 추정 및 가설 검정</h2>
 <ul>
-<li>계획서를 충실히 따른 피험자들만을 포함하는 분석군입니다.</li>
-<li>기준: 최소한의 처치를 받은 자, 일차 평가변수 측정이 가능한 자, 중대한 계획서 위반이 없는 자 등.</li>
-<li>PPS 분석은 편향의 위험이 있으므로 계획서에 제외 기준을 명확히 명시해야 합니다.</li>
-</ul>
-</section>
-<section id="민감도-분석-sensitivity-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="민감도-분석-sensitivity-analysis">3. 민감도 분석 (Sensitivity Analysis)</h4>
-<ul>
-<li>FAS와 PPS 결과를 비교하여 전체적인 결론의 일관성을 확인합니다.</li>
-<li>우월성 시험에서는 FAS가, 동등성/비열등성 시험에서는 PPS가 더 중요한 의미를 가질 수 있습니다.</li>
-<li>결측치 처리 방법이나 이상치(Outlier) 유무에 따라 결과가 어떻게 변하는지 확인해야 합니다.</li>
-</ul>
-</section>
-</section>
-<section id="추정-신뢰구간-및-가설-검정" class="level3">
-<h3 class="anchored" data-anchor-id="추정-신뢰구간-및-가설-검정">추정, 신뢰구간 및 가설 검정</h3>
-<ul>
-<li>모든 추정치(Estimation)는 신뢰구간(Confidence Intervals)과 함께 보고되어야 합니다.</li>
-<li>공변량 분석(ANCOVA) 등을 활용하여 정밀도를 높이는 노력이 필요합니다.</li>
-<li>단측 검정(One-sided Test)을 사용할 경우 유의수준 설정에 유의해야 합니다.</li>
+<li><strong>신뢰구간 (Confidence Intervals):</strong> 모든 점 추정치는 정밀도를 나타내는 신뢰구간과 함께 보고되어야 합니다.</li>
+<li><strong>통계적 유의성:</strong> 양측 검정(Two-sided)을 원칙으로 하되, 단측 검정(One-sided) 사용 시 합리적인 정당성을 제시해야 합니다.</li>
 </ul>
 <table class="caption-top table">
 <colgroup>
@@ -349,72 +337,35 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">모수적 방법 (Parametric)</th>
-<th style="text-align: center;">비모수적 방법 (Non-parametric)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><img src="pics/parametric_statistics.jpeg" class="img-fluid" alt="모수 통계"></td>
-<td style="text-align: center;"><img src="pics/nonparametric_statistics.jpeg" class="img-fluid" alt="비모수 통계"></td>
-</tr>
-</tbody>
-</table>
+<hr>
 </section>
-<section id="다중성-multiplicity" class="level3">
-<h3 class="anchored" data-anchor-id="다중성-multiplicity">다중성 (Multiplicity)</h3>
-<p>여러 개의 일차 변수, 다중 비교, 반복 측정 등 다중성 문제가 발생하면 제1종 오류가 증가합니다. 이를 조절하기 위해 일차 변수 지정, 가중치 조절, 또는 AUC(Area Under Curve) 활용 등의 방법을 고려해야 합니다.</p>
-</section>
-<section id="층화-및-하위군-분석" class="level3">
-<h3 class="anchored" data-anchor-id="층화-및-하위군-분석">층화 및 하위군 분석</h3>
+<section id="다중성-및-하위군-분석" class="level2">
+<h2 class="anchored" data-anchor-id="다중성-및-하위군-분석">3. 다중성 및 하위군 분석</h2>
 <ul>
-<li>임상시험 전 주요 영향 요인을 고려하여 층화(Stratification)를 실시할 수 있습니다.</li>
-<li>하위군 분석(Subgroup Analysis)은 주로 탐색적 목적으로 수행되며, 하위군 간 치료 효과의 균일성을 확인해야 합니다. 하위군 분석 결과만으로 최종 결론을 내리는 것은 위험합니다.</li>
+<li><strong>다중성 (Multiplicity):</strong> 여러 개의 평가변수를 동시에 검정할 경우 제1종 오류가 증가하므로, 이를 보정하기 위한 사전 계획(예: Bonferroni 보정 등)이 필요합니다.</li>
+<li><strong>하위군 분석 (Subgroup Analysis):</strong> 특정 환자군에서의 효과를 탐색적으로 확인하는 데 사용됩니다. 하지만 하위군 분석 결과만으로 전체 결론을 도출하는 것은 지양해야 합니다.</li>
 </ul>
-</section>
+<hr>
 </section>
 <section id="안전성-및-내약성-평가" class="level2">
-<h2 class="anchored" data-anchor-id="안전성-및-내약성-평가">6. 안전성 및 내약성 평가</h2>
-<section id="범위-및-대상" class="level3">
-<h3 class="anchored" data-anchor-id="범위-및-대상">범위 및 대상</h3>
-<p>안전성 분석군은 약물을 단 한 번이라도 투여받은 모든 피험자를 대상으로 합니다. 인과관계와 상관없이 발생한 모든 이상사례(AE)를 보고해야 합니다.</p>
-</section>
-<section id="통계적-평가" class="level3">
-<h3 class="anchored" data-anchor-id="통계적-평가">통계적 평가</h3>
+<h2 class="anchored" data-anchor-id="안전성-및-내약성-평가">4. 안전성 및 내약성 평가</h2>
+<p>안전성 데이터는 유효성 데이터와는 다른 관점에서 접근해야 합니다.</p>
 <ul>
-<li>이상사례 발생 비율, 노출 정도 등을 요약합니다.</li>
-<li>장기 시험의 경우 생존 분석 방법론을 활용하여 누적 발생률을 평가할 수 있습니다.</li>
-<li>신뢰구간을 통해 안전성 프로파일을 기술하고, 필요한 경우 그래프를 활용한 시각화를 병행합니다.</li>
+<li><strong>분석 대상:</strong> 임상시험용 의약품을 단 1회라도 투여받은 모든 피험자를 포함합니다.</li>
+<li><strong>이상사례 보고:</strong> 인과관계 유무와 상관없이 발생한 모든 이상사례(AE)를 수집하여 노출 정도와 발생 빈도를 분석합니다.</li>
+<li><strong>목적:</strong> 신약의 안전성 기술(Safety Profile)을 명확히 하고 잠재적 위험을 식별하는 데 있습니다.</li>
 </ul>
 </section>
-</section>
-<section id="보고-reporting" class="level2">
-<h2 class="anchored" data-anchor-id="보고-reporting">7. 보고 (Reporting)</h2>
-<section id="평가-및-보고-절차" class="level3">
-<h3 class="anchored" data-anchor-id="평가-및-보고-절차">평가 및 보고 절차</h3>
-<ul>
-<li>ICH E3 지침에 따라 상세 보고서를 작성합니다.</li>
-<li>분석 전 리뷰에서 피험자 제외 기준, 데이터 변환(Log 등), 이상치 처리 등을 확정합니다.</li>
-<li>계획되지 않은 추가 분석(Post-hoc Analysis)은 계획된 분석과 명확히 구분하여 보고해야 하며, 과도한 해석을 경계해야 합니다.</li>
-</ul>
-</section>
-<section id="데이터베이스-통합-요약" class="level3">
-<h3 class="anchored" data-anchor-id="데이터베이스-통합-요약">데이터베이스 통합 요약</h3>
-<ul>
-<li>상품화를 위해 전체 임상 데이터를 통합하여 요약합니다.</li>
-<li>메타 분석 등을 위해 변수의 정의와 측정 과정을 일관되게 유지하는 것이 중요합니다.</li>
-<li>안전성 데이터는 충분한 대조군과의 비교를 통해 위험-이익 관계를 적절히 평가해야 합니다.</li>
-</ul>
+<section id="최종-보고-및-해석" class="level2">
+<h2 class="anchored" data-anchor-id="최종-보고-및-해석">5. 최종 보고 및 해석</h2>
+<p>임상시험 결과 보고서(CSR)는 ICH E3 지침을 따르며, 통계적 유의성뿐만 아니라 임상적 의미(Clinical Relevance)를 균형 있게 다루어야 합니다.</p>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ich1998e9" class="csl-entry" role="listitem">
+International Council for Harmonisation. 1998. <em>Guideline for Industry: E9 Statistical Principles for Clinical Trials</em>. ICH.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

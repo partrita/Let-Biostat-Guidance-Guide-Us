@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +56,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./delta_part2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,14 +131,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -232,14 +251,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -252,21 +269,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#배경-background" id="toc-배경-background" class="nav-link active" data-scroll-target="#배경-background">1. 배경 (Background)</a></li>
-  <li><a href="#범위-scope" id="toc-범위-scope" class="nav-link" data-scroll-target="#범위-scope">2. 범위 (Scope)</a></li>
-  <li><a href="#주요-개념-및-정의" id="toc-주요-개념-및-정의" class="nav-link" data-scroll-target="#주요-개념-및-정의">3. 주요 개념 및 정의</a>
+  <li><a href="#지침의-도입-배경-및-목적" id="toc-지침의-도입-배경-및-목적" class="nav-link active" data-scroll-target="#지침의-도입-배경-및-목적">1. 지침의 도입 배경 및 목적</a></li>
+  <li><a href="#진단-성능-평가의-주요-개념" id="toc-진단-성능-평가의-주요-개념" class="nav-link" data-scroll-target="#진단-성능-평가의-주요-개념">2. 진단 성능 평가의 주요 개념</a>
   <ul class="collapse">
-  <li><a href="#진단-검사의-목적" id="toc-진단-검사의-목적" class="nav-link" data-scroll-target="#진단-검사의-목적">진단 검사의 목적</a></li>
-  <li><a href="#기준점-benchmarks" id="toc-기준점-benchmarks" class="nav-link" data-scroll-target="#기준점-benchmarks">기준점 (Benchmarks)</a></li>
-  <li><a href="#진단-정확도-diagnostic-accuracy" id="toc-진단-정확도-diagnostic-accuracy" class="nav-link" data-scroll-target="#진단-정확도-diagnostic-accuracy">진단 정확도 (Diagnostic Accuracy)</a></li>
-  <li><a href="#진단-정확도-설명-척도" id="toc-진단-정확도-설명-척도" class="nav-link" data-scroll-target="#진단-정확도-설명-척도">진단 정확도 설명 척도</a></li>
-  <li><a href="#편향-bias" id="toc-편향-bias" class="nav-link" data-scroll-target="#편향-bias">편향 (Bias)</a></li>
+  <li><a href="#참조-표준과-기준점-benchmarks" id="toc-참조-표준과-기준점-benchmarks" class="nav-link" data-scroll-target="#참조-표준과-기준점-benchmarks">참조 표준과 기준점 (Benchmarks)</a></li>
   </ul></li>
-  <li><a href="#기준점-및-연구군-권장-사항" id="toc-기준점-및-연구군-권장-사항" class="nav-link" data-scroll-target="#기준점-및-연구군-권장-사항">4. 기준점 및 연구군 권장 사항</a>
+  <li><a href="#진단-정확도-지표-diagnostic-accuracy" id="toc-진단-정확도-지표-diagnostic-accuracy" class="nav-link" data-scroll-target="#진단-정확도-지표-diagnostic-accuracy">3. 진단 정확도 지표 (Diagnostic Accuracy)</a>
   <ul class="collapse">
-  <li><a href="#기준점과의-비교-전략" id="toc-기준점과의-비교-전략" class="nav-link" data-scroll-target="#기준점과의-비교-전략">4.1 기준점과의 비교 전략</a></li>
-  <li><a href="#일치도-척도-agreement-measures" id="toc-일치도-척도-agreement-measures" class="nav-link" data-scroll-target="#일치도-척도-agreement-measures">일치도 척도 (Agreement Measures)</a></li>
-  <li><a href="#연구군-선택-study-population" id="toc-연구군-선택-study-population" class="nav-link" data-scroll-target="#연구군-선택-study-population">4.2 연구군 선택 (Study Population)</a></li>
+  <li><a href="#핵심-성능-지표" id="toc-핵심-성능-지표" class="nav-link" data-scroll-target="#핵심-성능-지표">핵심 성능 지표</a></li>
+  <li><a href="#일치도-지표-agreement-measures" id="toc-일치도-지표-agreement-measures" class="nav-link" data-scroll-target="#일치도-지표-agreement-measures">일치도 지표 (Agreement Measures)</a></li>
+  </ul></li>
+  <li><a href="#설계-시-유의해야-할-편향-bias" id="toc-설계-시-유의해야-할-편향-bias" class="nav-link" data-scroll-target="#설계-시-유의해야-할-편향-bias">4. 설계 시 유의해야 할 편향 (Bias)</a>
+  <ul class="collapse">
+  <li><a href="#피험자군-선택-selection-bias" id="toc-피험자군-선택-selection-bias" class="nav-link" data-scroll-target="#피험자군-선택-selection-bias">피험자군 선택 (Selection Bias)</a></li>
+  <li><a href="#확인-편향-verification-bias" id="toc-확인-편향-verification-bias" class="nav-link" data-scroll-target="#확인-편향-verification-bias">확인 편향 (Verification Bias)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -277,6 +293,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diagnostic_part1.html">진단 검사 평가 (Diagnostic)</a></li><li class="breadcrumb-item"><a href="./diagnostic_part1.html"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span></h1>
+<p class="subtitle lead">정확도 지표의 정의와 연구 설계의 원칙</p>
 </div>
 
 
@@ -293,67 +310,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>본 내용은 진단 검사(Diagnostic Tests)를 평가하는 연구 결과를 보고할 때 준수해야 할 통계적 원칙과 부적절한 관행에 대한 FDA 지침을 정리한 것입니다.</p>
-<section id="배경-background" class="level2">
-<h2 class="anchored" data-anchor-id="배경-background">1. 배경 (Background)</h2>
-<p>이 지침의 목적은 진단 검사 평가 연구 결과를 보고하기 위한 통계적으로 적절한 관례를 기술하고, 흔히 발생하는 부적절한 관례를 식별하는 데 있습니다. 특히 최종 결과가 질적(Qualitative)인 진단 검사(기저 측정치가 양적이라 할지라도)를 중점적으로 다룹니다.</p>
-<p>성능(Performance) 결과를 설명하기 위해 올바른 용어를 사용하는 것은 진단 기기의 안전하고 효과적인 사용을 보장하는 데 매우 중요합니다. 본 지침은 CLSI(Clinical and Laboratory Standards Institute) 및 STARD(Standards for Reporting of Diagnostic Accuracy)에서 정의한 국제적으로 용인되는 용어와 정의를 사용합니다.</p>
+<p>진단 검사(Diagnostic Tests) 평가 연구 결과를 보고할 때 준수해야 할 통계적 원칙과 부적절한 보고 관행에 대한 FDA 지침을 요약 정리한 것입니다 <span class="citation" data-cites="fda2007diagnostic">(<a href="references.html#ref-fda2007diagnostic" role="doc-biblioref">U.S. Food and Drug Administration 2007</a>)</span>.</p>
+<section id="지침의-도입-배경-및-목적" class="level2">
+<h2 class="anchored" data-anchor-id="지침의-도입-배경-및-목적">1. 지침의 도입 배경 및 목적</h2>
+<p>공중보건에 중요한 진단 기기는 안전하고 효과적인 사용을 위해 그 성능이 명확하게 기술되어야 합니다. 본 지침은 CLSI(Clinical and Laboratory Standards Institute) 및 STARD(Standards for Reporting of Diagnostic Accuracy)에서 통용되는 국제 표준 용어와 정의에 기반하여 작성되었습니다.</p>
 </section>
-<section id="범위-scope" class="level2">
-<h2 class="anchored" data-anchor-id="범위-scope">2. 범위 (Scope)</h2>
-<p>본 문서는 진단 기기에 대한 시판 전 신고(510(k)) 및 시판 전 승인(PMA) 신청을 위한 지침을 제공합니다. 특히 결과가 양성 또는 음성으로 도출되는 질적 진단 기기를 평가하는 연구 결과를 보고하는 방식을 다룹니다.</p>
-</section>
-<section id="주요-개념-및-정의" class="level2">
-<h2 class="anchored" data-anchor-id="주요-개념-및-정의">3. 주요 개념 및 정의</h2>
-<section id="진단-검사의-목적" class="level3">
-<h3 class="anchored" data-anchor-id="진단-검사의-목적">진단 검사의 목적</h3>
-<p>질적 진단 검사는 목표 질환(Target Condition)이 피험자에게 있는지 여부를 판정하기 위해 설계되었습니다. 목표 질환은 특정 질병, 질병의 단계, 또는 치료의 시작·수정·중단을 결정할 수 있는 환자의 식별 가능한 상태를 의미합니다.</p>
-</section>
-<section id="기준점-benchmarks" class="level3">
-<h3 class="anchored" data-anchor-id="기준점-benchmarks">기준점 (Benchmarks)</h3>
-<p>새로운 진단 검사의 성능을 평가하기 위한 기준점은 크게 두 가지로 나뉩니다. 1. 참조 표준(Reference Standard)과의 비교: 목표 질환의 유무를 확립하기 위해 사용 가능한 최선의 방식과 비교합니다. 2. 비-참조 표준(Non-reference Standard)과의 비교: 참조 표준 외의 기존 방식이나 유사 기기(Predicate)와 비교합니다.</p>
-</section>
-<section id="진단-정확도-diagnostic-accuracy" class="level3">
-<h3 class="anchored" data-anchor-id="진단-정확도-diagnostic-accuracy">진단 정확도 (Diagnostic Accuracy)</h3>
-<p>새로운 검사와 참조 표준 결과 사이의 일치 정도를 의미합니다. 참조 표준은 단일 검사일 수도 있고, 여러 검사와 임상적 추적 조사를 결합한 알고리즘일 수도 있습니다.</p>
-</section>
-<section id="진단-정확도-설명-척도" class="level3">
-<h3 class="anchored" data-anchor-id="진단-정확도-설명-척도">진단 정확도 설명 척도</h3>
-<ul>
-<li>민감도(Sensitivity): 목표 질환이 있는 피험자 중 양성으로 판정된 비율</li>
-<li>특이도(Specificity): 목표 질환이 없는 피험자 중 음성으로 판정된 비율</li>
-<li>양성 예측도(PPV): 양성 판정을 받은 피험자 중 실제로 질환이 있을 확률</li>
-<li>음성 예측도(NPV): 음성 판정을 받은 피험자 중 실제로 질환이 없을 확률</li>
-</ul>
-</section>
-<section id="편향-bias" class="level3">
-<h3 class="anchored" data-anchor-id="편향-bias">편향 (Bias)</h3>
-<p>민감도와 특이도 추정치는 여러 원인에 의해 편향될 수 있습니다. 단순히 피험자 수를 늘리는 것만으로는 편향을 해결할 수 없으며, 적절한 피험자 선택과 연구 설계, 데이터 분석 절차의 개선이 필요합니다.</p>
-</section>
-</section>
-<section id="기준점-및-연구군-권장-사항" class="level2">
-<h2 class="anchored" data-anchor-id="기준점-및-연구군-권장-사항">4. 기준점 및 연구군 권장 사항</h2>
-<section id="기준점과의-비교-전략" class="level3">
-<h3 class="anchored" data-anchor-id="기준점과의-비교-전략">4.1 기준점과의 비교 전략</h3>
-<p>참조 표준의 가용성에 따라 다음과 같은 보고 방식을 권장합니다.</p>
+<section id="진단-성능-평가의-주요-개념" class="level2">
+<h2 class="anchored" data-anchor-id="진단-성능-평가의-주요-개념">2. 진단 성능 평가의 주요 개념</h2>
+<p>질적 진단 검사란 결과가 <strong>양성(Positive)</strong> 또는 <strong>음성(Negative)</strong> 등의 범주형으로 산출되는 검사를 의미합니다.</p>
+<section id="참조-표준과-기준점-benchmarks" class="level3">
+<h3 class="anchored" data-anchor-id="참조-표준과-기준점-benchmarks">참조 표준과 기준점 (Benchmarks)</h3>
+<p>새로운 진단 검사의 성능을 평가하기 위해 비교 대상이 되는 기준점은 두 가지 유형으로 구분됩니다.</p>
 <ol type="1">
-<li>참조 표준 사용 가능 시: 민감도와 특이도를 추정하여 보고합니다.</li>
-<li>참조 표준 사용이 제한적일 때: 가능한 범위 내에서 참조 표준을 사용하고, 확인 편향(Verification Bias) 등을 보정한 추정치를 계산합니다.</li>
-<li>참조 표준이 없을 때: 새로운 참조 표준을 구성할 수 있는지 검토하고, 불가능하다면 ‘일치도(Agreement)’ 척도를 사용합니다.</li>
+<li><strong>참조 표준 (Reference Standard):</strong> 목표 질환의 유무를 확립하기 위해 사용 가능한 최선의 방식을 의미합니다.</li>
+<li><strong>비-참조 표준 (Non-reference Standard):</strong> 참조 표준이 아닌 기존 검사법이나 기기(Predicate Device)를 의미합니다.</li>
 </ol>
+<hr>
 </section>
-<section id="일치도-척도-agreement-measures" class="level3">
-<h3 class="anchored" data-anchor-id="일치도-척도-agreement-measures">일치도 척도 (Agreement Measures)</h3>
-<p>참조 표준이 없어 정확도를 직접 산출할 수 없는 경우, 다음 용어를 사용합니다. - 양성 퍼센트 일치도 (Positive Percent Agreement, PPA) - 음성 퍼센트 일치도 (Negative Percent Agreement, NPA) - 주의 사항: 일치도가 높다고 해서 반드시 ‘올바른(Correct)’ 결과임을 의미하지는 않습니다. 두 검사가 동시에 틀릴 수도 있기 때문입니다.</p>
 </section>
-<section id="연구군-선택-study-population" class="level3">
-<h3 class="anchored" data-anchor-id="연구군-선택-study-population">4.2 연구군 선택 (Study Population)</h3>
+<section id="진단-정확도-지표-diagnostic-accuracy" class="level2">
+<h2 class="anchored" data-anchor-id="진단-정확도-지표-diagnostic-accuracy">3. 진단 정확도 지표 (Diagnostic Accuracy)</h2>
+<section id="핵심-성능-지표" class="level3">
+<h3 class="anchored" data-anchor-id="핵심-성능-지표">핵심 성능 지표</h3>
 <ul>
-<li>스펙트럼 편의(Spectrum Bias): 매우 건강한 사람과 매우 위중한 사람만 포함하고 중간 단계의 환자를 누락할 경우, 정확도가 실제보다 높게 나타날 수 있습니다. 질병 단계의 전 범위를 포함하는 피험자군을 구성해야 합니다.</li>
-<li>외적 타당성(External Validity): 연구 결과가 실제 의료 현장의 성능을 충분히 반영해야 합니다. 최종 버전의 기기 사용, 다양한 숙련도의 사용자 포함 등이 필요합니다.</li>
+<li><strong>민감도 (Sensitivity):</strong> 목표 질환이 있는 환자 중 양성으로 판정된 비율.</li>
+<li><strong>특이도 (Specificity):</strong> 목표 질환이 없는 환자 중 음성으로 판정된 비율.</li>
+<li><strong>예측도 (PPV/NPV):</strong> 양성 혹은 음성 판정을 받은 피험자가 실제로 해당 상태를 가질 확률.</li>
 </ul>
+</section>
+<section id="일치도-지표-agreement-measures" class="level3">
+<h3 class="anchored" data-anchor-id="일치도-지표-agreement-measures">일치도 지표 (Agreement Measures)</h3>
+<p>참조 표준을 확보할 수 없어 기기 간의 유사성만을 평가해야 할 경우 다음의 용어를 사용합니다.</p>
+<ul>
+<li><strong>양성 퍼센트 일치도 (PPA):</strong> 기존 검사가 양성일 때 새 검사도 양성일 확률.</li>
+<li><strong>음성 퍼센트 일치도 (NPA):</strong> 기존 검사가 음성일 때 새 검사도 음성일 확률.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="설계-시-유의해야-할-편향-bias" class="level2">
+<h2 class="anchored" data-anchor-id="설계-시-유의해야-할-편향-bias">4. 설계 시 유의해야 할 편향 (Bias)</h2>
+<p>진단 성능 추정치는 여러 설계상의 요인에 의해 편향될 수 있으므로, 다음 사항을 고려해야 합니다.</p>
+<section id="피험자군-선택-selection-bias" class="level3">
+<h3 class="anchored" data-anchor-id="피험자군-선택-selection-bias">피험자군 선택 (Selection Bias)</h3>
+<ul>
+<li><strong>스펙트럼 편의 (Spectrum Bias):</strong> 건강한 사람과 위중한 환자만을 극단적으로 포함할 경우 성능이 과대평가될 수 있습니다.</li>
+<li><strong>외적 타당성 (External Validity):</strong> 연구에 참여한 피험자가 실제 제품을 사용할 타겟 모집단의 폭을 충분히 반영해야 합니다.</li>
+</ul>
+</section>
+<section id="확인-편향-verification-bias" class="level3">
+<h3 class="anchored" data-anchor-id="확인-편향-verification-bias">확인 편향 (Verification Bias)</h3>
+<p>참조 표준을 통한 최종 진단이 일부 피험자에게만 선별적으로 수행될 때 발생하는 오류입니다. 이러한 편향을 최소화하기 위해 모든 피험자에게 참조 표준을 적용하거나, 적절한 통계적 보정을 수행해야 합니다.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-fda2007diagnostic" class="csl-entry" role="listitem">
+U.S. Food and Drug Administration. 2007. <em>Statistical Guidance on Reporting Results from Studies Evaluating Diagnostic Tests - Guidance for Industry and FDA Staff</em>. FDA.
+</div>
+</div>
 </section>
 </section>
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>임상시험 통계 가이드라인 이해 (LBGGU)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -35,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./intro.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-44ee0976171e9be92e6ebe9be850cd66.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">서문</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">서문</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,14 +113,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">서문</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">서문</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">소개</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">소개</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -233,14 +233,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">요약 및 결론</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">요약 및 결론</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">참고 문헌</span></a>
   </div>
 </li>
     </ul>
@@ -253,8 +251,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#서문" id="toc-서문" class="nav-link active" data-scroll-target="#서문">서문</a></li>
-  <li><a href="#let-biostat-guidance-guide-us-lbggu" id="toc-let-biostat-guidance-guide-us-lbggu" class="nav-link" data-scroll-target="#let-biostat-guidance-guide-us-lbggu">Let Biostat Guidance Guide Us (LBGGU)</a>
+  <li><a href="#let-biostat-guidance-guide-us-lbggu" id="toc-let-biostat-guidance-guide-us-lbggu" class="nav-link active" data-scroll-target="#let-biostat-guidance-guide-us-lbggu">Let Biostat Guidance Guide Us (LBGGU)</a>
   <ul class="collapse">
   <li><a href="#주요-링크" id="toc-주요-링크" class="nav-link" data-scroll-target="#주요-링크">주요 링크</a></li>
   <li><a href="#정리된-가이드라인-목록" id="toc-정리된-가이드라인-목록" class="nav-link" data-scroll-target="#정리된-가이드라인-목록">정리된 가이드라인 목록</a></li>
@@ -268,6 +265,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">임상시험 통계 가이드라인 이해 (LBGGU)</h1>
+<p class="subtitle lead">임상시험 가이드라인 학습의 첫걸음</p>
 </div>
 
 
@@ -296,29 +294,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="서문" class="level1 unnumbered">
-<h1 class="unnumbered">서문</h1>
-</section>
 <section id="let-biostat-guidance-guide-us-lbggu" class="level1">
 <h1>Let Biostat Guidance Guide Us (LBGGU)</h1>
-<p>가짜연구소(PseudoLab)에서 임상시험 가이드라인을 함께 학습하는 모임입니다. 본 모임에서는 주로 임상시험의 통계적 원칙과 방법론에 집중하여 심도 있게 공부하였습니다.</p>
+<p><strong>가짜연구소(PseudoLab)</strong>에서 임상시험 가이드라인을 깊이 있게 학습하기 위해 구성된 커뮤니티입니다. 본 도서는 임상시험 전 과정에 걸쳐 필수적으로 적용되는 글로벌 통계 원칙과 방법론을 심도 있게 분석한 결과물입니다.</p>
 <section id="주요-링크" class="level2">
 <h2 class="anchored" data-anchor-id="주요-링크">주요 링크</h2>
 <ul>
-<li>GitHub 저장소: <a href="https://github.com/Pseudo-Lab/Let-Biostat-Guidance-Guide-Us">Pseudo-Lab/Let-Biostat-Guide-Us</a></li>
-<li>프로젝트가 도움이 되셨다면 GitHub Star를 눌러 응원해주세요!</li>
+<li><strong>GitHub 저장소:</strong> <a href="https://github.com/Pseudo-Lab/Let-Biostat-Guidance-Guide-Us">Pseudo-Lab/Let-Biostat-Guide-Us</a></li>
+<li>연구 및 학습에 도움이 되셨다면 <strong>GitHub Star</strong>를 통해 응원해 주세요!</li>
 </ul>
 </section>
 <section id="정리된-가이드라인-목록" class="level2">
 <h2 class="anchored" data-anchor-id="정리된-가이드라인-목록">정리된 가이드라인 목록</h2>
-<p>본 도서에서는 다음과 같은 주요 임상시험 가이드라인을 다룹니다.</p>
+<p>본 자료는 신약 개발 및 임상 연구의 각 단계에서 실무자가 반드시 숙지해야 할 핵심 지침들을 다룹니다.</p>
 <ol type="1">
-<li>Good Clinical Practice (GCP) - 임상시험 관리 기준</li>
-<li>Guideline for Industry E9 - 임상시험을 위한 통계적 원칙</li>
-<li>Switching between Superiority and Non-inferiority - 우월성 및 비열등성 시험 간 전환 시 고려사항</li>
-<li>DELTA2 Guidance - 무작위 대조 시험(RCT)의 목표 차이 설정 및 표본 수 산출</li>
-<li>Diagnostic Tests Evaluation - 진단 검사 평가 연구 결과 보고를 위한 통계적 지침</li>
-<li>E9(R1) Addendum - 임상시험의 Estimand 및 민감도 분석</li>
+<li><strong>GCP (Good Clinical Practice)</strong> - 임상시험 관리 및 피험자 보호 원칙</li>
+<li><strong>ICH E9 (Guideline for Industry E9)</strong> - 임상시험 통계를 위한 포괄적인 가이드라인</li>
+<li><strong>Switching Objectives</strong> - 우월성 및 비열등성 시험 간 전환 시의 통계적 고려사항</li>
+<li><strong>DELTA2 Guidance</strong> - RCT 연구의 목표 차이값 설정 및 표본 크기 산출 전략</li>
+<li><strong>Diagnostic Tests Evaluation</strong> - 진단 기기 및 진단 검사 평가를 위한 FDA 지침</li>
+<li><strong>ICH E9(R1) Addendum</strong> - Estimand(추정 대상) 정의와 민감도 분석의 실행 프레임워크</li>
 </ol>
 
 
@@ -731,7 +726,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./intro.html" class="pagination-link" aria-label="소개">
-        <span class="nav-page-text">소개</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">소개</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
