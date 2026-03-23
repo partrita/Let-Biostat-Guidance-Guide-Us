@@ -1,4 +1,7 @@
-# References {.unnumbered}
+---
+title: "참고 문헌"
+subtitle: "주요 글로벌 가이드라인 및 관련 문헌 목록"
+---
 
 ::: {#refs}
 :::

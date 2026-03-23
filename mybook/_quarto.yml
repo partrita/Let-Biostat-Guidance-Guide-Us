@@ -4,8 +4,8 @@ project:
 
 book:
   title: "임상시험 통계 가이드라인 이해 (LBGGU)"
-  author: "가짜연구소(PseudoLab) LBGGU 모임"
-  date: "2026. 03. 20."
+  author: "가짜연구소(PseudoLab)"
+  date: "2026-03-20."
   language: ko
   chapters:
     - index.qmd
@@ -41,7 +41,4 @@ format:
     theme:
       - cosmo
     toc: true
-    number-sections: true
-  pdf:
-    documentclass: scrreprt
-    number-sections: true
+    number-sections: false
