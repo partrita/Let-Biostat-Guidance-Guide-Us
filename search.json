@@ -1,0 +1,605 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "임상시험 통계 가이드라인 이해 (LBGGU)",
+    "section": "",
+    "text": "서문",
+    "crumbs": [
+      "서문"
+    ]
+  },
+  {
+    "objectID": "index.html#주요-링크",
+    "href": "index.html#주요-링크",
+    "title": "임상시험 통계 가이드라인 이해 (LBGGU)",
+    "section": "주요 링크",
+    "text": "주요 링크\n\nGitHub 저장소: Pseudo-Lab/Let-Biostat-Guide-Us\n프로젝트가 도움이 되셨다면 GitHub Star를 눌러 응원해주세요!",
+    "crumbs": [
+      "서문"
+    ]
+  },
+  {
+    "objectID": "index.html#정리된-가이드라인-목록",
+    "href": "index.html#정리된-가이드라인-목록",
+    "title": "임상시험 통계 가이드라인 이해 (LBGGU)",
+    "section": "정리된 가이드라인 목록",
+    "text": "정리된 가이드라인 목록\n본 도서에서는 다음과 같은 주요 임상시험 가이드라인을 다룹니다.\n\nGood Clinical Practice (GCP) - 임상시험 관리 기준\nGuideline for Industry E9 - 임상시험을 위한 통계적 원칙\nSwitching between Superiority and Non-inferiority - 우월성 및 비열등성 시험 간 전환 시 고려사항\nDELTA2 Guidance - 무작위 대조 시험(RCT)의 목표 차이 설정 및 표본 수 산출\nDiagnostic Tests Evaluation - 진단 검사 평가 연구 결과 보고를 위한 통계적 지침\nE9(R1) Addendum - 임상시험의 Estimand 및 민감도 분석",
+    "crumbs": [
+      "서문"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "소개",
+    "section": "",
+    "text": "Let Biostat Guidance Guide Us (LBGGU)\n가짜연구소(PseudoLab)에서 임상시험 가이드라인을 함께 공부하는 모임입니다. 주로 임상 통계 분야의 글로벌 가이드라인을 심도 있게 다루었습니다.\n본 도서는 학습 모임에서 정리한 내용을 바탕으로, 실무자와 연구자들이 임상시험 통계 원칙을 더 쉽게 이해할 수 있도록 구성되었습니다.",
+    "crumbs": [
+      "소개"
+    ]
+  },
+  {
+    "objectID": "intro.html#주요-학습-자료",
+    "href": "intro.html#주요-학습-자료",
+    "title": "소개",
+    "section": "주요 학습 자료",
+    "text": "주요 학습 자료\n본 도서에서 다루는 주요 가이드라인은 다음과 같습니다.\n\nGood Clinical Practice (GCP): 임상시험 관리 기준의 기초와 윤리\nGuideline for Industry E9: 임상시험을 위한 통계적 원칙\nSwitching between Superiority and Non-inferiority: 우월성 및 비열등성 시험 간의 전환 시 고려사항\nDELTA2 Guidance: RCT 연구에서 목표 차이값 설정 및 표본 수 산출 지침\nDiagnostic Tests Evaluation: 진단 검사 평가 연구 결과 보고를 위한 통계적 지침\nE9(R1) Addendum: 임상시험의 Estimand(추정 대상) 및 민감도 분석",
+    "crumbs": [
+      "소개"
+    ]
+  },
+  {
+    "objectID": "intro.html#관련-링크",
+    "href": "intro.html#관련-링크",
+    "title": "소개",
+    "section": "관련 링크",
+    "text": "관련 링크\n\nGitHub 저장소: Pseudo-Lab/Let-Biostat-Guidance-Guide-Us\n본 자료가 도움이 되셨다면 GitHub 저장소에 Star를 눌러 응원해주세요!",
+    "crumbs": [
+      "소개"
+    ]
+  },
+  {
+    "objectID": "gcp_part1.html",
+    "href": "gcp_part1.html",
+    "title": "임상시험 관리 기준 (GCP) Part 1",
+    "section": "",
+    "text": "헬싱키 선언 (Declaration of Helsinki)\nGCP(Good Clinical Practice)의 목적은 크게 두 가지입니다. 첫째는 피험자를 보호하는 것(Human Subject Protection)이며, 둘째는 신뢰할 수 있는 임상시험 결과(Reliability of Trial Results)를 확보하는 것입니다 (ICH GCP 2.13).\n피험자 보호의 기본 원칙은 헬싱키 선언에 기초합니다. 다음은 헬싱키 선언의 주요 내용 중 GCP와 밀접하게 연관된 핵심 사항들을 정리한 것입니다.",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part1.html#헬싱키-선언-declaration-of-helsinki",
+    "href": "gcp_part1.html#헬싱키-선언-declaration-of-helsinki",
+    "title": "임상시험 관리 기준 (GCP) Part 1",
+    "section": "",
+    "text": "일반 원칙 (General Principles)\n\n환자의 건강을 최우선으로 고려해야 합니다.\n의학 연구는 피험자를 존중하고, 그들의 건강과 권리를 보호하는 범위 내에서 수행되어야 합니다.\n의학 연구의 목적은 새로운 지식을 얻는 것이지만, 이러한 목적이 피험자의 권리와 이익보다 우선할 수 없습니다.\n국가적 또는 국제적인 법적·규제적 요구사항이 헬싱키 선언에서 보장하는 피험자 보호 수준을 낮추거나 훼손해서는 안 됩니다.\n피험자를 대상으로 하는 의학 연구는 적절한 윤리적·과학적 교육과 훈련을 받고 자격을 갖춘 전문가가 진행해야 합니다.\n\n\n\n위험과 이익 (Risks and Benefits)\n\n의학적 치료와 연구를 병행하는 경우, 잠재적인 예방·진단·치료적 가치가 있는 경우에만 정당화될 수 있습니다. 또한 의사는 환자의 건강에 부정적인 영향을 미치지 않을 것이라는 충분한 근거를 가지고 있어야 합니다.\n연구 과정에서 피해를 입은 피험자에게는 적절한 보상과 치료가 보장되어야 합니다.\n모든 의학 연구는 시작 전 피험자와 해당 집단에 대한 예측 가능한 위험과 이익을 비교 평가하는 과정을 반드시 거쳐야 합니다.\n피험자에게 미치는 위험이 이익보다 크다고 판단되거나, 결과에 대한 결정적인 증거가 확보된 경우 의사는 해당 연구의 지속, 수정 또는 중단 여부를 즉시 평가해야 합니다.\n\n\n\n취약한 집단 및 개인 (Vulnerable Groups and Individuals)\n\n연구로 인해 추가적인 위험에 노출될 가능성이 높은 집단이나 개인을 ’취약한 피험자(Vulnerable)’로 분류합니다.\n이들은 특별한 보호를 받아야 합니다. 취약 집단을 대상으로 하는 연구는 비취약 집단을 대상으로 수행할 수 없는 경우에만 한하며, 해당 집단의 건강상 필요와 우선순위를 반영해야 합니다. 또한 연구 결과가 해당 집단에 실질적인 이익을 줄 수 있어야 합니다.\n\n\n\n과학적 요구사항 및 연구 계획서 (Scientific Requirements and Research Protocols)\n\n의학 연구는 일반적으로 인정된 과학적 원리에 기반해야 하며, 충분한 문헌 검토와 실험실 및 동물 실험 결과를 토대로 해야 합니다. 이때 실험 동물의 복지도 존중되어야 합니다.\n연구 설계와 과정은 연구 계획서(Protocol)에 명확히 기술되어야 하며 정당성을 갖추어야 합니다.\n\n연구 계획서(Protocol): 임상시험의 목적, 설계, 방법론, 통계적 고려사항 및 조직을 기술한 문서입니다. ICH GCP 가이드라인에서는 계획서뿐만 아니라 그 개정안(Protocol Amendments)도 포함하는 개념으로 사용됩니다.\n\n계획서에는 윤리적 고려 사항과 헬싱키 선언의 원칙이 어떻게 적용되었는지 명시해야 합니다. 또한 자금 조달, 스폰서, 기관 제휴, 잠재적 이해상충, 피험자 인센티브, 피해 보상 및 치료에 대한 정보가 포함되어야 합니다.\n\n\n\n연구 윤리 위원회 (Research Ethics Committees)\n\n연구 계획서는 시작 전 심의와 승인을 위해 윤리 위원회(IRB/IEC)에 제출되어야 합니다. 위원회는 연구자 및 스폰서로부터 독립적이어야 하며 투명하게 운영되어야 합니다.\n윤리 위원회의 승인 없이는 계획서를 임의로 변경할 수 없습니다. 연구 종료 후 연구자는 위원회에 최종 보고서를 제출해야 합니다.\n\n\n\n사생활 보호 및 비밀 유지 (Privacy and Confidentiality)\n\n피험자의 사생활을 보호하고 개인정보의 비밀을 철저히 준수해야 합니다.\n\n\n\n충분한 정보에 의한 동의 (Informed Consent)\n\n임상시험 참여는 피험자가 정보를 충분히 인지한 상태에서 자발적으로 동의(Informed Consent)했을 때만 가능합니다.\n피험자는 연구의 목적, 방법, 자금 출처, 이해관계, 위험 및 이익, 참여 철회 권리 등을 충분히 설명 들어야 합니다.\n동의는 원칙적으로 서면으로 이루어져야 합니다. 만약 서면 동의가 불가능한 경우, 독립적인 참관인(Impartial Witness)의 확인 하에 구두 동의 등의 절차를 문서화해야 합니다.\n본인이 동의 능력이 없는 경우 법정 대리인으로부터 동의를 받아야 하며, 응급 상황 등 특수한 경우에 대한 절차는 계획서에 명시하고 윤리 위원회의 승인을 받아야 합니다.\n\n\n\n위약의 사용 (Use of Placebo)\n\n새로운 치료법의 효과는 입증된 최선의 방법과 비교되어야 합니다. 다만, 입증된 치료법이 없거나 과학적 타당성에 따라 위약(Placebo) 사용이 불가피한 경우에 한해 제한적으로 허용됩니다. 이 과정에서 피험자에게 심각하거나 돌이킬 수 없는 위해가 가해져서는 안 됩니다.",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part1.html#기타-안전-지침",
+    "href": "gcp_part1.html#기타-안전-지침",
+    "title": "임상시험 관리 기준 (GCP) Part 1",
+    "section": "기타 안전 지침",
+    "text": "기타 안전 지침\n\n임상시험용 의약품은 우수 의약품 제조 및 품질관리 기준(GMP)에 따라 제조, 관리 및 보관되어야 합니다.\n피험자의 신원을 식별할 수 있는 정보는 철저히 보호되어야 합니다.",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part1.html#임상시험의-구조-및-주요-주체",
+    "href": "gcp_part1.html#임상시험의-구조-및-주요-주체",
+    "title": "임상시험 관리 기준 (GCP) Part 1",
+    "section": "임상시험의 구조 및 주요 주체",
+    "text": "임상시험의 구조 및 주요 주체\n\nIRB / IEC (Institutional Review Board / Independent Ethics Committee)\n의학, 과학, 비과학 분야의 위원들로 구성된 독립적인 기구로, 피험자의 권리, 안전, 복지를 보호할 책임이 있습니다. 연구 계획서 심의, 승인, 지속적인 검토 등을 수행합니다.\n\n주요 기능:\n\n연구자(Investigator)의 자격 검토\n취약한 피험자 보호 대책 확인\n피험자에게 제공되는 보상 및 지급 방법의 적절성 검토 (강압이나 부당한 영향 방지)\n구성: 최소 5명 이상의 위원, 비과학 분야 위원 1명 이상, 기관 외부 위원 1명 이상 포함\n\n\n\n\n연구자 (Investigator)\n\n자격 및 책임: 임상시험의 적절한 수행을 위한 교육, 훈련, 경험을 갖추어야 합니다. 계획서와 임상시험용 의약품에 대해 숙지하고, 참여 인력에게 충분한 정보를 제공해야 합니다.\n의료적 관리: 시험 중 발생하는 모든 의료적 결정은 자격을 갖춘 의사(또는 치과의사)가 책임집니다.\n계획서 준수: 스폰서의 합의와 IRB 승인 없이 계획서를 임의로 변경할 수 없습니다. (단, 피험자의 즉각적인 위험 제거가 필요한 경우는 예외)\n의약품 관리: 시험 사이트에서의 의약품 관리 책임은 연구자에게 있습니다. 배송, 재고, 투약, 반납 등 모든 과정을 정확히 기록해야 합니다.\n동의 절차: 피험자로부터 직접 동의를 받는 주체입니다. 이 과정에서 모니터 요원, 감사인, IRB, 규제 당국의 직접 접근 권한에 대해서도 설명해야 합니다.\n증례 기록서 (CRF): 스폰서에게 보고할 정보를 기록하는 문서로, 모든 데이터는 근거 문서(Source Documents)와 일치해야 하며 수정 시 감사 추적(Audit Trail)이 가능해야 합니다.\n\n\n\n주요 보고 사항\n\n이상반응 보고: 모든 중대한 이상사례(SAE)는 스폰서에게 즉시 보고해야 합니다.\n진행 상황 보고: 연 1회 또는 IRB의 요청에 따라 시험 상태 요약 보고서를 제출해야 합니다.\n조기 종료 시: 시험이 중단되거나 조기 종료된 경우 피험자에게 알리고 적절한 사후 조치를 취해야 하며, IRB와 규제 당국에도 이를 보고해야 합니다.",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part2.html",
+    "href": "gcp_part2.html",
+    "title": "임상시험 관리 기준 (GCP) Part 2",
+    "section": "",
+    "text": "6. 임상시험 계획서 및 개정안 (Protocol and Amendments)\n임상시험 계획서의 내용은 일반적으로 다음과 같은 주제를 포함해야 합니다. 구체적인 정보는 별도의 계획서 페이지나 계약서에서 다루어질 수 있으며, 일부 정보는 연구자 자료집(IB) 등 다른 참조 문서에 포함될 수 있습니다.",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part2.html#임상시험-계획서-및-개정안-protocol-and-amendments",
+    "href": "gcp_part2.html#임상시험-계획서-및-개정안-protocol-and-amendments",
+    "title": "임상시험 관리 기준 (GCP) Part 2",
+    "section": "",
+    "text": "6.1 일반 정보 (General Information)\n계획서에는 다음과 같은 기본 정보가 포함되어야 합니다.\n\n계획서 제목, 식별 번호, 날짜 및 개정 번호\n주요 관련자 정보 (표 1 참고): | 역할 | 성명 | 직함 | 주소 | 전화번호 | | :— | :—: | :—: | :—: | :—: | | 의뢰자 (Sponsor) | O | X | O | X | | 모니터 (Monitor) | O | X | O | X | | 계획서 서명 권한자 | O | X | O | X | | 의뢰자 측 의료 전문가 | O | O | O | O | | 책임 연구자 (Investigator) | O | O | X | X | | 시험 실시기관 (Site) | X | X | O | O | | 의료 결정 책임 의사 | O | O | O | O | | 관련 실험실 및 기술 부서 | O | X | O | X |\nTable: 표 1. 계획서에 포함되는 주요 인력 정보 (O: 포함, X: 미포함)\n\n\n\n6.2 배경 정보 (Background Information)\n\n임상시험용 의약품의 명칭 및 상세 설명\n비임상 연구 및 관련 임상시험 결과의 요약\n피험자에 대한 알려진 또는 잠재적 위험 및 이익 요약\n투여 경로, 용량, 투여 요법 및 치료 기간의 설명과 타당성 근거\n계획서, GCP 및 관련 규정 준수 확약\n대상 피험자군(모집단)에 대한 설명\n배경 근거가 되는 주요 문헌 및 데이터 목록\n\n\n\n6.3 시험 목적 (Objectives and Purpose)\n\n임상시험의 목적에 대한 상세한 설명\n\n\n\n6.4 시험 설계 (Trial Design)\n시험 데이터의 신뢰성은 설계의 과학적 무결성에 달려 있습니다.\n\n측정하고자 하는 일차 및 이차 평가변수 (Endpoints)\n시험 유형 및 설계에 대한 설명 (단계별 도식 포함)\n편향(Bias) 최소화 방법 (무작위 배정, 눈가림 등)\n시험 약물의 제형, 포장, 라벨링 및 투여 방법 설명\n피험자별 예상 참여 기간 및 전체 시험 일정\n시험 중단 기준 (개별 피험자 및 전체 시험)\n위약 및 대조약 관리 절차\n무작위 배정 코드 관리 및 긴급 해제 절차\n증례 기록서(CRF)에 직접 기록되는 원시 데이터(Source Data)의 정의\n\n\n\n6.5 피험자 선정 및 탈락 (Selection and Withdrawal)\n\n피험자 선정 기준 (Inclusion Criteria)\n피험자 제외 기준 (Exclusion Criteria)\n피험자 중도 탈락 기준 및 관련 절차:\n\n탈락 시점 및 방법\n탈락 피험자로부터 수집할 데이터의 유형과 시기\n피험자 교체 여부 및 방법\n탈락 피험자에 대한 후속 조치\n\n\n\n\n6.6 피험자 치료 (Treatment of Subjects)\n\n투여되는 모든 약물의 명칭, 용량, 투여 경로 및 기간\n시험 전후 및 기간 동안 허용되거나 금지되는 병용 약물\n피험자의 복약 순응도(Compliance) 확인 방법\n\n\n\n6.7 유효성 평가 (Assessment of Efficacy)\n\n유효성 평가변수 설정\n평가변수의 측정, 기록 및 분석 방법과 시기\n\n\n\n6.8 안전성 평가 (Assessment of Safety)\n\n안전성 평가변수 명세\n평가변수의 측정, 기록 및 분석 방법과 시기\n이상사례(AE) 및 병발 질환의 보고 및 기록 절차\n이상사례 발생 후 피험자 추적 관찰 기간 및 방법\n\n\n\n6.9 통계 (Statistics)\n\n중간 분석 시기를 포함한 통계적 방법 설명\n계획된 피험자 수 (다기관 시험의 경우 기관별 예상 인원)\n표본 크기(Sample Size) 산출 근거 (검정력 및 임상적 타당성)\n사용할 유의 수준 (Significance Level)\n시험 종료 기준 (Termination Criteria)\n결측치(Missing Data) 및 이상치 처리 절차\n통계 계획 변경 시 보고 및 정당화 절차\n분석 대상군 설정 (예: ITT, PP 등)\n\n\n\n6.10 원시 데이터 접근 (Direct Access to Source Data)\n의뢰자는 연구자 및 실시기관이 모니터링, 감사, IRB 심의 및 규제 기관의 조사를 위해 원시 데이터와 문서에 직접 접근하는 것을 허용하도록 보장해야 합니다.\n\n\n6.11 품질 관리 및 보증 (QC & QA)\n\n\n6.12 윤리적 고려 사항 (Ethics)\n\n\n6.13 데이터 처리 및 기록 보관 (Data Handling & Record Keeping)\n\n\n6.14 재정 및 보험 (Financing and Insurance)\n\n\n6.15 출판 정책 (Publication Policy)",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part2.html#연구자-자료집-investigators-brochure-ib",
+    "href": "gcp_part2.html#연구자-자료집-investigators-brochure-ib",
+    "title": "임상시험 관리 기준 (GCP) Part 2",
+    "section": "7. 연구자 자료집 (Investigator’s Brochure, IB)",
+    "text": "7. 연구자 자료집 (Investigator’s Brochure, IB)\n연구자 자료집(IB)은 피험자를 대상으로 하는 임상시험용 의약품과 관련된 임상 및 비임상 데이터의 편집본입니다.\n\n목적: 연구자가 계획서의 핵심 내용(용량, 투여 경로, 안전성 모니터링 등)을 이해하고 준수할 수 있도록 과학적 근거를 제공하는 것입니다.\n특징: 정보는 간결하고 객관적이어야 하며, 편향되지 않은 위험-이득 평가가 가능하도록 비홍보적 형식으로 작성되어야 합니다.\n관리: 최소 매년 1회 검토되어야 하며, 새로운 중요한 정보가 발생할 경우 수시로 업데이트되어야 합니다. 의뢰자는 최신 IB를 연구자에게 제공할 책임이 있습니다.\n\n\n7.2 IB의 주요 내용\n\n요약 (Summary): 물리적, 화학적, 약학적, 약리학적, 독성학적, 약물동태학적, 대사 및 임상적 정보의 핵심 요약\n서론 (Introduction): 약물 명칭, 활성 성분, 약리학적 분류, 연구 근거 및 예상 적응증\n물리·화학·약학적 특성: 제형 및 성분 설명, 보관 및 취급 방법\n비임상 연구 (Nonclinical Studies): 동물 대상 약리학, 독성학, 약물동태학 결과 요약\n임상 연구 (Effects in Humans): 인간 대상 약물동태학, 안전성, 유효성 및 시판 경험(있는 경우) 정보\n데이터 요약 및 연구자 지침: 전체 데이터를 종합적으로 논의하여 연구자가 이상반응 등을 예측하고 대비할 수 있도록 가이드 제공\n\n\n\n7.4 부록 1: IB 표지 예시\n\n\n\nIB 표지 예시\n\n\n\n\n7.5 부록 2: IB 목차 예시\n\n\n\nIB 목차 예시",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part2.html#임상시험-수행을-위한-필수-문서-essential-documents",
+    "href": "gcp_part2.html#임상시험-수행을-위한-필수-문서-essential-documents",
+    "title": "임상시험 관리 기준 (GCP) Part 2",
+    "section": "8. 임상시험 수행을 위한 필수 문서 (Essential Documents)",
+    "text": "8. 임상시험 수행을 위한 필수 문서 (Essential Documents)\n필수 문서는 임상시험의 수행 과정과 데이터의 품질을 증명하는 중요한 서류들입니다.\n\n표 2. 임상시험 단계별 필수 문서 리스트\n\n\n번호\n문서명\n시작 전\n진행 중\n종료 후\n\n\n\n\n1\n연구자 자료집 (IB)\nO\n업데이트\nX\n\n\n2\n서명된 계획서 및 개정안, CRF 양식\nO\nX\nX\n\n\n3\n피험자용 설명서 및 동의서\nO\nX\nX\n\n\n4\n재정적 합의 사항\nO\nX\nX\n\n\n5\n보험 증명서\nO\nX\nX\n\n\n6\n관련 당사자 간 서명된 합의서\nO\nX\nX\n\n\n7\nIRB/IEC 승인 서류\nO\n수정 시\nX\n\n\n8\nIRB/IEC 명단\nO\nX\nX\n\n\n9\n규제 당국 승인/신고서\nO\nO\nX\n\n\n10\n연구자 및 공동연구자 이력서\nO\nO\nX\n\n\n11\n검사 수치 정상 범위 (Normal Ranges)\nO\n업데이트\nX\n\n\n12\n의료/기술적 검사 절차 및 유효성 증명\nO\n업데이트\nX\n\n\n13\n시험 약물 라벨 샘플\nO\nX\nX\n\n\n14\n약물 관리 및 취급 지침서\nO\nX\nX\n\n\n15\n시험 약물 배송 기록\nO\n문서화\nX\n\n\n16\n시험 약물 분석 증명서 (CoA)\nO\nO\nX\n\n\n17\n눈가림 해제 절차 (Blind Test용)\nO\nX\nX\n\n\n18\n마스터 무작위 배정 명부\nO\nX\nX\n\n\n19\n시험 전 모니터링 보고서\nO\nX\nX\n\n\n20\n시험 개시 모니터링 보고서\nO\nX\nX\n\n\n21\n모니터링 방문 보고서\nX\nO\nX\n\n\n22\n주요 서신 (방문 외 통신)\nX\nO\nX\n\n\n23\n서명된 피험자 동의서 원본\nX\nO\nX\n\n\n24\n원시 문서 (Source Documents)\nX\nO\nX\n\n\n25\n작성 완료된 증례 기록서 (CRF)\nX\nO\nX\n\n\n26\nCRF 수정 증빙 자료\nX\nO\nX\n\n\n27\n중대한 이상사례 (SAE) 보고서\nX\nO\nX\n\n\n28\n예상치 못한 중대한 약물유해반응 보고\nX\nO\nX\n\n\n29\n안전성 정보 통지서\nX\nO\nX\n\n\n30\nIRB 중간 또는 연례 보고서\nX\nO\nX\n\n\n31\n피험자 스크리닝 명부\nX\nO\nX\n\n\n32\n피험자 식별 코드 명부\nX\nO\n완료\n\n\n33\n피험자 등록 명부 (Enrolment Log)\nX\nO\nX\n\n\n34\n시험 사이트 약물 수불부\nX\nO\nO\n\n\n35\n서명 권한 위임 명부 (Signature Sheet)\nX\nO\nX\n\n\n36\n검체 보관 기록 (해당 시)\nX\nO\nX\n\n\n37\n시험 약물 폐기 증빙 문서\nX\nX\nO\n\n\n38\n감사 증명서 (있는 경우)\nX\nX\nO\n\n\n39\n시험 종료 모니터링 보고서\nX\nX\nO\n\n\n40\n배정 및 해제 관련 최종 문서\nX\nX\nO\n\n\n41\n연구자 최종 보고서 (IRB 제출용)\nX\nX\nO\n\n\n42\n최종 임상시험 결과 보고서 (CSR)\nX\nX\nO",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "gcp_part2.html#참고-문헌",
+    "href": "gcp_part2.html#참고-문헌",
+    "title": "임상시험 관리 기준 (GCP) Part 2",
+    "section": "참고 문헌",
+    "text": "참고 문헌\n\nICH Guideline for Good Clinical Practice E6(R2)",
+    "crumbs": [
+      "임상시험 관리 기준 (GCP)",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>임상시험 관리 기준 (GCP) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part1.html",
+    "href": "e9_part1.html",
+    "title": "임상시험의 통계적 원칙 (E9) Part 1",
+    "section": "",
+    "text": "1. 서론 (Introduction)",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part1.html#서론-introduction",
+    "href": "e9_part1.html#서론-introduction",
+    "title": "임상시험의 통계적 원칙 (E9) Part 1",
+    "section": "",
+    "text": "A. 배경 및 목적\n본 문서는 의뢰자(Sponsor)에게 임상시험의 설계, 분석 및 평가 전반에 걸친 통계적 지침을 제공하는 것을 목적으로 합니다.\n\n\nB. 범위 및 방향\n\n본 지침은 구체적인 통계 절차보다는 통계적 원칙(Statistical Principles)에 중점을 둡니다.\n임상시험의 모든 통계적 업무는 통계 전문가(Statistician)의 책임하에 수행되어야 하며, 해당 전문가는 본 원칙을 준수할 수 있는 충분한 교육과 경험을 갖추어야 합니다.\n임상시험 계획서(Protocol) 및 개정안 작성 시, 통계 분석 부분이 적절히 반영되었는지 통계 전문가의 확인이 반드시 필요합니다.\n본 문서는 주로 확증적 임상시험(Confirmatory Trial)을 다룹니다.\n핵심 원칙은 편향(Bias)의 최소화와 정밀도(Precision)의 극대화입니다.\n편향은 타당한 결론 도출을 방해하는 가장 큰 요인이므로 이를 최소화하는 것이 무엇보다 중요합니다.\n주로 빈도주의 방법론(Frequentist Methods)을 설명하지만, 상황에 따라 베이지안(Bayesian) 방법론도 고려될 수 있습니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part1.html#임상-개발-전반에-대한-고려사항",
+    "href": "e9_part1.html#임상-개발-전반에-대한-고려사항",
+    "title": "임상시험의 통계적 원칙 (E9) Part 1",
+    "section": "2. 임상 개발 전반에 대한 고려사항",
+    "text": "2. 임상 개발 전반에 대한 고려사항\n\nA. 임상시험의 맥락\n\n개발 계획 (Development Plan): 신약 개발의 목표는 적절한 용량(Dose)과 투여 기간(Schedule) 내에서 안전성과 유효성을 동시에 입증하고, 수용 가능한 위험-이익(Risk-Benefit) 균형을 찾는 것입니다.\n확증적 임상시험 (Confirmatory Trial): 사전에 가설을 설정하고 이를 평가하는 통제된 시험입니다. 통계적 유의성뿐만 아니라 임상적 유의성(Clinical Significance) 확보가 중요하며, 계획서와 표준 작업 지침서(SOP)를 엄격히 준수해야 합니다.\n탐색적 임상시험 (Exploratory Trial): 가설 입증보다는 새로운 사실을 발견하고 확증적 시험을 위한 근거를 마련하는 데 초점을 둡니다.\n\n\n\nB. 임상시험의 범위\n\n대상자 집단 (Population): 적절한 선정 및 제외 기준을 통해 목표 모집단을 설정하는 것이 중요합니다. 너무 좁은 집단만 선택하면 결과의 일반화가 어려울 수 있습니다.\n일차 및 이차 변수 (Primary and Secondary Variables):\n\n일차 변수 (Primary Variable): 시험 목적과 가장 직결되는 변수로, 표본 크기 산정의 근거가 됩니다. 눈가림 해제 후 임의로 변경할 수 없습니다.\n이차 변수 (Secondary Variable): 일차 목적을 보조하는 변수입니다.\n\n복합 변수 (Composite Variables): 여러 측정 지표를 단일 지표로 통합한 변수입니다. 다중성 문제 해결에 유용하지만, 구성 요소 각각에 대한 분석도 병행하는 것이 바람직합니다.\n종합 평가 변수 (Global Assessment Variables): 전반적인 유효성이나 안전성을 측정하지만, 상세한 효과 차이를 가릴 수 있어 일차 변수로는 권장되지 않습니다.\n다중 일차 변수 (Multiple Primary Variables): 두 개 이상의 일차 변수를 사용할 경우, 가설 검정 방법과 다중성 조절(Type 1 Error 제어) 방안을 명확히 기술해야 합니다.\n대리 변수 (Surrogate Variables): 실제 임상적 유익성을 직접 관찰하기 어려울 때 사용하는 간접 지표입니다. 실제 임상 결과와의 상관관계가 충분히 입증되어야 합니다.\n범주화 변수 (Categorized Variables): 연속형 변수를 ‘성공/실패’ 등으로 범주화하는 것입니다. 임상적 의미가 명확해야 하며 계획서에 사전에 정의되어야 합니다.\n\n\n\nC. 편향 방지를 위한 설계 기법\n편향을 줄이는 가장 중요한 기법은 눈가림(Blinding)과 무작위 배정(Randomization)입니다.\n\n눈가림 (Blinding): 피험자나 연구자가 배정된 군을 알게 됨으로써 발생하는 편향을 방지합니다.\n\n이중 눈가림 (Double Blind): 피험자, 연구자, 의뢰자, 평가자 모두 배정 결과를 모르게 하는 가장 이상적인 방법입니다.\n데이터 정리(Data Cleaning)가 완료되고 눈가림 해제(Unblinding) 전까지 엄격히 유지되어야 합니다.\n\n무작위 배정 (Randomization): 대상자를 치료군에 무작위로 할당하여 각 군의 비교 가능성을 높입니다.\n\n주로 블록 무작위 배정 (Block Randomization)을 사용하며, 주요 예후 인자에 따른 층화(Stratification)를 병행할 수 있습니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part1.html#임상시험-설계-시-고려사항",
+    "href": "e9_part1.html#임상시험-설계-시-고려사항",
+    "title": "임상시험의 통계적 원칙 (E9) Part 1",
+    "section": "3. 임상시험 설계 시 고려사항",
+    "text": "3. 임상시험 설계 시 고려사항\n\nA. 설계 구성 (Design Configuration)\n\n평행군 설계 (Parallel Group Design): 가장 일반적인 설계로, 대상자가 무작위로 한 치료군에 배정되어 시험 종료 시까지 해당 치료를 받는 방식입니다. \n교차 설계 (Crossover Design): 각 대상자가 순차적으로 여러 치료를 받는 방식입니다. 대상자 자신이 대조군 역할을 하므로 표본 크기를 줄일 수 있으나, 이전 치료의 효과가 남는 잔류 효과(Carryover Effect)를 방지하기 위한 휴약기(Washout Period) 설정이 중요합니다. \n요인 설계 (Factorial Design): 두 개 이상의 치료 조합을 동시에 평가하여 치료 간의 상호작용(Interaction)을 확인하는 데 사용됩니다. \n\n\n\nB. 다기관 임상시험 (Multicenter Trials)\n짧은 기간 내 대상자 모집이 가능하고 결과의 일반화에 유리하지만, 기관 간의 이질성을 관리해야 합니다.\n\n\nC. 비교 유형\n\n우월성 시험 (Superiority Trial): 시험약이 대조군(위약 또는 활성대조약)보다 우수함을 입증합니다.\n동등성 및 비열등성 시험 (Equivalence and Non-inferiority Trial): 시험약이 대조약과 효과 차이가 없거나, 허용 범위 내에서 나쁘지 않음을 입증합니다.\n용량-반응 시험 (Dose-Response Trial): 약물 용량에 따른 유효성 및 안전성 변화를 확인하여 최적 용량을 찾습니다.\n\n\n\nD. 표본 크기 (Sample Size)\n\n표본 크기는 일차 목적에 근거하여 통계적으로 산출되어야 합니다.\n유의수준(Type 1 Error), 검정력(Power), 기대 효과 크기, 탈락률 등을 고려하여 계획서에 명시해야 합니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part1.html#임상시험-수행-중-고려사항",
+    "href": "e9_part1.html#임상시험-수행-중-고려사항",
+    "title": "임상시험의 통계적 원칙 (E9) Part 1",
+    "section": "4. 임상시험 수행 중 고려사항",
+    "text": "4. 임상시험 수행 중 고려사항\n\n중간 분석 (Interim Analysis): 시험 완료 전 치료 효과를 비교하는 분석입니다. 사전에 계획되어야 하며, 반복적 분석으로 인한 제1종 오류 증가를 제어해야 합니다.\n독립적 데이터 모니터링 위원회 (IDMC): 의뢰자와 독립적으로 안전성 및 유효성 데이터를 모니터링하여 시험의 지속 여부를 권고하는 기구입니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part2.html",
+    "href": "e9_part2.html",
+    "title": "임상시험의 통계적 원칙 (E9) Part 2",
+    "section": "",
+    "text": "5. 데이터 분석 고려사항\n통계 분석 계획서(Statistical Analysis Plan, SAP)는 임상시험 계획서가 완성된 직후 작성되어야 하며, 데이터의 눈가림 리뷰(Blind Review)가 완료된 시점에 다시 한번 검토되어야 합니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part2.html#데이터-분석-고려사항",
+    "href": "e9_part2.html#데이터-분석-고려사항",
+    "title": "임상시험의 통계적 원칙 (E9) Part 2",
+    "section": "",
+    "text": "분석 대상 집단 (Analysis Sets)\n원칙적으로 모든 피험자의 데이터를 확보하는 것이 목표이지만, 실제로는 중도 탈락이나 결측치 발생이 불가피합니다. 이러한 상황에서 발생할 수 있는 편향(Bias)을 최소화하고 제1종 오류를 통제하기 위한 대책을 수립해야 합니다.\n\n1. ITT 분석군 (Full Analysis Set, FAS)\n\nITT 원칙(Intention-to-Treat Principle): 무작위 배정된 모든 피험자를 분석에 포함하는 원칙입니다. 피험자가 계획을 엄격히 준수하지 않았더라도 배정된 군의 일원으로 분석합니다.\n예외적으로 데이터 분석 전 객관적인 기준에 따라 일부 데이터를 제외할 수 있으나, 이는 충분히 정당화되어야 합니다.\n\n\n\n2. 계획서 준수 분석군 (Per Protocol Set, PPS)\n\n계획서를 충실히 따른 피험자들만을 포함하는 분석군입니다.\n기준: 최소한의 처치를 받은 자, 일차 평가변수 측정이 가능한 자, 중대한 계획서 위반이 없는 자 등.\nPPS 분석은 편향의 위험이 있으므로 계획서에 제외 기준을 명확히 명시해야 합니다.\n\n\n\n3. 민감도 분석 (Sensitivity Analysis)\n\nFAS와 PPS 결과를 비교하여 전체적인 결론의 일관성을 확인합니다.\n우월성 시험에서는 FAS가, 동등성/비열등성 시험에서는 PPS가 더 중요한 의미를 가질 수 있습니다.\n결측치 처리 방법이나 이상치(Outlier) 유무에 따라 결과가 어떻게 변하는지 확인해야 합니다.\n\n\n\n\n추정, 신뢰구간 및 가설 검정\n\n모든 추정치(Estimation)는 신뢰구간(Confidence Intervals)과 함께 보고되어야 합니다.\n공변량 분석(ANCOVA) 등을 활용하여 정밀도를 높이는 노력이 필요합니다.\n단측 검정(One-sided Test)을 사용할 경우 유의수준 설정에 유의해야 합니다.\n\n\n\n\n\n\n\n\n양측 검정 (Two-sided)\n단측 검정 (One-sided)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n모수적 방법 (Parametric)\n비모수적 방법 (Non-parametric)\n\n\n\n\n\n\n\n\n\n\n\n다중성 (Multiplicity)\n여러 개의 일차 변수, 다중 비교, 반복 측정 등 다중성 문제가 발생하면 제1종 오류가 증가합니다. 이를 조절하기 위해 일차 변수 지정, 가중치 조절, 또는 AUC(Area Under Curve) 활용 등의 방법을 고려해야 합니다.\n\n\n층화 및 하위군 분석\n\n임상시험 전 주요 영향 요인을 고려하여 층화(Stratification)를 실시할 수 있습니다.\n하위군 분석(Subgroup Analysis)은 주로 탐색적 목적으로 수행되며, 하위군 간 치료 효과의 균일성을 확인해야 합니다. 하위군 분석 결과만으로 최종 결론을 내리는 것은 위험합니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part2.html#안전성-및-내약성-평가",
+    "href": "e9_part2.html#안전성-및-내약성-평가",
+    "title": "임상시험의 통계적 원칙 (E9) Part 2",
+    "section": "6. 안전성 및 내약성 평가",
+    "text": "6. 안전성 및 내약성 평가\n\n범위 및 대상\n안전성 분석군은 약물을 단 한 번이라도 투여받은 모든 피험자를 대상으로 합니다. 인과관계와 상관없이 발생한 모든 이상사례(AE)를 보고해야 합니다.\n\n\n통계적 평가\n\n이상사례 발생 비율, 노출 정도 등을 요약합니다.\n장기 시험의 경우 생존 분석 방법론을 활용하여 누적 발생률을 평가할 수 있습니다.\n신뢰구간을 통해 안전성 프로파일을 기술하고, 필요한 경우 그래프를 활용한 시각화를 병행합니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9_part2.html#보고-reporting",
+    "href": "e9_part2.html#보고-reporting",
+    "title": "임상시험의 통계적 원칙 (E9) Part 2",
+    "section": "7. 보고 (Reporting)",
+    "text": "7. 보고 (Reporting)\n\n평가 및 보고 절차\n\nICH E3 지침에 따라 상세 보고서를 작성합니다.\n분석 전 리뷰에서 피험자 제외 기준, 데이터 변환(Log 등), 이상치 처리 등을 확정합니다.\n계획되지 않은 추가 분석(Post-hoc Analysis)은 계획된 분석과 명확히 구분하여 보고해야 하며, 과도한 해석을 경계해야 합니다.\n\n\n\n데이터베이스 통합 요약\n\n상품화를 위해 전체 임상 데이터를 통합하여 요약합니다.\n메타 분석 등을 위해 변수의 정의와 측정 과정을 일관되게 유지하는 것이 중요합니다.\n안전성 데이터는 충분한 대조군과의 비교를 통해 위험-이익 관계를 적절히 평가해야 합니다.",
+    "crumbs": [
+      "임상시험 통계 원칙 (E9)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>임상시험의 통계적 원칙 (E9) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html",
+    "href": "switching.html",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "",
+    "text": "1. 서론 (Introduction)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html#서론-introduction",
+    "href": "switching.html#서론-introduction",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "",
+    "text": "시험군(신약)과 활성 대조군 간의 비교 유형\n임상시험에서 신약의 유효성을 검증하기 위한 비교 유형은 크게 세 가지로 나뉩니다.\n\n우월성 (Superiority): 신약이 대조군보다 뛰어남을 입증\n비열등성 (Non-inferiority): 신약이 대조군보다 크게 나쁘지 않음을 입증\n동등성 (Equivalence): 신약과 대조군의 효과 차이가 허용 범위 내에 있음을 입증\n\n\n\n비교 유형 간의 전환\n상황에 따라 초기 설정한 비교 목적을 다음과 같이 전환해야 할 경우가 발생합니다.\n\n우월성 시험 → 비열등성 시험으로 해석\n비열등성 시험 → 우월성 시험으로 해석\n동등성 시험 → 더 좁은 마진의 동등성 확인\n\n본 문서는 단일 일차 평가변수를 사용하는 유효성 시험의 관점에서, 이러한 전환 시 고려해야 할 통계적·임상적 원칙을 다룹니다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html#시험-목적별-비교-trial-objectives",
+    "href": "switching.html#시험-목적별-비교-trial-objectives",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "2. 시험 목적별 비교 (Trial Objectives)",
+    "text": "2. 시험 목적별 비교 (Trial Objectives)\n\n\n\n\n\n\n\n\n\n비교 유형\n우월성 시험 (Superiority)\n동등성 시험 (Equivalence)\n비열등성 시험 (Non-inferiority)\n\n\n\n\n목적\n시험약이 대조약보다 임상적으로 우월함을 확인\n두 치료군 간의 효과 차이가 임상적으로 유의하지 않음을 확인\n시험약이 대조약보다 효과가 작지 않음(비열등함)을 확인\n\n\n검정 방법\n주로 p-value 확인 (p &lt; 0.05)\n주로 신뢰구간(CI) 사용\n주로 신뢰구간(CI) 및 하한선 확인\n\n\n신뢰구간 및 허용 한계(Δ)\n95% 신뢰구간이 0을 포함하지 않아야 함. 별도의 허용 한계(Δ)는 없음.\n95% 신뢰구간이 (-Δ, +Δ) 사이에 완전히 포함되어야 함.\n95% 신뢰구간의 하한값이 -Δ보다 오른쪽에 있어야 함.\n\n\n\n\n시각적 비교\n\n신뢰구간: 95% 양측 신뢰구간 기준\n좌측: 대조군 효과 우세 / 우측: 시험군 효과 우세 (\\(\\mu_T - \\mu_C\\))\nΔ (Delta): 임상적으로 허용 가능한 최대 차이값 (마진)\n\n\n\n\n통계적 유의성과 신뢰구간\n\n\n\n\n\n동등성 분석 도식\n\n\n\n\n\n비열등성 분석 도식",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html#사전-정의의-중요성",
+    "href": "switching.html#사전-정의의-중요성",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "3. 사전 정의의 중요성",
+    "text": "3. 사전 정의의 중요성\n시험 설계 단계에서 다음 사항들이 사전에 정의되어야 합니다.\n\n대조군의 치료법, 용량, 대상자 및 평가변수의 적절성\n통계적 검정력에 근거한 표본 크기 산출\n비열등성 및 동등성 마진(Δ)의 설정 근거\n프로토콜 내 명확한 통계 분석 계획\n시험의 민감도(Sensitivity) 확보 여부",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html#비교-목적의-전환-switching-the-objective",
+    "href": "switching.html#비교-목적의-전환-switching-the-objective",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "4. 비교 목적의 전환 (Switching the Objective)",
+    "text": "4. 비교 목적의 전환 (Switching the Objective)\n\n4.1 비열등성 시험을 우월성 시험으로 해석하는 경우\n이 전환은 통계적으로 폐쇄 검정 절차(Closed Test Procedure)에 해당하므로, 별도의 다중성 조절 없이도 제1종 오류(Type 1 Error)를 제어할 수 있습니다.\n\n대조군의 적절성: 대조군이 해당 적응증에서 유효성이 확립된 약제여야 하며, ’우월성’에 대한 기준이 명확해야 합니다.\n검정력: 비열등성 시험은 대조군과의 작은 차이도 정밀하게 보기 위해 대규모로 설계되는 경우가 많아, 우월성을 입증하기에 충분한 정밀도를 가질 수 있습니다.\n분석 집단: 우월성 입증을 위해서는 ITT 원칙에 따른 FAS(Full Analysis Set) 분석 결과가 핵심적인 역할을 합니다.\n신뢰도: 비열등성 시험에서 우월성이 입증되면 시험의 민감도가 함께 증명되는 셈이므로 결론의 신뢰도가 높아집니다.\n\n\n\n\n치료 효과 차이 분석 1\n\n\n\n\n4.2 우월성 시험을 비열등성 시험으로 해석하는 경우\n우월성 입증에 실패한 후 비열등성을 주장하려는 경우로, 4.1의 경우보다 훨씬 엄격한 기준이 적용됩니다.\n\n마진(Δ)의 사후 설정 문제: 시험 종료 후 마진을 설정하는 것은 분석자의 주관이 개입될 수 있어 편향의 위험이 큽니다. 가급적 설계 단계에서 마진을 사전에 정의해두는 것이 좋습니다.\n시험의 민감도: 우월성 시험은 차이를 입증하지 못했을 때 그것이 실제 효과가 없어서인지, 아니면 시험의 정밀도(민감도)가 낮아서인지를 구별하기 어렵습니다. 따라서 비열등성을 주장하기 위해서는 해당 시험이 효과 차이를 감별해낼 충분한 민감도를 가졌음을 입증해야 합니다.\n분석 집단: 비열등성 판단 시에는 FAS와 PP(Per Protocol) 집단 모두에서 일관된 결과가 나오는지 확인하는 것이 매우 중요합니다.\n\n\n\n\n치료 효과 차이 분석 2",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "switching.html#결론-및-제언",
+    "href": "switching.html#결론-및-제언",
+    "title": "우월성 및 비열등성 시험 간의 전환 시 고려사항",
+    "section": "5. 결론 및 제언",
+    "text": "5. 결론 및 제언\n우월성 시험과 비열등성 시험 간의 전환은 결과를 신뢰구간(Confidence Interval) 관점에서 접근할 때 가장 명확하게 해석될 수 있습니다.\n\n비열등성 → 우월성: 적절히 설계된 시험이라면 전환에 큰 무리가 없으며, 결론의 신뢰성을 높여줍니다.\n우월성 → 비열등성: 사후에 마진을 설정해야 하는 어려움과 시험의 민감도 부족 가능성 때문에 신중해야 합니다. 가급적 설계 단계에서 비열등성 마진을 함께 고려하는 것이 바람직합니다.\n\n결국, 가장 좋은 방법은 시험 설계 단계에서 비열등성과 우월성을 모두 순차적으로 검정할 수 있도록 전향적인 분석 계획을 수립하는 것입니다.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>우월성 및 비열등성 시험 간의 전환 시 고려사항</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part1.html",
+    "href": "delta_part1.html",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1",
+    "section": "",
+    "text": "DELTA2 프로젝트 소개\n본 내용은 무작위 대조 시험(RCT)에서 목표 차이(Target Difference) 설정과 표본 수 산출 및 보고를 위한 DELTA2 지침을 정리한 것입니다.\nDELTA2 지침은 2019년 옥스퍼드 대학교 CSM(Centre for Statistics in Medicine)에서 발표한 최종 버전으로, RCT 연구 설계 시 가장 중요한 요소인 ‘목표 차이’ 설정과 그에 따른 ’표본 수 산출’에 대한 가이드를 제공합니다. 영국 의학연구위원회(MRC)와 국립보건연구소(NIHR)의 지원을 받아 기존 지침을 대폭 개정하였습니다.",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part1.html#연구자를-위한-delta2-권고-사항-box-1",
+    "href": "delta_part1.html#연구자를-위한-delta2-권고-사항-box-1",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1",
+    "section": "연구자를 위한 DELTA2 권고 사항 (Box 1)",
+    "text": "연구자를 위한 DELTA2 권고 사항 (Box 1)\n표본 수를 산출하고 목표 차이를 선택할 때 다음의 권고 사항을 준수해야 합니다.\n\n문헌 고찰: 관련 문헌을 통해 주 평가변수에 대해 임상적으로 중요하고 현실적인 차이가 어느 정도인지 먼저 파악하십시오.\n주 평가변수(Primary Outcome) 선정: 여러 후보 변수 중 주 평가변수를 정할 때는 환자를 포함한 핵심 이해관계자의 의견과 연구 수행의 현실성을 고려해야 합니다. 단순히 표본 수가 가장 적게 나오는 변수를 선택해서는 안 됩니다.\n차이값의 정당성 확보: 사망률이나 중대한 이상반응을 제외한 모든 결과변수는 해당 차이값이 왜 중요한지에 대해 이해관계자(환자, 의료진 등)의 관점에서 추가적인 정당성을 제시해야 합니다.\n목표 차이 설정: 확증적 임상시험(3상 등)의 목표 차이는 적어도 하나 이상의 핵심 이해관계자 집단에게 중요한 가치를 지니는 값이어야 합니다. 현실적으로 더 큰 차이가 가능하거나 진료 관행을 바꾸기 위해 필요하다면, 최소 중요 차이보다 큰 값을 설정할 수 있습니다.\n보조 연구 방법: 현실적인 차이값을 파악하기 위해 추가 연구가 필요할 경우, 앵커 방법(Anchor Method)이나 전문가 의견 수렴(Opinion Seeking) 방식이 권장됩니다. 단순히 통계적 분포에 의존하는 방식은 피해야 합니다.\n예비 연구(Pilot Trial) 활용: 예비 연구 결과는 표준편차(연속형 변수)나 대조군의 반응률(이분형 변수), 결측치 비율 등을 추정하는 근거로 활용하십시오.\n민감도 분석(Sensitivity Analysis): 목표 차이나 대조군 반응률 등 표본 수 계산에 사용된 주요 가정값들이 변할 때 필요한 표본 수가 어떻게 달라지는지 민감도 분석을 수행해야 합니다.\n투명한 보고: 표본 수 산출 근거와 사용된 값들을 임상시험 계획서 및 결과 보고서에 명확히 기술해야 합니다.",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part1.html#rct-연구에서의-목표-차이와-표본-수-산출",
+    "href": "delta_part1.html#rct-연구에서의-목표-차이와-표본-수-산출",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1",
+    "section": "RCT 연구에서의 목표 차이와 표본 수 산출",
+    "text": "RCT 연구에서의 목표 차이와 표본 수 산출\n\n표본 수 산출의 역할\n표본 수 산출은 연구의 주요 목표를 신뢰성 있게 달성하기 위해 몇 명의 피험자가 필요한지 결정하는 과정입니다. 주로 주 평가변수를 기준으로 하며, 신뢰할 수 있는 수준에서 탐지하고자 하는 ’목표 차이’를 명시하는 것에서 시작됩니다.\n\n\n분석 대상(Estimand)과의 연관성\n연구가 답하고자 하는 정밀한 질문에 따라 분석 대상(Estimand)이 결정됩니다. 설정된 목표 차이는 이 분석 대상에 적합한 값이어야 합니다.\n\n\n통계적 산출의 한계와 가정\n표본 수 산출은 정밀 과학이라기보다 여러 가정(Assumption)에 기반한 예측 과정입니다. - 분석 모델의 단순화: 실제 분석은 여러 공변량을 보정하지만, 표본 수 계산 시에는 무보정 분석을 가정하는 등 단순화된 수식을 사용하는 경우가 많습니다. - 가정값에 대한 민감도: 설정된 가정값이 조금만 변해도 필요한 표본 수는 크게 달라질 수 있습니다. 예를 들어, 탐지하고자 하는 차이값을 절반으로 줄이면 필요한 표본 수는 약 4배로 늘어납니다.\n\n\n제1종 오류와 제2종 오류의 균형\n통계적 가설 검정 틀 안에서 다음 두 가지 오류 사이의 균형을 맞춰야 합니다. - 제1종 오류 (\\(\\alpha\\)): 실제로 차이가 없는데 차이가 있다고 잘못 결론 내릴 위험 (통상 5%) - 제2종 오류 (\\(\\beta\\)): 실제로 의미 있는 차이가 있는데 이를 발견하지 못할 위험 - 검정력 (\\(1-\\beta\\)): 실제 차이를 발견할 확률 (통상 80% 또는 90%)\n\n\n\n표본 수 산출 예시 및 공식\n주요 평가변수의 유형(연속형, 이분형 등)에 따라 적절한 산출 공식을 사용하며, 복잡한 시나리오의 경우 시뮬레이션을 활용하기도 합니다.\n 차이값(\\(\\delta\\))의 변화에 따른 표본 수(\\(n\\))의 민감도를 보여주는 예시",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part2.html",
+    "href": "delta_part2.html",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2",
+    "section": "",
+    "text": "임상시험의 목표 차이 명시 방법\n임상시험의 목표 차이를 설정할 때 다음 두 가지 관점에서 접근할 수 있습니다. - 중요성: 하나 이상의 이해관계자 집단(환자, 의료진 등)에게 의미 있는 수준인가? - 현실성: 기존 근거 또는 전문가 의견에 비추어 달성 가능한 수준인가?\n확증적 임상시험(3상 등) 설계 시에는 목표 차이가 중요하면서도 현실적이어야 합니다.",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part2.html#표본-수-산출-시-보고-항목-table-1-권고안",
+    "href": "delta_part2.html#표본-수-산출-시-보고-항목-table-1-권고안",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2",
+    "section": "표본 수 산출 시 보고 항목 (Table 1 권고안)",
+    "text": "표본 수 산출 시 보고 항목 (Table 1 권고안)\n우월성 검정을 수행하는 임상시험의 표본 수 산출 결과 보고 시 포함되어야 할 핵심 항목들입니다.\n\n핵심 보고 항목 (Core Items)\n\n주 평가변수 (Primary Outcome): 표본 수 산출의 기준이 되는 변수\n통계적 유의수준 및 검정력: 통상 양측 유의수준 5%, 검정력 80%~90% 설정\n결과변수 유형에 따른 목표 차이 명시:\n\n이분형 (Binary): 절대적 차이(Absolute) 또는 상대적 효과(Relative)와 함께 중재군과 대조군의 예상 반응률 명시\n연속형 (Continuous): 평균 차이, 공통 표준편차(Standard Deviation), 그리고 표준화된 효과 크기(Standardised Effect Size) 명시 \\[Effect Size = \\frac{\\mu_{diff}}{\\sigma}\\]\n생존 분석 (Time-to-event): 절대적/상대적 차이와 함께 다음 4가지 사항을 포함 (대조군 사건 발생률, 추적 관찰 기간, 생존 분포, 모집 기간)\n\n할당 비율 (Allocation Ratio): 시험군과 대조군의 배정 비율 (예: 1:1)\n기타 가정 사항: 중도 탈락 고려, 다중 검정 보정 여부, 결측치 처리 방법, 사용된 산출 공식 및 민감도 분석 결과",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part2.html#목표-차이-및-중요-차이-파악-방법-box-2",
+    "href": "delta_part2.html#목표-차이-및-중요-차이-파악-방법-box-2",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2",
+    "section": "목표 차이 및 중요 차이 파악 방법 (Box 2)",
+    "text": "목표 차이 및 중요 차이 파악 방법 (Box 2)\n임상적으로 중요한 차이(Important Difference)나 현실적인 차이(Realistic Difference)를 파악하기 위해 다음 방법론들을 활용할 수 있습니다.\n\n중요 차이 파악을 위한 방법 (Anchor & Distribution)\n\n앵커 방법 (Anchor): 환자나 의료진의 판단을 외부 지표(Anchor)로 삼아, 해당 지표의 변화와 결과변수 점수의 변화 사이의 관계를 파악하는 방식\n분포 방법 (Distribution): 측정 도구 자체의 정밀도나 변동성을 기준으로, 우연히 발생하기 어려운 최소한의 변화 수준을 파악하는 방식\n경제성 평가 (Health Economic): 투입 비용 대비 건강 이득의 가치를 평가하여 임상적으로 수용 가능한 차이를 결정하는 방식\n\n\n\n표준화된 효과 크기 (Standardised Effect Size)\n\nCohen’s d: 두 군의 평균 차이를 표준편차로 나눈 값으로, 효과의 크기를 객관적으로 비교할 때 사용합니다.\n\n0.2: 작음 (Small)\n0.5: 중간 (Medium)\n0.8: 큼 (Large)\n\n\n\n\n현실적인 차이 파악을 위한 방법\n\n예비 연구 (Pilot Study): 관련 근거가 부족할 때 적절한 목표 차이를 탐색하고 변동성을 파악하기 위해 소규모로 수행하는 연구\n전문가 의견 수렴 (Opinion Seeking): 의료 전문가, 환자 등으로부터 임상적 의미를 지니는 차이에 대한 의견을 구하는 방식\n기존 증거 검토 (Review of Evidence Base): 체계적 문헌고찰이나 메타분석 결과를 바탕으로 현실적인 차이값을 도출하는 방식",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "delta_part2.html#요약-및-결론",
+    "href": "delta_part2.html#요약-및-결론",
+    "title": "임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2",
+    "section": "요약 및 결론",
+    "text": "요약 및 결론\nDELTA2 지침의 핵심 메시지는 목표 차이 설정과 표본 수 산출 근거를 보다 명확하고 투명하게 보고해야 한다는 것입니다. 통계적으로 유의하든 그렇지 않든, 임상시험 결과의 해석은 설정된 목표 차이를 기반으로 이루어집니다. 따라서 연구 설계 단계에서부터 이해관계자들의 관점을 반영한 타당한 목표 차이를 설정하고 이를 문서화하는 노력이 필요합니다.",
+    "crumbs": [
+      "목표 차이 설정 및 표본수 산출 (DELTA2)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part1.html",
+    "href": "diagnostic_part1.html",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1",
+    "section": "",
+    "text": "1. 배경 (Background)\n본 내용은 진단 검사(Diagnostic Tests)를 평가하는 연구 결과를 보고할 때 준수해야 할 통계적 원칙과 부적절한 관행에 대한 FDA 지침을 정리한 것입니다.\n이 지침의 목적은 진단 검사 평가 연구 결과를 보고하기 위한 통계적으로 적절한 관례를 기술하고, 흔히 발생하는 부적절한 관례를 식별하는 데 있습니다. 특히 최종 결과가 질적(Qualitative)인 진단 검사(기저 측정치가 양적이라 할지라도)를 중점적으로 다룹니다.\n성능(Performance) 결과를 설명하기 위해 올바른 용어를 사용하는 것은 진단 기기의 안전하고 효과적인 사용을 보장하는 데 매우 중요합니다. 본 지침은 CLSI(Clinical and Laboratory Standards Institute) 및 STARD(Standards for Reporting of Diagnostic Accuracy)에서 정의한 국제적으로 용인되는 용어와 정의를 사용합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part1.html#범위-scope",
+    "href": "diagnostic_part1.html#범위-scope",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1",
+    "section": "2. 범위 (Scope)",
+    "text": "2. 범위 (Scope)\n본 문서는 진단 기기에 대한 시판 전 신고(510(k)) 및 시판 전 승인(PMA) 신청을 위한 지침을 제공합니다. 특히 결과가 양성 또는 음성으로 도출되는 질적 진단 기기를 평가하는 연구 결과를 보고하는 방식을 다룹니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part1.html#주요-개념-및-정의",
+    "href": "diagnostic_part1.html#주요-개념-및-정의",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1",
+    "section": "3. 주요 개념 및 정의",
+    "text": "3. 주요 개념 및 정의\n\n진단 검사의 목적\n질적 진단 검사는 목표 질환(Target Condition)이 피험자에게 있는지 여부를 판정하기 위해 설계되었습니다. 목표 질환은 특정 질병, 질병의 단계, 또는 치료의 시작·수정·중단을 결정할 수 있는 환자의 식별 가능한 상태를 의미합니다.\n\n\n기준점 (Benchmarks)\n새로운 진단 검사의 성능을 평가하기 위한 기준점은 크게 두 가지로 나뉩니다. 1. 참조 표준(Reference Standard)과의 비교: 목표 질환의 유무를 확립하기 위해 사용 가능한 최선의 방식과 비교합니다. 2. 비-참조 표준(Non-reference Standard)과의 비교: 참조 표준 외의 기존 방식이나 유사 기기(Predicate)와 비교합니다.\n\n\n진단 정확도 (Diagnostic Accuracy)\n새로운 검사와 참조 표준 결과 사이의 일치 정도를 의미합니다. 참조 표준은 단일 검사일 수도 있고, 여러 검사와 임상적 추적 조사를 결합한 알고리즘일 수도 있습니다.\n\n\n진단 정확도 설명 척도\n\n민감도(Sensitivity): 목표 질환이 있는 피험자 중 양성으로 판정된 비율\n특이도(Specificity): 목표 질환이 없는 피험자 중 음성으로 판정된 비율\n양성 예측도(PPV): 양성 판정을 받은 피험자 중 실제로 질환이 있을 확률\n음성 예측도(NPV): 음성 판정을 받은 피험자 중 실제로 질환이 없을 확률\n\n\n\n편향 (Bias)\n민감도와 특이도 추정치는 여러 원인에 의해 편향될 수 있습니다. 단순히 피험자 수를 늘리는 것만으로는 편향을 해결할 수 없으며, 적절한 피험자 선택과 연구 설계, 데이터 분석 절차의 개선이 필요합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part1.html#기준점-및-연구군-권장-사항",
+    "href": "diagnostic_part1.html#기준점-및-연구군-권장-사항",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1",
+    "section": "4. 기준점 및 연구군 권장 사항",
+    "text": "4. 기준점 및 연구군 권장 사항\n\n4.1 기준점과의 비교 전략\n참조 표준의 가용성에 따라 다음과 같은 보고 방식을 권장합니다.\n\n참조 표준 사용 가능 시: 민감도와 특이도를 추정하여 보고합니다.\n참조 표준 사용이 제한적일 때: 가능한 범위 내에서 참조 표준을 사용하고, 확인 편향(Verification Bias) 등을 보정한 추정치를 계산합니다.\n참조 표준이 없을 때: 새로운 참조 표준을 구성할 수 있는지 검토하고, 불가능하다면 ‘일치도(Agreement)’ 척도를 사용합니다.\n\n\n\n일치도 척도 (Agreement Measures)\n참조 표준이 없어 정확도를 직접 산출할 수 없는 경우, 다음 용어를 사용합니다. - 양성 퍼센트 일치도 (Positive Percent Agreement, PPA) - 음성 퍼센트 일치도 (Negative Percent Agreement, NPA) - 주의 사항: 일치도가 높다고 해서 반드시 ‘올바른(Correct)’ 결과임을 의미하지는 않습니다. 두 검사가 동시에 틀릴 수도 있기 때문입니다.\n\n\n4.2 연구군 선택 (Study Population)\n\n스펙트럼 편의(Spectrum Bias): 매우 건강한 사람과 매우 위중한 사람만 포함하고 중간 단계의 환자를 누락할 경우, 정확도가 실제보다 높게 나타날 수 있습니다. 질병 단계의 전 범위를 포함하는 피험자군을 구성해야 합니다.\n외적 타당성(External Validity): 연구 결과가 실제 의료 현장의 성능을 충분히 반영해야 합니다. 최종 버전의 기기 사용, 다양한 숙련도의 사용자 포함 등이 필요합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part2.html",
+    "href": "diagnostic_part2.html",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2",
+    "section": "",
+    "text": "5. 권장 보고 사항\n진단 검사를 평가하는 연구에서는 다음 원칙에 따라 결과를 투명하게 보고해야 합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part2.html#권장-보고-사항",
+    "href": "diagnostic_part2.html#권장-보고-사항",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2",
+    "section": "",
+    "text": "(1) 연구 맥락 보고 (Reporting the context of the study)\n민감도와 특이도는 연구 모집단 및 설계의 맥락에 따라 달라질 수 있으므로, 다음 정보를 포함해야 합니다. - 의도된 사용군 (Intended Use Population): 제품의 실제 타겟이 되는 대상군 - 연구 집단 (Study Population): 실제 연구에 참여한 피험자 특성 - 참조 표준 (Reference Standard): 사용된 기준점의 정의 및 선택 근거와 한계점\n\n\n(2) 사용 조건 정의 (Defining the conditions of use)\n\n수행자의 숙련도 및 경험 (Operator Experience)\n실험 환경 및 설비 (Test Setting)\n품질 관리 절차 (Controls Applied) 및 표본 승인 기준\n\n\n\n(3) 비교 결과 및 방법 설명\n\n피험자 모집 절차 및 인구통계학적 정보\n포함 및 제외 기준 (Inclusion/Exclusion Criteria)\n표본 수집, 보관 및 처리 절차\n\n\n\n(4) 연구 결과 보고\n\n임상 현장 및 검사 사이트별 결과\n하위 그룹별 분석 결과\n보고 형식: 2x2 분할표, 정확도/일치도 측정치 및 95% 신뢰구간 (CI)\n양적 결과 기반 질적 검사: 히스토그램 및 ROC 커브 포함",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part2.html#통계적으로-부적절한-관행",
+    "href": "diagnostic_part2.html#통계적으로-부적절한-관행",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2",
+    "section": "6. 통계적으로 부적절한 관행",
+    "text": "6. 통계적으로 부적절한 관행\nFDA는 진단 검사 평가 시 다음 네 가지 관행을 피할 것을 강력히 권고합니다.\n\n(1) 비-참조 표준 비교 시 ‘민감도/특이도’ 용어 사용 금지\n참조 표준이 아닌 기존 검사법과 비교할 때는 ‘민감도’와 ’특이도’ 대신 ’양성 퍼센트 일치도(PPA)’와 ’음성 퍼센트 일치도(NPA)’라는 용어를 사용해야 합니다.\n\n\n(2) 모호한 결과(Equivocal Results)의 임의 제거 금지\n모호한 결과를 분석에서 제외하면 편향된 추정치가 발생할 수 있습니다. 모호한 결과를 양성으로 처리한 경우와 음성으로 처리한 경우를 모두 보고하는 것이 좋습니다.\n\n\n(3) 불일치 해결(Discrepant Resolution) 기반 데이터 수정 금지\n두 검사법이 일치하지 않을 때 제3의 검사법(Resolver)을 써서 결과를 수정하는 방식은 과학적으로 타당하지 않으며, 결과가 과도하게 낙관적으로 보일 수 있습니다.\n\n\n(4) 평가 대상 검사가 포함된 알고리즘과 비교 금지\n새로운 검사의 결과가 이미 포함된 진단 알고리즘의 결과와 해당 검사를 비교하는 것은 일치도가 부당하게 높게 나타나는 문제를 야기합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "diagnostic_part2.html#부록-통계-계산-방법",
+    "href": "diagnostic_part2.html#부록-통계-계산-방법",
+    "title": "진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2",
+    "section": "7. 부록: 통계 계산 방법",
+    "text": "7. 부록: 통계 계산 방법\n\n(1) 민감도와 특이도 산출 (참조 표준 사용 시)\n\n\n\n\n질병 있음 (Ref+)\n질병 없음 (Ref-)\n\n\n\n\n새 검사 양성\nTP (진양성)\nFP (위양성)\n\n\n새 검사 음성\nFN (위음성)\nTN (진음성)\n\n\n\n\n민감도: \\(\\frac{TP}{TP + FN}\\)\n특이도: \\(\\frac{TN}{FP + TN}\\)\n\n\n\n\n참조 표준 기반 2x2 표\n\n\n\n\n\n계산 예시\n\n\n\n\n(2) 일치도 산출 (비-참조 표준 사용 시)\n\n\n\n\n비-참조 표준 양성\n비-참조 표준 음성\n\n\n\n\n새 검사 양성\na\nb\n\n\n새 검사 음성\nc\nd\n\n\n\n\n양성 퍼센트 일치도 (PPA): \\(\\frac{a}{a+c}\\)\n음성 퍼센트 일치도 (NPA): \\(\\frac{d}{b+d}\\)\n전체 퍼센트 일치도 (OPA): \\(\\frac{a+d}{a+b+c+d}\\)\n\n\n\n\n비-참조 표준 기반 2x2 표\n\n\n\n일치도의 한계 (예시)\n일치도 수치만으로는 실제 성능을 완벽히 이해할 수 없습니다.\n\n\n\n일치도 예시 1\n\n\n (위 표에서 분모 값 수정이 필요할 수 있습니다: 41 → 59)\n\n\n\n(3) 불일치 해결(Discrepant Resolution)의 문제점\n불일치 해결 방식은 다음과 같은 단계를 거치지만, 결과의 신뢰도를 떨어뜨릴 수 있습니다.\n\n새 검사와 기존 검사 비교 후 불일치 발생 확인\n제3의 검사(Resolver)로 재검사\n기존 검사 결과를 Resolver의 결과로 수정하여 2x2 표 재작성 (비권장)\n\n  \n결론: 불일치 해결 방식을 통해 원래의 결과표를 수정하는 것은 부적절하며, 모든 데이터는 투명하게 공개되어야 합니다.",
+    "crumbs": [
+      "진단 검사 평가 (Diagnostic)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part1.html",
+    "href": "e9r1_part1.html",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1",
+    "section": "",
+    "text": "1. 목적 및 범위\n본 내용은 ICH E9 지침의 개정안(Addendum)인 E9(R1)의 핵심 내용으로, 임상시험에서 Estimand(분석 대상)의 정의와 민감도 분석(Sensitivity Analysis)에 대한 프레임워크를 다룹니다.\nE9(R1) 개정안은 임상시험의 설계, 수행, 분석 및 해석 과정에서 발생할 수 있는 모호함을 줄이고, 의뢰사와 규제기관 간의 원활한 소통을 위해 구조화된 프레임워크를 제시합니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part1.html#목적-및-범위",
+    "href": "e9r1_part1.html#목적-및-범위",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1",
+    "section": "",
+    "text": "주요 목적: 치료 효과(Treatment Effect)에 대한 명확한 정의와 분석 방법의 정립\n핵심 이슈:\n\nITT(Intention-To-Treat) 원칙의 적용 범위\n중도 탈락(Discontinuation)과 연구 동의 철회(Withdrawal)의 구분\n중간 사건(Intercurrent Events, ICE): 무작위 배정 이후 치료 과정을 변경하는 사건 (예: 치료 중단, 병용 약물 사용, 사망 등)에 대한 처리 방안\n분석군 설정(FAS vs PPS) 및 결과의 견고성(Robustness) 평가를 위한 민감도 분석",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part1.html#분석-체계-framework",
+    "href": "e9r1_part1.html#분석-체계-framework",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1",
+    "section": "2. 분석 체계 (Framework)",
+    "text": "2. 분석 체계 (Framework)\n임상시험의 목적을 달성하기 위해 다음의 단계적 체계를 따릅니다.\n\n\nEstimand (분석 대상): “무엇을 추정할 것인가?”에 대한 정의입니다. 단순히 통계 수치가 아니라, 특정 조건 하에서 우리가 알고자 하는 임상적 질문의 최종 목표입니다.\nEstimator (추정 방법): 정의된 Estimand를 산출하기 위한 통계적 방법(예: ANCOVA, MMRM 등)입니다.\nEstimate (추정치): 실제 데이터를 통해 얻은 수치적 결과입니다.\nSensitivity Analysis (민감도 분석): 설정된 통계적 가정이 결과의 견고성에 미치는 영향을 평가하는 분석입니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part1.html#estimand의-구성-요소",
+    "href": "e9r1_part1.html#estimand의-구성-요소",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1",
+    "section": "3. Estimand의 구성 요소",
+    "text": "3. Estimand의 구성 요소\n관심 있는 치료 효과를 명확히 정의하기 위해 Estimand는 다음 다섯 가지 속성을 포함해야 합니다.\n\nA. 치료 (Treatment)\n연구에서 평가하고자 하는 치료법의 상세 내용입니다. 중간 사건 발생 시 치료의 변경이나 추가 허용 여부 등을 포함합니다.\n\n\nB. 대상 집단 (Population)\n분석에 포함될 피험자 집단입니다. 선정/제외 기준을 만족하는 전체 집단 혹은 특정 하위 집단 등을 정의합니다.\n\n\nC. 평가 변수 (Variable / Endpoint)\n관심 있는 임상적 결과를 측정하는 변수와 측정 시점입니다.\n\n\nD. 중간 사건(ICE) 처리 전략 (Strategies for ICEs)\n임상시험 중 발생하는 다양한 중간 사건을 어떻게 다룰 것인지에 대한 전략입니다. 1. 치료 방침 전략 (Treatment Policy): ICE 발생 여부와 상관없이 실제 측정된 값을 그대로 사용합니다. (ITT 원칙과 유사) 2. 가상적 전략 (Hypothetical): “만약 ICE가 발생하지 않았다면 어떤 결과가 나왔을까?”라는 가상적 상황을 가정합니다. 3. 복합 변수 전략 (Composite Variable): ICE 자체를 평가 결과의 일부(예: 실패)로 통합합니다. 4. 치료 중 전략 (While-on-Treatment): ICE가 발생하기 전까지 측정된 데이터만 사용합니다. 5. 주요 계층 전략 (Principal Stratum): 특정 ICE가 발생할(혹은 발생하지 않을) 피험자 집단에 대해서만 분석합니다.\n\n\nE. 요약 지표 (Population-level Summary)\n치료군 간의 효과 차이를 요약하는 방법입니다. (예: 평균 차이, 위험비(Hazard Ratio), 오즈비(Odds Ratio) 등)",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part1.html#요약",
+    "href": "e9r1_part1.html#요약",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1",
+    "section": "4. 요약",
+    "text": "4. 요약\nEstimand는 임상시험의 설계 단계에서부터 명확히 정의되어야 합니다. 특히 중간 사건(ICE)을 어떻게 처리할 것인지에 대한 전략이 임상적 질문의 성격과 직결되므로, 연구 목적에 가장 부합하는 전략을 선택하는 것이 중요합니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part2.html",
+    "href": "e9r1_part2.html",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2",
+    "section": "",
+    "text": "4. 임상시험 설계 및 수행에 미치는 영향\n본 섹션에서는 정의된 Estimand가 임상시험의 설계, 수행 및 분석 전반에 미치는 실질적인 영향에 대해 다룹니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part2.html#임상시험-설계-및-수행에-미치는-영향",
+    "href": "e9r1_part2.html#임상시험-설계-및-수행에-미치는-영향",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2",
+    "section": "",
+    "text": "설계의 기초가 되는 Estimand\n하나의 임상시험에서 여러 분석 대상(Estimand)이 존재할 수 있지만, 시험의 주된 목적을 반영하는 핵심 Estimand를 기반으로 설계가 이루어져야 합니다. 이는 포함/제외 기준, 병용 약물 허용 여부, 데이터 수집 방법 결정의 기준이 됩니다.\n\n\n데이터 수집 및 누락 관리\n\n모든 피험자의 데이터를 완벽하게 수집하는 것은 현실적으로 불가능합니다.\n치료 중단(ICE)이 발생하더라도 가능한 한 피험자의 건강 상태를 추적 관찰하는 것이 권장됩니다.\n사망과 같은 사건은 ’누락’이 아니라 분석 전략에 따라 적절히 처리되어야 하는 중간 사건입니다.\n누락 이유 기록: 데이터가 왜 누락되었는지(예: 효능 부족으로 인한 중단, 연락 두절 등)를 명확히 기록해야 분석의 타당성을 높일 수 있습니다.\n\n\n\n표본 수 산출 (Sample Size)\n표본 수 계산은 명확하게 정의된 치료 효과(Estimand)에 기반해야 합니다. 특히 모든 대상자의 정보가 분석에 포함되고 중간 사건(ICE)까지 고려된 상태라면, 중도 탈락률을 단순히 고려하여 표본 수를 무리하게 늘릴 필요는 없습니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part2.html#분석-및-민감도-분석-analysis-sensitivity",
+    "href": "e9r1_part2.html#분석-및-민감도-분석-analysis-sensitivity",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2",
+    "section": "5. 분석 및 민감도 분석 (Analysis & Sensitivity)",
+    "text": "5. 분석 및 민감도 분석 (Analysis & Sensitivity)\n\n주 분석 (Main Estimation)\n모든 분석 방법은 특정 가정에 의존합니다. 사용된 가정은 명시적이고 타당해야 하며, 선택된 전략(Treatment Policy, Hypothetical 등)에 따라 적절한 분석 도구(MMRM 등)를 선택해야 합니다.\n\n\n민감도 분석 (Sensitivity Analysis)\n민감도 분석은 주 분석의 결론이 통계적 가정의 변화에도 얼마나 견고한지(Robustness)를 평가하는 과정입니다. - 규제 승인을 위한 주 분석 결과에 대해 반드시 민감도 분석 계획을 사전에 수립해야 합니다. - 누락된 데이터의 처리에 대한 가정을 변경해 가며 결과의 일관성을 확인합니다. - 단순한 재분석이 아니라, 결론의 신뢰도를 뒷받침하는 핵심적인 통계적 검증 단계입니다.\n\n\n보충 분석 (Supplementary Analysis)\n\n데이터를 보다 입체적으로 이해하기 위해 수행하는 분석입니다.\n민감도 분석보다는 낮은 우선순위를 가지며, 결과의 해석을 돕는 보조적인 역할을 합니다.\nFAS와 PPS 결과의 일관성을 확인하는 것도 보충 분석의 좋은 예입니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part2.html#문서화-documentation",
+    "href": "e9r1_part2.html#문서화-documentation",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2",
+    "section": "6. 문서화 (Documentation)",
+    "text": "6. 문서화 (Documentation)\n임상시험을 계획할 때 다음 사항들을 반드시 연구 프로토콜에 문서화해야 합니다. 1. 연구의 주요 및 보조 목적별 Estimand 2. 중간 사건(ICE) 발생 시의 처리 전략 3. 주 분석 방법 및 이를 뒷받침하는 통계적 가정 4. 가정의 견고성을 검증하기 위한 민감도 분석 계획\n시험 도중에 Estimand를 임의로 변경하는 것은 결과의 신뢰도를 크게 떨어뜨리므로 지양해야 하며, 변경이 불가피한 경우 프로토콜 수정을 통해 이를 투명하게 반영해야 합니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "e9r1_part2.html#결론",
+    "href": "e9r1_part2.html#결론",
+    "title": "임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2",
+    "section": "결론",
+    "text": "결론\nE9(R1)은 임상시험의 각 단계(설계-수행-분석-해석)가 하나의 일관된 질문(Estimand)을 향해 정렬되어야 함을 강조합니다. 명확한 Estimand 정의와 철저한 민감도 분석은 임상시험 결과의 신뢰성을 확보하고 의사 결정의 근거를 강화하는 핵심 요소입니다.",
+    "crumbs": [
+      "Estimand 및 민감도 분석 (E9R1)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "요약 및 결론",
+    "section": "",
+    "text": "본 도서에서는 임상시험의 설계부터 수행, 분석, 결과 보고에 이르기까지 필수적인 글로벌 가이드라인들을 살펴보았습니다.\n가장 기본이 되는 GCP(임상시험 관리 기준)를 통해 피험자 보호와 데이터의 신뢰성 확보라는 대원칙을 이해하고, E9(임상시험 통계 원칙)를 통해 통계적 편향을 최소화하고 정밀도를 높이는 방법론을 학습하였습니다.\n또한, 실무에서 빈번하게 발생하는 우월성 및 비열등성 시험 간의 전환, DELTA2 지침에 따른 목표 차이 설정과 표본 수 산출, 그리고 진단 검사 평가의 특수한 보고 기준들을 다루었습니다. 마지막으로 최신 흐름인 E9(R1)의 Estimand(추정 대상) 개념을 통해 임상 연구의 질문을 더 명확하게 정의하고 분석하는 체계를 살펴보았습니다.\n이 자료가 임상시험에 참여하는 모든 연구자들에게 실무적인 가이드가 되기를 바랍니다.",
+    "crumbs": [
+      "요약 및 결론"
+    ]
+  }
+]

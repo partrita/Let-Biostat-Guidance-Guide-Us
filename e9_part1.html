@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>임상시험의 통계적 원칙 (E9) Part 1 – 임상시험 통계 가이드라인 이해 (LBGGU)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./e9_part2.html" rel="next">
+<link href="./gcp_part2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2c90c5d594fb2d977fd9b31380ea4076.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9_part1.html">임상시험 통계 원칙 (E9)</a></li><li class="breadcrumb-item"><a href="./e9_part1.html"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">임상시험 통계 가이드라인 이해 (LBGGU)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">서문</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">소개</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">임상시험 관리 기준 (GCP)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gcp_part1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험 관리 기준 (GCP) Part 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gcp_part2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험 관리 기준 (GCP) Part 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">임상시험 통계 원칙 (E9)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e9_part1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e9_part2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./switching.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">우월성 및 비열등성 시험 간의 전환 시 고려사항</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">목표 차이 설정 및 표본수 산출 (DELTA2)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./delta_part1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./delta_part2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험 목표 차이 설정 및 표본 수 산출 지침 (DELTA2) Part 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">진단 검사 평가 (Diagnostic)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diagnostic_part1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diagnostic_part2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">진단 검사 평가 연구 결과 보고에 대한 통계적 지침 (FDA) Part 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Estimand 및 민감도 분석 (E9R1)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e9r1_part1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./e9r1_part2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">임상시험의 통계적 원칙 개정안 (E9(R1)) Part 2</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">요약 및 결론</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#서론-introduction" id="toc-서론-introduction" class="nav-link active" data-scroll-target="#서론-introduction">1. 서론 (Introduction)</a>
+  <ul class="collapse">
+  <li><a href="#a.-배경-및-목적" id="toc-a.-배경-및-목적" class="nav-link" data-scroll-target="#a.-배경-및-목적">A. 배경 및 목적</a></li>
+  <li><a href="#b.-범위-및-방향" id="toc-b.-범위-및-방향" class="nav-link" data-scroll-target="#b.-범위-및-방향">B. 범위 및 방향</a></li>
+  </ul></li>
+  <li><a href="#임상-개발-전반에-대한-고려사항" id="toc-임상-개발-전반에-대한-고려사항" class="nav-link" data-scroll-target="#임상-개발-전반에-대한-고려사항">2. 임상 개발 전반에 대한 고려사항</a>
+  <ul class="collapse">
+  <li><a href="#a.-임상시험의-맥락" id="toc-a.-임상시험의-맥락" class="nav-link" data-scroll-target="#a.-임상시험의-맥락">A. 임상시험의 맥락</a></li>
+  <li><a href="#b.-임상시험의-범위" id="toc-b.-임상시험의-범위" class="nav-link" data-scroll-target="#b.-임상시험의-범위">B. 임상시험의 범위</a></li>
+  <li><a href="#c.-편향-방지를-위한-설계-기법" id="toc-c.-편향-방지를-위한-설계-기법" class="nav-link" data-scroll-target="#c.-편향-방지를-위한-설계-기법">C. 편향 방지를 위한 설계 기법</a></li>
+  </ul></li>
+  <li><a href="#임상시험-설계-시-고려사항" id="toc-임상시험-설계-시-고려사항" class="nav-link" data-scroll-target="#임상시험-설계-시-고려사항">3. 임상시험 설계 시 고려사항</a>
+  <ul class="collapse">
+  <li><a href="#a.-설계-구성-design-configuration" id="toc-a.-설계-구성-design-configuration" class="nav-link" data-scroll-target="#a.-설계-구성-design-configuration">A. 설계 구성 (Design Configuration)</a></li>
+  <li><a href="#b.-다기관-임상시험-multicenter-trials" id="toc-b.-다기관-임상시험-multicenter-trials" class="nav-link" data-scroll-target="#b.-다기관-임상시험-multicenter-trials">B. 다기관 임상시험 (Multicenter Trials)</a></li>
+  <li><a href="#c.-비교-유형" id="toc-c.-비교-유형" class="nav-link" data-scroll-target="#c.-비교-유형">C. 비교 유형</a></li>
+  <li><a href="#d.-표본-크기-sample-size" id="toc-d.-표본-크기-sample-size" class="nav-link" data-scroll-target="#d.-표본-크기-sample-size">D. 표본 크기 (Sample Size)</a></li>
+  </ul></li>
+  <li><a href="#임상시험-수행-중-고려사항" id="toc-임상시험-수행-중-고려사항" class="nav-link" data-scroll-target="#임상시험-수행-중-고려사항">4. 임상시험 수행 중 고려사항</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./e9_part1.html">임상시험 통계 원칙 (E9)</a></li><li class="breadcrumb-item"><a href="./e9_part1.html"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 1</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="서론-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="서론-introduction">1. 서론 (Introduction)</h2>
+<section id="a.-배경-및-목적" class="level3">
+<h3 class="anchored" data-anchor-id="a.-배경-및-목적">A. 배경 및 목적</h3>
+<p>본 문서는 의뢰자(Sponsor)에게 임상시험의 설계, 분석 및 평가 전반에 걸친 통계적 지침을 제공하는 것을 목적으로 합니다.</p>
+</section>
+<section id="b.-범위-및-방향" class="level3">
+<h3 class="anchored" data-anchor-id="b.-범위-및-방향">B. 범위 및 방향</h3>
+<ol type="1">
+<li>본 지침은 구체적인 통계 절차보다는 통계적 원칙(Statistical Principles)에 중점을 둡니다.</li>
+<li>임상시험의 모든 통계적 업무는 통계 전문가(Statistician)의 책임하에 수행되어야 하며, 해당 전문가는 본 원칙을 준수할 수 있는 충분한 교육과 경험을 갖추어야 합니다.</li>
+<li>임상시험 계획서(Protocol) 및 개정안 작성 시, 통계 분석 부분이 적절히 반영되었는지 통계 전문가의 확인이 반드시 필요합니다.</li>
+<li>본 문서는 주로 확증적 임상시험(Confirmatory Trial)을 다룹니다.</li>
+<li>핵심 원칙은 편향(Bias)의 최소화와 정밀도(Precision)의 극대화입니다.</li>
+<li>편향은 타당한 결론 도출을 방해하는 가장 큰 요인이므로 이를 최소화하는 것이 무엇보다 중요합니다.</li>
+<li>주로 빈도주의 방법론(Frequentist Methods)을 설명하지만, 상황에 따라 베이지안(Bayesian) 방법론도 고려될 수 있습니다.</li>
+</ol>
+</section>
+</section>
+<section id="임상-개발-전반에-대한-고려사항" class="level2">
+<h2 class="anchored" data-anchor-id="임상-개발-전반에-대한-고려사항">2. 임상 개발 전반에 대한 고려사항</h2>
+<section id="a.-임상시험의-맥락" class="level3">
+<h3 class="anchored" data-anchor-id="a.-임상시험의-맥락">A. 임상시험의 맥락</h3>
+<ol type="1">
+<li>개발 계획 (Development Plan): 신약 개발의 목표는 적절한 용량(Dose)과 투여 기간(Schedule) 내에서 안전성과 유효성을 동시에 입증하고, 수용 가능한 위험-이익(Risk-Benefit) 균형을 찾는 것입니다.</li>
+<li>확증적 임상시험 (Confirmatory Trial): 사전에 가설을 설정하고 이를 평가하는 통제된 시험입니다. 통계적 유의성뿐만 아니라 임상적 유의성(Clinical Significance) 확보가 중요하며, 계획서와 표준 작업 지침서(SOP)를 엄격히 준수해야 합니다.</li>
+<li>탐색적 임상시험 (Exploratory Trial): 가설 입증보다는 새로운 사실을 발견하고 확증적 시험을 위한 근거를 마련하는 데 초점을 둡니다.</li>
+</ol>
+</section>
+<section id="b.-임상시험의-범위" class="level3">
+<h3 class="anchored" data-anchor-id="b.-임상시험의-범위">B. 임상시험의 범위</h3>
+<ol type="1">
+<li>대상자 집단 (Population): 적절한 선정 및 제외 기준을 통해 목표 모집단을 설정하는 것이 중요합니다. 너무 좁은 집단만 선택하면 결과의 일반화가 어려울 수 있습니다.</li>
+<li>일차 및 이차 변수 (Primary and Secondary Variables):
+<ul>
+<li>일차 변수 (Primary Variable): 시험 목적과 가장 직결되는 변수로, 표본 크기 산정의 근거가 됩니다. 눈가림 해제 후 임의로 변경할 수 없습니다.</li>
+<li>이차 변수 (Secondary Variable): 일차 목적을 보조하는 변수입니다.</li>
+</ul></li>
+<li>복합 변수 (Composite Variables): 여러 측정 지표를 단일 지표로 통합한 변수입니다. 다중성 문제 해결에 유용하지만, 구성 요소 각각에 대한 분석도 병행하는 것이 바람직합니다.</li>
+<li>종합 평가 변수 (Global Assessment Variables): 전반적인 유효성이나 안전성을 측정하지만, 상세한 효과 차이를 가릴 수 있어 일차 변수로는 권장되지 않습니다.</li>
+<li>다중 일차 변수 (Multiple Primary Variables): 두 개 이상의 일차 변수를 사용할 경우, 가설 검정 방법과 다중성 조절(Type 1 Error 제어) 방안을 명확히 기술해야 합니다.</li>
+<li>대리 변수 (Surrogate Variables): 실제 임상적 유익성을 직접 관찰하기 어려울 때 사용하는 간접 지표입니다. 실제 임상 결과와의 상관관계가 충분히 입증되어야 합니다.</li>
+<li>범주화 변수 (Categorized Variables): 연속형 변수를 ‘성공/실패’ 등으로 범주화하는 것입니다. 임상적 의미가 명확해야 하며 계획서에 사전에 정의되어야 합니다.</li>
+</ol>
+</section>
+<section id="c.-편향-방지를-위한-설계-기법" class="level3">
+<h3 class="anchored" data-anchor-id="c.-편향-방지를-위한-설계-기법">C. 편향 방지를 위한 설계 기법</h3>
+<p>편향을 줄이는 가장 중요한 기법은 눈가림(Blinding)과 무작위 배정(Randomization)입니다.</p>
+<ol type="1">
+<li>눈가림 (Blinding): 피험자나 연구자가 배정된 군을 알게 됨으로써 발생하는 편향을 방지합니다.
+<ul>
+<li>이중 눈가림 (Double Blind): 피험자, 연구자, 의뢰자, 평가자 모두 배정 결과를 모르게 하는 가장 이상적인 방법입니다.</li>
+<li>데이터 정리(Data Cleaning)가 완료되고 눈가림 해제(Unblinding) 전까지 엄격히 유지되어야 합니다.</li>
+</ul></li>
+<li>무작위 배정 (Randomization): 대상자를 치료군에 무작위로 할당하여 각 군의 비교 가능성을 높입니다.
+<ul>
+<li>주로 블록 무작위 배정 (Block Randomization)을 사용하며, 주요 예후 인자에 따른 층화(Stratification)를 병행할 수 있습니다.</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="임상시험-설계-시-고려사항" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-설계-시-고려사항">3. 임상시험 설계 시 고려사항</h2>
+<section id="a.-설계-구성-design-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="a.-설계-구성-design-configuration">A. 설계 구성 (Design Configuration)</h3>
+<ol type="1">
+<li>평행군 설계 (Parallel Group Design): 가장 일반적인 설계로, 대상자가 무작위로 한 치료군에 배정되어 시험 종료 시까지 해당 치료를 받는 방식입니다. <img src="pics/randomized_allocation.png" class="img-fluid"></li>
+<li>교차 설계 (Crossover Design): 각 대상자가 순차적으로 여러 치료를 받는 방식입니다. 대상자 자신이 대조군 역할을 하므로 표본 크기를 줄일 수 있으나, 이전 치료의 효과가 남는 잔류 효과(Carryover Effect)를 방지하기 위한 휴약기(Washout Period) 설정이 중요합니다. <img src="pics/drop_out.png" class="img-fluid"></li>
+<li>요인 설계 (Factorial Design): 두 개 이상의 치료 조합을 동시에 평가하여 치료 간의 상호작용(Interaction)을 확인하는 데 사용됩니다. <img src="pics/factorial_design.png" class="img-fluid"></li>
+</ol>
+</section>
+<section id="b.-다기관-임상시험-multicenter-trials" class="level3">
+<h3 class="anchored" data-anchor-id="b.-다기관-임상시험-multicenter-trials">B. 다기관 임상시험 (Multicenter Trials)</h3>
+<p>짧은 기간 내 대상자 모집이 가능하고 결과의 일반화에 유리하지만, 기관 간의 이질성을 관리해야 합니다.</p>
+</section>
+<section id="c.-비교-유형" class="level3">
+<h3 class="anchored" data-anchor-id="c.-비교-유형">C. 비교 유형</h3>
+<ol type="1">
+<li>우월성 시험 (Superiority Trial): 시험약이 대조군(위약 또는 활성대조약)보다 우수함을 입증합니다.</li>
+<li>동등성 및 비열등성 시험 (Equivalence and Non-inferiority Trial): 시험약이 대조약과 효과 차이가 없거나, 허용 범위 내에서 나쁘지 않음을 입증합니다.</li>
+<li>용량-반응 시험 (Dose-Response Trial): 약물 용량에 따른 유효성 및 안전성 변화를 확인하여 최적 용량을 찾습니다.</li>
+</ol>
+</section>
+<section id="d.-표본-크기-sample-size" class="level3">
+<h3 class="anchored" data-anchor-id="d.-표본-크기-sample-size">D. 표본 크기 (Sample Size)</h3>
+<ul>
+<li>표본 크기는 일차 목적에 근거하여 통계적으로 산출되어야 합니다.</li>
+<li>유의수준(Type 1 Error), 검정력(Power), 기대 효과 크기, 탈락률 등을 고려하여 계획서에 명시해야 합니다.</li>
+</ul>
+</section>
+</section>
+<section id="임상시험-수행-중-고려사항" class="level2">
+<h2 class="anchored" data-anchor-id="임상시험-수행-중-고려사항">4. 임상시험 수행 중 고려사항</h2>
+<ol type="1">
+<li>중간 분석 (Interim Analysis): 시험 완료 전 치료 효과를 비교하는 분석입니다. 사전에 계획되어야 하며, 반복적 분석으로 인한 제1종 오류 증가를 제어해야 합니다.</li>
+<li>독립적 데이터 모니터링 위원회 (IDMC): 의뢰자와 독립적으로 안전성 및 유효성 데이터를 모니터링하여 시험의 지속 여부를 권고하는 기구입니다.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./gcp_part2.html" class="pagination-link" aria-label="임상시험 관리 기준 (GCP) Part 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">임상시험 관리 기준 (GCP) Part 2</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./e9_part2.html" class="pagination-link" aria-label="임상시험의 통계적 원칙 (E9) Part 2">
+        <span class="nav-page-text"><span class="chapter-title">임상시험의 통계적 원칙 (E9) Part 2</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
